@@ -169,6 +169,14 @@ The game is a vanilla JS SPA (no heavy frameworks) for IPA learning. Users enter
 - `tableId` — Table element ID (default: `'DataTable'`)
 - `enableTTS`, `enableLanguageButtons`, `paging`, `pageLength`
 
+### Agent Interface (`agent.html`)
+
+The root `agent.html` is a client-side API for AI agents to translate text to IPA via URL query parameters. Logic lives in `js/agent.js`.
+
+- **MUST use a browser tool** (agent-browser, Playwright, Puppeteer) — the page runs entirely client-side. Fetching raw HTML returns an empty `<div>`.
+- Query params: `?language=code&input=text[&format=key][&variant=key][&displayFormat=normal|ipa|json|csv]`
+- Output appears in a `<pre>` element as plain text. See `SKILL.md` for full agent usage guide.
+
 ## Development Guidelines
 
 - **KISS**: Keep solutions simple and direct. Avoid over-engineering.

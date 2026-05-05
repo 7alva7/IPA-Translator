@@ -7,13 +7,18 @@ description: Translate text to International Phonetic Alphabet (IPA) and romaniz
 
 Translate text to International Phonetic Alphabet (IPA) via a web interface.
 
+## IMPORTANT: Use a Browser Tool
+
+This page runs entirely client-side (JavaScript fetches IPA databases and processes text).
+**DO NOT** use curl, fetch, or any HTTP tool that doesn't execute JavaScript — you will only get an empty `<div id="app"></div>`.
+
+Use **agent-browser** (open, wait for load, extract text from `pre` element) or a headless browser (Playwright/Puppeteer).
+
 ## Prerequisites
 
 **Required Tooling**
 
 To use this, you must use a browser-based tool like [agent-browser](https://github.com/anthropics/claude-code) or a headless engine (Playwright/Puppeteer) that executes JavaScript.
-
-**Do not use curl or HTTP tools** — the page runs entirely in the browser (client-side JS fetches IPA databases and processes text).
 
 ## Base URL
 
