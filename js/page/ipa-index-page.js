@@ -4,6 +4,7 @@
  */
 
 import { loadIPADatabase, normalizeIPAData, isElementChecked, setElementValue, setElementValueAnimated } from '../utils.js';
+import { formatPairIPAs, formatAsJSON, formatAsCSV } from '../format-display.js';
 import { initSpeakButton } from '../tts.js';
 import { getShareModal, parseShareFromUrl, clearShareParams } from '../share.js';
 import { svgShare, svgGlobe, svgGamepad, svgCopy, svgTick, svgDownArrow, svgLang } from '../svg.js';
@@ -113,14 +114,7 @@ export function initIPAIndexPage(options) {
     });
 
     const formatter = getFormatter();
-    const formattedPairs = pairs.map(([w, ipa]) => {
-      if (!formatter) return [w, ipa];
-      const formatted = formatter('/' + ipa + '/');
-      const match = formatted.match(/\/(.+?)\//);
-      return [w, match ? match[1] : formatted];
-    });
-
-    return { pairs, formattedPairs };
+    return { pairs, formattedPairs: formatPairIPAs(pairs, formatter) };
   }
 
   const translate = () => {
@@ -157,20 +151,11 @@ export function initIPAIndexPage(options) {
         if (formatter) ipaResult = formatter(ipaResult);
         setElementValueAnimated(outputId, ipaResult);
       } else if (displayFormat === 'json') {
-        const { pairs, formattedPairs } = buildPairsData();
-        const output = pairs.map(([w, ipa], i) => ({
-          word: w,
-          ipa: ipa || '',
-          formatted: (formattedPairs[i] || [])[1] || ''
-        }));
-        setElementValueAnimated(outputId, JSON.stringify(output, null, 2));
+        const { pairs } = buildPairsData();
+        setElementValueAnimated(outputId, formatAsJSON(pairs, formatter));
       } else if (displayFormat === 'csv') {
-        const { pairs, formattedPairs } = buildPairsData();
-        const csv = ['"word","ipa","formatted"'];
-        pairs.forEach(([w, ipa], i) => {
-          csv.push(`"${w}","${ipa || ''}","${(formattedPairs[i] || [])[1] || ''}"`);
-        });
-        setElementValueAnimated(outputId, csv.join('\n'));
+        const { pairs } = buildPairsData();
+        setElementValueAnimated(outputId, formatAsCSV(pairs, formatter));
       } else {
         // Normal display (current format/withWords settings)
         let result = process({

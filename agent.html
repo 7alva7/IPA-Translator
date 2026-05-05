@@ -21,27 +21,35 @@
     import { LANGUAGES, resolveDatabasePath, getValidFormats, getValidVariants } from './js/agent-lang-config.js';
     import { normalizeIPAData } from './js/utils.js';
     import { processTextCharBased, processTextLongestMatch, processKhmerText, processKorean } from './js/ipa.js';
+    import { formatAsJSON, formatAsCSV, stripHTML } from './js/format-display.js';
 
     const app = document.getElementById('app');
     const params = new URLSearchParams(window.location.search);
     const language = params.get('language');
     const input = params.get('input');
+    const displayFormat = (params.get('displayFormat') || 'normal').toLowerCase();
 
     if (!language || input === null) {
       showDocumentation();
     } else {
       app.innerHTML = '<pre id="output" class="loading">Loading...</pre>';
-      await runTranslation(language, input, params.get('format'), params.get('variant'));
+      await runTranslation(language, input, params.get('format'), params.get('variant'), displayFormat);
     }
 
     // ============================================
     // Translation Mode
     // ============================================
 
-    async function runTranslation(langCode, inputText, formatKey, variantKey) {
+    async function runTranslation(langCode, inputText, formatKey, variantKey, displayFormat) {
       const lang = LANGUAGES[langCode];
       if (!lang) {
         return showError(`Unknown language "${langCode}". Valid languages: ${Object.keys(LANGUAGES).join(', ')}`);
+      }
+
+      // Validate displayFormat
+      const validDisplayFormats = ['normal', 'ipa', 'json', 'csv'];
+      if (!validDisplayFormats.includes(displayFormat)) {
+        return showError(`Invalid displayFormat "${displayFormat}". Valid values: ${validDisplayFormats.join(', ')}`);
       }
 
       // Validate format
@@ -113,25 +121,37 @@
         return showError(`Unknown processor "${lang.processor}" for ${langCode}.`);
       }
 
-      let result = processor(procOpts);
-
-      // Apply formatter if specified
+      // Load formatter function if specified
+      let formatter = null;
       if (formatKey && lang.formats && lang.formats[formatKey]) {
         const formatRef = lang.formats[formatKey];
         if (formatRef) {
           const [moduleName, exportName] = formatRef.split(':');
           try {
             const mod = await import(`./js/format/${moduleName}`);
-            result = mod[exportName](result);
+            formatter = mod[exportName];
           } catch (e) {
             return showError(`Failed to load formatter: ${e.message}`);
           }
         }
       }
 
-      // Extract text content from formatted result (remove HTML tags if any)
-      const cleanResult = result.replace(/<[^>]+>/g, '');
-      document.getElementById('output').textContent = cleanResult;
+      // Handle display format
+      if (displayFormat === 'json' || displayFormat === 'csv') {
+        const { pairs } = processor({ ...procOpts, pairsOnly: true });
+        let output;
+        if (displayFormat === 'json') {
+          output = formatAsJSON(pairs, formatter);
+        } else {
+          output = formatAsCSV(pairs, formatter);
+        }
+        document.getElementById('output').textContent = output;
+      } else {
+        procOpts.withWords = displayFormat === 'normal';
+        let result = processor(procOpts);
+        if (formatter) result = formatter(result);
+        document.getElementById('output').textContent = stripHTML(result);
+      }
     }
 
     function showError(msg) {
@@ -158,15 +178,16 @@
 <p><b>Required Tooling</b> — use a browser-based tool like agent-browser or a headless engine (Playwright/Puppeteer) that executes JavaScript.</p>
 
 <h2>Usage</h2>
-<pre class="code-block">agent.html?language=&lt;code&gt;&amp;input=&lt;text&gt;[&amp;format=&lt;format&gt;][&amp;variant=&lt;variant&gt;]</pre>
+<pre class="code-block">agent.html?language=&lt;code&gt;&amp;input=&lt;text&gt;[&amp;format=&lt;format&gt;][&amp;variant=&lt;variant&gt;][&amp;displayFormat=&lt;format&gt;]</pre>
 
 <h2>Parameters</h2>
 <table>
 <tr><th>Param</th><th>Required</th><th>Description</th></tr>
 <tr><td><code>language</code></td><td>Yes</td><td>Language code (see list below)</td></tr>
 <tr><td><code>input</code></td><td>Yes</td><td>Text to translate (URL-encode non-ASCII)</td></tr>
-<tr><td><code>format</code></td><td>No</td><td>Output format key. Defaults to raw IPA when omitted</td></tr>
+<tr><td><code>format</code></td><td>No</td><td>Output format key (Jyutping, Pinyin, etc). Defaults to raw IPA when omitted</td></tr>
 <tr><td><code>variant</code></td><td>No</td><td>Language variant. Uses default when omitted</td></tr>
+<tr><td><code>displayFormat</code></td><td>No</td><td>Display mode: <code>normal</code> (text+IPA, default), <code>ipa</code> (IPA only), <code>json</code>, <code>csv</code></td></tr>
 </table>
 
 <h2>Supported Languages</h2>
@@ -177,14 +198,16 @@ ${langRows}
 
 <h2>Examples</h2>
 <ul>
-<li><a href="?language=german&amp;input=Hallo%20Welt">German IPA</a> — basic usage</li>
+<li><a href="?language=german&amp;input=Hallo%20Welt">German IPA</a> — basic usage (text+IPA)</li>
 <li><a href="?language=cantonese&amp;format=Jyutping&amp;input=你好">Cantonese → Jyutping</a> — with format</li>
 <li><a href="?language=mandarin&amp;variant=hans&amp;format=Pinyin&amp;input=你好">Mandarin → Pinyin</a> — with variant + format</li>
 <li><a href="?language=khmer&amp;input=សួស្តី">Khmer</a> — special processor</li>
+<li><a href="?language=cantonese&amp;input=歡迎&displayFormat=ipa">IPA only</a> — pure IPA output</li>
+<li><a href="?language=cantonese&amp;input=歡迎&displayFormat=json">JSON output</a> — structured JSON</li>
 </ul>
 
 <h2>Output</h2>
-<p>Plain text IPA or romanization. No HTML wrapping, no extra UI. Errors are returned as plain text prefixed with "Error:".</p>
+<p>Plain text output. Default is text+IPA format. Use <code>displayFormat=ipa</code> for IPA only, <code>json</code> for structured JSON, <code>csv</code> for CSV. Errors are returned as plain text prefixed with "Error:".</p>
 </div>`;
     }
 

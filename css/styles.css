@@ -1319,3 +1319,74 @@ body.dark-mode .format-dropdown {
     font-size: var(--font-xl);
   }
 }
+
+/* ============================================
+ * Agent Interface Section
+ * ============================================ */
+
+.agent-section {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--accent-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  margin: 8px 0 18px;
+  text-align: center;
+}
+
+.agent-title {
+  font-size: var(--font-lg);
+  color: var(--color-text);
+  margin: 0 0 4px;
+}
+
+.agent-desc {
+  font-size: var(--font-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.agent-desc code {
+  background: var(--color-btn-bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: var(--font-xs);
+}
+
+.agent-example {
+  background: var(--color-btn-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  margin: 0 auto 8px;
+  max-width: 520px;
+  font-size: var(--font-xs);
+  color: var(--color-text);
+  overflow-x: auto;
+}
+
+.agent-example a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.agent-example a:hover {
+  text-decoration: underline;
+}
+
+.agent-link {
+  font-size: var(--font-xs);
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .agent-section {
+    padding: 15px;
+  }
+
+  .agent-example {
+    font-size: var(--font-xs);
+  }
+}
