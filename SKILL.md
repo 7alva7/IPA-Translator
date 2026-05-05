@@ -24,15 +24,16 @@ To use this, you must use a browser-based tool like [agent-browser](https://gith
 Navigate to the URL with query parameters. The page runs entirely in the browser — JavaScript fetches the IPA database and processes the text client-side.
 
 ```
-https://toolbox.lotusfa.com/ipa/agent.html?language=<code>&input=<text>[&format=<format>][&variant=<variant>]
+https://toolbox.lotusfa.com/ipa/agent.html?language=<code>&input=<text>[&format=<format>][&variant=<variant>][&displayFormat=<format>]
 ```
 
 | Param | Required | Description |
 |-------|----------|-------------|
 | `language` | Yes | Language code (see list below) |
 | `input` | Yes | Text to translate (URL-encode non-ASCII characters) |
-| `format` | No | Output format. Omit for raw IPA |
+| `format` | No | Output format key (Jyutping, Pinyin, etc). Omit for raw IPA |
 | `variant` | No | Language variant. Uses default when omitted |
+| `displayFormat` | No | Display mode: `normal` (text+IPA, default), `ipa` (IPA only), `json`, `csv` |
 
 ## Browser Usage
 
@@ -83,10 +84,19 @@ WebFetch url="https://toolbox.lotusfa.com/ipa/agent.html?language=german&input=H
 - [Vietnamese (Southern)](https://toolbox.lotusfa.com/ipa/agent.html?language=vietnamese&variant=S&format=tone_simple&input=Xin%20chao)
 - [Korean](https://toolbox.lotusfa.com/ipa/agent.html?language=korean&input=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94)
 - [Japanese](https://toolbox.lotusfa.com/ipa/agent.html?language=japanese&input=%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF)
+- [IPA only (no text)](https://toolbox.lotusfa.com/ipa/agent.html?language=cantonese&input=%E6%AC%A2%E8%BF%8E&displayFormat=ipa)
+- [JSON output](https://toolbox.lotusfa.com/ipa/agent.html?language=cantonese&input=%E6%AC%A2%E8%BF%8E&displayFormat=json)
 
 ## Output
 
-The page renders plain text IPA or romanization in a `<pre>` element. No extra UI, no HTML wrapping. Errors appear as plain text starting with "Error:" or "Unknown".
+The page renders plain text in a `<pre>` element. No extra UI, no HTML wrapping. Errors appear as plain text starting with "Error:" or "Unknown".
+
+| displayFormat | Output |
+|---------------|--------|
+| `normal` (default) | Text with IPA, e.g. `( 歡 fu:n˥ ) ( 迎 jɪŋ˨˩ )` |
+| `ipa` | IPA only, e.g. `fu:n˥ jɪŋ˨˩` |
+| `json` | JSON array of `{word, ipa, formatted}` objects |
+| `csv` | CSV with `word`, `ipa`, `formatted` columns |
 
 ## Notes
 
