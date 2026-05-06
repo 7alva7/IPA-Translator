@@ -24,5 +24,8 @@
   "game_fill_in_the": "Vul {part} in",
   "game_initial": "Beginklank",
   "game_rhyme": "Rijm",
-  "game_tone": "Toon"
+  "game_tone": "Toon",
+  "i18n_home": "Home",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Weergavetaal"
 }

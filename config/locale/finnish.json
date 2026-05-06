@@ -24,5 +24,8 @@
   "game_fill_in_the": "Täytä {part}",
   "game_initial": "Alkuääni",
   "game_rhyme": "Rimi",
-  "game_tone": "Sävy"
+  "game_tone": "Sävy",
+  "i18n_home": "Koti",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Näyttökieli"
 }

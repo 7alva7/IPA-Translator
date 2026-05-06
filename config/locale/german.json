@@ -24,5 +24,8 @@
   "game_fill_in_the": "Füllen Sie {part} aus",
   "game_initial": "Anlaut",
   "game_rhyme": "Reim",
-  "game_tone": "Ton"
+  "game_tone": "Ton",
+  "i18n_home": "Startseite",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Anzeigesprache"
 }

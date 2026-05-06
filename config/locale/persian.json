@@ -24,5 +24,8 @@
   "game_fill_in_the": "{part} را پر کنید",
   "game_initial": "ابتدایی",
   "game_rhyme": "قافیه",
-  "game_tone": "لحن"
+  "game_tone": "لحن",
+  "i18n_home": "خانه",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "زبان نمایش"
 }

@@ -24,5 +24,8 @@
   "game_fill_in_the": "Jaza {part}",
   "game_initial": "Mwanzo",
   "game_rhyme": "Rythimu",
-  "game_tone": "Sauti"
+  "game_tone": "Sauti",
+  "i18n_home": "Nyumbani",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Lugha ya Onyesho"
 }

@@ -24,5 +24,8 @@
   "game_fill_in_the": "Fill in the {part}",
   "game_initial": "Initial",
   "game_rhyme": "Rhyme",
-  "game_tone": "Tone"
+  "game_tone": "Tone",
+  "i18n_home": "Home",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Display Language"
 }

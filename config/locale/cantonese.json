@@ -24,5 +24,8 @@
   "game_fill_in_the": "填寫 {part}",
   "game_initial": "聲母",
   "game_rhyme": "韻母",
-  "game_tone": "聲調"
+  "game_tone": "聲調",
+  "i18n_home": "主頁",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "顯示語言"
 }

@@ -24,5 +24,8 @@
   "game_fill_in_the": "Completați {part}",
   "game_initial": "Inițială",
   "game_rhyme": "Rimă",
-  "game_tone": "Ton"
+  "game_tone": "Ton",
+  "i18n_home": "Acasă",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Limba de Afișare"
 }

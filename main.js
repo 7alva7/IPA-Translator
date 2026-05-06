@@ -1,6 +1,7 @@
-import { initDarkMode } from './js/page/page-shared.js';
+import { initDarkMode, initLocaleSelector } from './js/page/page-shared.js';
 
 initDarkMode('dark-mode-toggle');
+initLocaleSelector({ languagesPath: './config/languages.json', localeBasePath: './config/locale' });
 
 // Build language grids from config
 fetch('./config/languages.json')

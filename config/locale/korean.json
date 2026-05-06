@@ -24,5 +24,8 @@
   "game_fill_in_the": "{part}을(를) 채우세요",
   "game_initial": "초성",
   "game_rhyme": "중종성",
-  "game_tone": "음조"
+  "game_tone": "음조",
+  "i18n_home": "홈",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "표시 언어"
 }

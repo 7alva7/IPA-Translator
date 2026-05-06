@@ -24,5 +24,8 @@
   "game_fill_in_the": "Plenigu {part}",
   "game_initial": "Komenco",
   "game_rhyme": "Rimo",
-  "game_tone": "Tono"
+  "game_tone": "Tono",
+  "i18n_home": "Hejmpaĝo",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Montra Lingvo"
 }

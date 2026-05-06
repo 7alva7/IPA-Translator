@@ -24,5 +24,8 @@
   "game_fill_in_the": "填写 {part}",
   "game_initial": "声母",
   "game_rhyme": "韵母",
-  "game_tone": "声调"
+  "game_tone": "声调",
+  "i18n_home": "首页",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "显示语言"
 }

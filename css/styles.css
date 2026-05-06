@@ -197,6 +197,14 @@ body.dark-mode .footer-bottom a {
   color: #999;
 }
 
+body.dark-mode .locale-select-btn {
+  color: #888;
+}
+
+body.dark-mode .locale-select-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 body.dark-mode a {
   color: #999;
 }
@@ -451,6 +459,12 @@ select.form-control {
   text-align: center;
 }
 
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer-bottom p {
   margin: 0;
   font-size: 13px;
@@ -464,6 +478,24 @@ select.form-control {
 
 .footer-bottom a:hover {
   color: #666;
+}
+
+/* Locale selector button — matches lang-selector-btn style */
+.locale-select-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  color: inherit;
+  font-size: 13px;
+  color: #999;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  line-height: 1;
+}
+
+.locale-select-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* Mobile responsive - footer columns stack vertically */
@@ -486,6 +518,11 @@ select.form-control {
   .footer-col p {
     display: block;
     text-align: center;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 

@@ -24,5 +24,8 @@
   "game_fill_in_the": "{part} を埋めてください",
   "game_initial": "子音",
   "game_rhyme": "母音",
-  "game_tone": "調子"
+  "game_tone": "調子",
+  "i18n_home": "ホーム",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "表示言語"
 }

@@ -24,5 +24,8 @@
   "game_fill_in_the": "Rellena {part}",
   "game_initial": "Inicial",
   "game_rhyme": "Rima",
-  "game_tone": "Tono"
+  "game_tone": "Tono",
+  "i18n_home": "Inicio",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Idioma de Visualización"
 }

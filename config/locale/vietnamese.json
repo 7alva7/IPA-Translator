@@ -24,5 +24,8 @@
   "game_fill_in_the": "Điền {part}",
   "game_initial": "Phụ âm đầu",
   "game_rhyme": "Vần",
-  "game_tone": "Thanh"
+  "game_tone": "Thanh",
+  "i18n_home": "Trang Chủ",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Ngôn Ngữ Hiển Thị"
 }

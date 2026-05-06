@@ -24,5 +24,8 @@
   "game_fill_in_the": "Fyll i {part}",
   "game_initial": "Inljud",
   "game_rhyme": "Rim",
-  "game_tone": "Ton"
+  "game_tone": "Ton",
+  "i18n_home": "Hem",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Visningsspråk"
 }

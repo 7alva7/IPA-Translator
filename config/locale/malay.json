@@ -24,5 +24,8 @@
   "game_fill_in_the": "Isikan {part}",
   "game_initial": "Awal",
   "game_rhyme": "Rima",
-  "game_tone": "Nada"
+  "game_tone": "Nada",
+  "i18n_home": "Laman Utama",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Bahasa Paparan"
 }

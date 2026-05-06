@@ -24,5 +24,8 @@
   "game_fill_in_the": "Preencha {part}",
   "game_initial": "Inicial",
   "game_rhyme": "Rima",
-  "game_tone": "Tom"
+  "game_tone": "Tom",
+  "i18n_home": "Início",
+  "i18n_github": "GitHub",
+  "i18n_locale_label": "Idioma de Exibição"
 }

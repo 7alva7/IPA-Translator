@@ -98,6 +98,103 @@ export function initLanguageButtons(options) {
 /**
  * Set textarea rows based on screen width and re-check on resize
  */
+/**
+ * Initialize locale (display language) selector dropdown.
+ * Populates a <select> from languages.json, applies translations to [data-i18n] elements,
+ * and persists the selection in localStorage.
+ *
+ * @param {object} options - Options:
+ *   @param {string} options.selectId - ID of the select element (default: "locale-select")
+ *   @param {string} options.languagesPath - Path to languages.json (default: "../config/languages.json")
+ *   @param {string} options.localeBasePath - Base path to locale JSON files (default: "../config/locale")
+ *   @param {string} options.storageKey - localStorage key (default: "ipa_locale")
+ *   @param {string} options.defaultLocale - Fallback locale code (default: "english")
+ */
+export function initLocaleSelector(options = {}) {
+  const {
+    selectId = "locale-select",
+    languagesPath = "../config/languages.json",
+    localeBasePath = "../config/locale",
+    storageKey = "ipa_locale",
+    defaultLocale = "english"
+  } = options;
+
+  const selectEl = document.getElementById(selectId);
+  if (!selectEl) return;
+
+  const localeCache = {};
+  let languagesList = null;
+
+  async function loadLocale(code) {
+    if (localeCache[code]) return localeCache[code];
+    try {
+      const resp = await fetch(`${localeBasePath}/${code}.json`);
+      if (!resp.ok) throw new Error(`Locale not found: ${code} (${resp.status})`);
+      const data = await resp.json();
+      localeCache[code] = data;
+      return data;
+    } catch (e) {
+      console.error(`Failed to load locale ${code}:`, e.message);
+      return {};
+    }
+  }
+
+  async function applyTranslations(localeCode) {
+    const locale = await loadLocale(localeCode);
+    const keys = Object.keys(locale);
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (locale[key] !== undefined) {
+        if (!el.dataset.i18nOriginal) {
+          el.dataset.i18nOriginal = el.textContent;
+        }
+        el.textContent = locale[key];
+      } else if (key && !keys.length) {
+        // Restore original text if locale failed to load
+        if (el.dataset.i18nOriginal) {
+          el.textContent = el.dataset.i18nOriginal;
+        }
+      }
+    });
+  }
+
+  async function init() {
+    try {
+      const resp = await fetch(languagesPath);
+      if (!resp.ok) throw new Error(`Failed to load languages config: ${resp.status}`);
+      const { languages } = await resp.json();
+      languagesList = languages;
+
+      languages.forEach(lang => {
+        const opt = document.createElement('option');
+        opt.value = lang.code;
+        opt.textContent = lang.name;
+        selectEl.appendChild(opt);
+      });
+
+      const savedLocale = localStorage.getItem(storageKey);
+      const initialLocale = (savedLocale && languages.find(l => l.code === savedLocale))
+        ? savedLocale
+        : defaultLocale;
+
+      selectEl.value = initialLocale;
+      await applyTranslations(initialLocale);
+
+      selectEl.addEventListener('change', async () => {
+        const newLocale = selectEl.value;
+        localStorage.setItem(storageKey, newLocale);
+        await applyTranslations(newLocale);
+      });
+    } catch (e) {
+      console.error('initLocaleSelector:', e.message);
+    }
+  }
+
+  init();
+}
+
+
 export function initResponsiveTextareaRows(options = {}) {
   const isMobile = window.innerWidth <= 768;
   const mobileRows = options.mobileRows || 5;

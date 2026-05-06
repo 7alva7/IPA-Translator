@@ -8,7 +8,7 @@ import { formatPairIPAs, formatAsJSON, formatAsCSV } from '../format-display.js'
 import { initSpeakButton } from '../tts.js';
 import { getShareModal, parseShareFromUrl, clearShareParams } from '../share.js';
 import { svgShare, svgGlobe, svgGamepad, svgCopy, svgTick, svgDownArrow, svgLang } from '../svg.js';
-import { initDarkMode, initLanguageButtons, generateLanguageButtons, initResponsiveTextareaRows } from './page-shared.js';
+import { initDarkMode, initLanguageButtons, generateLanguageButtons, initResponsiveTextareaRows, initLocaleSelector } from './page-shared.js';
 
 export function initIPAIndexPage(options) {
   const {
@@ -246,6 +246,9 @@ export function initIPAIndexPage(options) {
   if (enableLanguageButtons && !languageSelectorId) {
     initLanguageButtons({ containerId: langButtonsContainerId, configPath: '../config/languages.json' });
   }
+
+  // Initialize locale selector (footer dropdown)
+  initLocaleSelector();
 
   // Language selector modal (shared by header button and footer tools)
   let langModal = null;

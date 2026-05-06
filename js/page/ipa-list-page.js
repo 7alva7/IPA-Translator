@@ -7,7 +7,7 @@
 
 import { normalizeIPAData } from '../utils.js';
 import { createSpeakButton, preloadVoiceSupport } from '../tts.js';
-import { initDarkMode, initLanguageButtons } from './page-shared.js';
+import { initDarkMode, initLanguageButtons, initLocaleSelector } from './page-shared.js';
 
 /**
  * Initialize IPA DataTable with optional TTS speak buttons
@@ -123,6 +123,9 @@ export async function initIPAListPage(options = {}) {
       configPath: '../config/languages.json'
     });
   }
+
+  // Initialize locale selector (footer dropdown)
+  initLocaleSelector();
 
   // Preload TTS voices if enabled
   if (enableTTS && language) {
