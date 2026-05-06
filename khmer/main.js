@@ -3,6 +3,7 @@ import { initIPAIndexPage } from '../js/page/ipa-index-page.js';
 import { processKhmerText } from '../js/ipa.js';
 
 initIPAIndexPage({
+  defaultLocale: 'khmer',
   databasePath: '../json/km.json',
   // Use the new Khmer processor here
   process: processKhmerText, 

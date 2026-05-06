@@ -110,7 +110,8 @@ export async function initIPAListPage(options = {}) {
     enableLanguageButtons = true,
     paging = true,
     pageLength = 10,
-    speakWordLabel = 'Read word aloud'
+    speakWordLabel = 'Read word aloud',
+    defaultLocale = null,
   } = options;
 
   // Initialize dark mode (uses existing initDarkMode from ipa-core.js)
@@ -125,7 +126,9 @@ export async function initIPAListPage(options = {}) {
   }
 
   // Initialize locale selector (footer dropdown)
-  initLocaleSelector();
+  if (defaultLocale) {
+    initLocaleSelector({ defaultLocale });
+  }
 
   // Preload TTS voices if enabled
   if (enableTTS && language) {

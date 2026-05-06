@@ -14,6 +14,7 @@ import {
 
 // Initialize with char-based processing and Mandarin formatters
 initIPAIndexPage({
+  defaultLocale: 'mandarin',
   databasePath: '../json/${variant}.json',
   variantRadioSelector: 'input[name="zhTypeOption"]',
   variantMapping: { zh_type1: 'zh_hant', zh_type2: 'zh_hans' },

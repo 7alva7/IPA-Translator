@@ -7,6 +7,7 @@ import { processTextLongestMatch } from '../js/ipa.js';
 
 // Initialize with longest-match algorithm for phrase processing
 initIPAIndexPage({
+  defaultLocale: 'arabic',
   databasePath: '../json/ar.json',
   process: processTextLongestMatch,
   locale: { textAndIpa: '(نص /ipa/)', onlyIpa: '/ipa/ فقط' },

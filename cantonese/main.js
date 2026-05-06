@@ -16,6 +16,7 @@ import {
 
 // Initialize with char-based processing and Cantonese formatters
 initIPAIndexPage({
+  defaultLocale: 'cantonese',
   databasePath: '../json/yue.json',
   process: processTextCharBased,
   formatRadioSelector: 'input[name="format"]',

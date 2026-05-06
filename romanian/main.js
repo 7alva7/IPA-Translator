@@ -2,6 +2,7 @@ import { initIPAIndexPage } from '../js/page/ipa-index-page.js';
 import { processTextLongestMatch } from '../js/ipa.js';
 
 initIPAIndexPage({
+  defaultLocale: 'romanian',
   databasePath: '../json/ro.json',
   process: processTextLongestMatch,
   ttsLanguage: 'ro-RO',

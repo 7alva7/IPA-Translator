@@ -3,6 +3,7 @@ import { initIPAIndexPage } from '../js/page/ipa-index-page.js';
 import { processTextLongestMatch } from '../js/ipa.js';
 
 initIPAIndexPage({
+  defaultLocale: 'german',
   databasePath: '../json/de.json',
   process: processTextLongestMatch,
   ttsLanguage: 'de-DE',

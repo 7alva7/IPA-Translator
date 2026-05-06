@@ -3,6 +3,7 @@ import { processTextLongestMatch } from '../js/ipa.js';
 
 // Initialize with variant support (es_ES/es_MX)
 initIPAIndexPage({
+  defaultLocale: 'spanish',
   databasePath: '../json/es_${variant}.json',
   variantRadioSelector: 'input[name="inlineRadioOptions"]',
   variantMapping: { IPA_Spain: 'ES', IPA_Mexico: 'MX' },

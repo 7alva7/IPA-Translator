@@ -43,10 +43,11 @@ export function initIPAIndexPage(options) {
     footerToolsContainerId = null,
     toolsConfig = null,
     locale = null,
+    defaultLocale = null,
   } = options;
 
-  const defaultLocale = { textAndIpa: '(Text /ipa/)', onlyIpa: 'Only /ipa/' };
-  const L = locale ? { ...defaultLocale, ...locale } : defaultLocale;
+  const defaultFormatLabels = { textAndIpa: '(Text /ipa/)', onlyIpa: 'Only /ipa/' };
+  const L = locale ? { ...defaultFormatLabels, ...locale } : defaultFormatLabels;
 
   if (!databasePath) throw new Error('initIPAIndexPage: "databasePath" is required');
   if (!process) throw new Error('initIPAIndexPage: "process" is required');
@@ -248,7 +249,9 @@ export function initIPAIndexPage(options) {
   }
 
   // Initialize locale selector (footer dropdown)
-  initLocaleSelector();
+  if (defaultLocale) {
+    initLocaleSelector({ defaultLocale });
+  }
 
   // Language selector modal (shared by header button and footer tools)
   let langModal = null;

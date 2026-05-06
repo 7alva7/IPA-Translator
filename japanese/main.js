@@ -7,6 +7,7 @@ import { processTextCharBased } from '../js/ipa.js';
 
 // Initialize with char-based processing (no formatter needed)
 initIPAIndexPage({
+  defaultLocale: 'japanese',
   databasePath: '../json/ja.json',
   process: processTextCharBased,
   locale: { textAndIpa: '(文字 /ipa/)', onlyIpa: '/ipa/ のみ' },

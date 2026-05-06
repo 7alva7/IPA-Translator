@@ -8,6 +8,7 @@ import { formatVietnameseOutput, formatIPANumbers } from '../js/format/vi.format
 
 // Initialize with char-based processing and Vietnamese formatters
 initIPAIndexPage({
+  defaultLocale: 'vietnamese',
   databasePath: '../json/vi_${variant}.json',
   variantRadioSelector: 'input[name="variant"]',
   variantMapping: { variant_C: 'C', variant_N: 'N', variant_S: 'S' },

@@ -7,6 +7,7 @@ import { processTextLongestMatch } from '../js/ipa.js';
 
 // Initialize with longest-match algorithm for phrase processing
 initIPAIndexPage({
+  defaultLocale: 'esperanto',
   databasePath: '../json/eo.json',
   process: processTextLongestMatch,
   maxWordLength: 5,

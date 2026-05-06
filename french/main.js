@@ -7,6 +7,7 @@ import { processTextLongestMatch } from '../js/ipa.js';
 
 // Initialize with variant support (fr_FR/fr_QC)
 initIPAIndexPage({
+  defaultLocale: 'french',
   databasePath: '../json/${variant}.json',
   variantRadioSelector: 'input[name="inlineRadioOptions"]',
   variantMapping: { IPA_fr_FR: 'fr_FR', IPA_fr_QC: 'fr_QC' },

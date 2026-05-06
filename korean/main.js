@@ -2,6 +2,7 @@ import { initIPAIndexPage } from '../js/page/ipa-index-page.js';
 import { processKorean } from '../js/ipa.js';
 
 initIPAIndexPage({
+  defaultLocale: 'korean',
   databasePath: '../json/ko.json',
   process: processKorean,
   locale: { textAndIpa: '(문자 /ipa/)', onlyIpa: '/ipa/ 만' },

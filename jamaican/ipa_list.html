@@ -87,6 +87,7 @@
 
       // Initialize page with Jamaican Patois pronunciation (en-US voices, no en-JM TTS available)
       await initIPAListPage({
+        defaultLocale: 'jamaican',
         language: 'en-US',
         tableJsonPath: '../json/jam.json',
         tableId: 'DataTable',
