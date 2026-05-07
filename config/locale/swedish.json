@@ -41,5 +41,10 @@
   "label_pronounced": "Uttale:",
   "label_format": "Format:",
   "label_variant": "Variant:",
-  "label_word_match": "Ordmatchning"
+  "label_word_match": "Ordmatchning",
+  "list_back": "Tillbaka till Översättare",
+  "list_word_column": "Ord",
+  "list_ipa_column": "IPA",
+  "list_description": "Beskrivning",
+  "list_links": "Länkar"
 }

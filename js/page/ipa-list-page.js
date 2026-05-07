@@ -127,7 +127,18 @@ export async function initIPAListPage(options = {}) {
 
   // Initialize locale selector (footer dropdown)
   if (defaultLocale) {
-    initLocaleSelector({ defaultLocale });
+    initLocaleSelector({
+      defaultLocale,
+      onLocaleChange: (code, data) => {
+        // Update speak button labels in DataTable
+        const labels = data || {};
+        const speakLabel = labels.speakWord || speakWordLabel;
+        document.querySelectorAll('.speak-btn').forEach(btn => {
+          btn.title = speakLabel;
+          btn.setAttribute('aria-label', speakLabel);
+        });
+      }
+    });
   }
 
   // Preload TTS voices if enabled

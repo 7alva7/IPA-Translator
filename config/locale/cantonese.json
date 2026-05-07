@@ -41,5 +41,10 @@
   "label_pronounced": "發音：",
   "label_format": "輸出格式：",
   "label_variant": "變體：",
-  "label_word_match": "以詞組匹配"
+  "label_word_match": "以詞組匹配",
+  "list_back": "返回翻譯器",
+  "list_word_column": "文字",
+  "list_ipa_column": "IPA",
+  "list_description": "說明",
+  "list_links": "連結"
 }

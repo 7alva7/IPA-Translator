@@ -41,5 +41,10 @@
   "label_pronounced": "Ejaan:",
   "label_format": "Format:",
   "label_variant": "Varian:",
-  "label_word_match": "Padanan perkataan"
+  "label_word_match": "Padanan perkataan",
+  "list_back": "Kembali ke Penterjemah",
+  "list_word_column": "Kata",
+  "list_ipa_column": "IPA",
+  "list_description": "Penerangan",
+  "list_links": "Pautan"
 }

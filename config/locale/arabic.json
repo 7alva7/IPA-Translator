@@ -41,5 +41,10 @@
   "label_pronounced": "النطق:",
   "label_format": "التنسيق:",
   "label_variant": "المتغير:",
-  "label_word_match": "تطابق الكلمات"
+  "label_word_match": "تطابق الكلمات",
+  "list_back": "العودة إلى المترجم",
+  "list_word_column": "كلمة",
+  "list_ipa_column": "IPA",
+  "list_description": "الوصف",
+  "list_links": "روابط"
 }

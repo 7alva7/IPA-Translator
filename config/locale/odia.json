@@ -41,5 +41,10 @@
   "label_pronounced": "ଉଚ୍ଚାରଣ:",
   "label_format": "ଫର୍ମାଟ:",
   "label_variant": "ଭେଦ:",
-  "label_word_match": "ଶବ୍ଦ ମେଳ"
+  "label_word_match": "ଶବ୍ଦ ମେଳ",
+  "list_back": "ଅନୁବାଦକରେ ଫେରନ୍ତୁ",
+  "list_word_column": "ଶବ୍ଦ",
+  "list_ipa_column": "IPA",
+  "list_description": "ବିବରଣୀ",
+  "list_links": "ଲିଙ୍କ୍"
 }

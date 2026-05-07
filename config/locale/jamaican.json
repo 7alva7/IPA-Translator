@@ -41,5 +41,10 @@
   "label_pronounced": "Pronunciation:",
   "label_format": "Format:",
   "label_variant": "Variant:",
-  "label_word_match": "Word match"
+  "label_word_match": "Word match",
+  "list_back": "Gyadeetch to Translator",
+  "list_word_column": "Word",
+  "list_ipa_column": "IPA",
+  "list_description": "Mek Yu Know",
+  "list_links": "Links"
 }

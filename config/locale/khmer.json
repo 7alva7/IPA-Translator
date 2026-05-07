@@ -41,5 +41,10 @@
   "label_pronounced": "ការបញ្ចេញសំឡេង:",
   "label_format": "ទម្រង់:",
   "label_variant": "ប្រភេទ:",
-  "label_word_match": "ការត្អូញត្អែរពាក្យ"
+  "label_word_match": "ការត្អូញត្អែរពាក្យ",
+  "list_back": "ត្រឡប់ទៅម៉ាស៊ីនបកប្រែ",
+  "list_word_column": "ពាក្យ",
+  "list_ipa_column": "IPA",
+  "list_description": "ការពិពណ៌នា",
+  "list_links": "តំណ"
 }

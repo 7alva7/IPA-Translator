@@ -41,5 +41,10 @@
   "label_pronounced": "Uttale:",
   "label_format": "Format:",
   "label_variant": "Variant:",
-  "label_word_match": "Ordmatching"
+  "label_word_match": "Ordmatching",
+  "list_back": "Tilbake til oversetter",
+  "list_word_column": "Ord",
+  "list_ipa_column": "IPA",
+  "list_description": "Beskrivelse",
+  "list_links": "Lenker"
 }

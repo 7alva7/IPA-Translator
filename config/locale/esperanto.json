@@ -41,5 +41,10 @@
   "label_pronounced": "Prononco:",
   "label_format": "Formato:",
   "label_variant": "Variantoj:",
-  "label_word_match": "Vortokorespondado"
+  "label_word_match": "Vortokorespondado",
+  "list_back": "Reveni al Tradukilo",
+  "list_word_column": "Vorto",
+  "list_ipa_column": "IPA",
+  "list_description": "Priskribo",
+  "list_links": "Ligoj"
 }

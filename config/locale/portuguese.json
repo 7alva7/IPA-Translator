@@ -41,5 +41,10 @@
   "label_pronounced": "Pronúncia:",
   "label_format": "Formato:",
   "label_variant": "Variante:",
-  "label_word_match": "Correspondência de palavra"
+  "label_word_match": "Correspondência de palavra",
+  "list_back": "Voltar ao Tradutor",
+  "list_word_column": "Palavra",
+  "list_ipa_column": "IPA",
+  "list_description": "Descrição",
+  "list_links": "Links"
 }

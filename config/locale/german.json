@@ -41,5 +41,10 @@
   "label_pronounced": "Aussprache:",
   "label_format": "Format:",
   "label_variant": "Variante:",
-  "label_word_match": "Wortübereinstimmung"
+  "label_word_match": "Wortübereinstimmung",
+  "list_back": "Zurück zum Übersetzer",
+  "list_word_column": "Wort",
+  "list_ipa_column": "IPA",
+  "list_description": "Beschreibung",
+  "list_links": "Links"
 }

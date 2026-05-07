@@ -41,5 +41,10 @@
   "label_pronounced": "Ääntäminen:",
   "label_format": "Muoto:",
   "label_variant": "Vaihtoehto:",
-  "label_word_match": "Sanavastine"
+  "label_word_match": "Sanavastine",
+  "list_back": "Takaisin kääntäjään",
+  "list_word_column": "Sana",
+  "list_ipa_column": "IPA",
+  "list_description": "Kuvaus",
+  "list_links": "Linkit"
 }

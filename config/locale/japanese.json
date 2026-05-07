@@ -41,5 +41,10 @@
   "label_pronounced": "発音：",
   "label_format": "フォーマット：",
   "label_variant": "バリアント：",
-  "label_word_match": "単語マッチ"
+  "label_word_match": "単語マッチ",
+  "list_back": "翻訳ツールに戻る",
+  "list_word_column": "単語",
+  "list_ipa_column": "IPA",
+  "list_description": "説明",
+  "list_links": "リンク"
 }

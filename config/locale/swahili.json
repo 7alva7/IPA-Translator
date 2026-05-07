@@ -41,5 +41,10 @@
   "label_pronounced": "Sauti:",
   "label_format": "Umbizo:",
   "label_variant": "Tofauti:",
-  "label_word_match": "Ulinganifu wa maneno"
+  "label_word_match": "Ulinganifu wa maneno",
+  "list_back": "Rudi kwa Tafsiri",
+  "list_word_column": "Neno",
+  "list_ipa_column": "IPA",
+  "list_description": "Uteuzi",
+  "list_links": "Viungo"
 }

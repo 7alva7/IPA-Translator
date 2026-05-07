@@ -41,5 +41,10 @@
   "label_pronounced": "Uitspraak:",
   "label_format": "Formaat:",
   "label_variant": "Variant:",
-  "label_word_match": "Woordovereenkomst"
+  "label_word_match": "Woordovereenkomst",
+  "list_back": "Terug naar Vertaler",
+  "list_word_column": "Woord",
+  "list_ipa_column": "IPA",
+  "list_description": "Beschrijving",
+  "list_links": "Links"
 }
