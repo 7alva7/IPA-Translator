@@ -138,52 +138,42 @@ function showError(msg) {
 // ============================================
 
 function showDocumentation() {
-  const langRows = Object.entries(LANGUAGES).map(([code, lang]) => {
-    const variants = lang.variants ? Object.keys(lang.variants).join(', ') : '—';
-    const formats = lang.formats ? Object.keys(lang.formats).join(', ') : '—';
-    return `<tr><td>${code}</td><td>${variants}</td><td>${formats}</td></tr>`;
-  }).join('');
+  const langLines = Object.entries(LANGUAGES).map(([code, lang]) => {
+    const variants = lang.variants ? Object.keys(lang.variants).join(', ') : '-';
+    const formats = lang.formats ? Object.keys(lang.formats).join(', ') : '-';
+    return `  ${code}: variants=[${variants}] formats=[${formats}]`;
+  }).join('\n');
 
-  app.innerHTML = `<div class="doc">
-<h1>IPA Translator — Agent Interface</h1>
-<p>Translate text to International Phonetic Alphabet (IPA) via URL parameters. No JavaScript interaction required.</p>
-<p><a href="SKILL.md">SKILL.md</a> — Agent usage guide (copy to your skill folder)</p>
+  const doc = [
+    'IPA Translator — Agent Interface',
+    'Translate text to IPA via URL query parameters on agent.html.',
+    '',
+    'USAGE: agent.html?language=<code>&input=<text>[&format=<fmt>][&variant=<var>][&displayFormat=<fmt>]',
+    '',
+    'PARAMETERS:',
+    '  language     (required) Language code',
+    '  input        (required) Text to translate (URL-encode non-ASCII)',
+    '  format           Output format key (Jyutping, Pinyin, etc). Defaults to raw IPA when omitted.',
+    '  variant          Language variant. Uses default when omitted.',
+    '  displayFormat    normal (text+IPA, default), ipa (IPA only), json, csv',
+    '',
+    'SUPPORTED LANGUAGES:',
+    langLines,
+    '',
+    'EXAMPLES:',
+    '  ?language=german&input=Hallo%20Welt',
+    '  ?language=cantonese&format=Jyutping&input=你好',
+    '  ?language=mandarin&variant=hans&format=Pinyin&input=你好',
+    '  ?language=cantonese&input=歡迎&displayFormat=ipa',
+    '  ?language=cantonese&input=歡迎&displayFormat=json',
+    '',
+    'OUTPUT: Plain text in <pre> tag. Errors prefixed with "Error:".',
+    '',
+    'NOTE: Requires a JavaScript browser (agent-browser, Playwright, Puppeteer). curl/HTTP fetch will not work.',
+    'See SKILL.md for full agent usage guide.',
+  ].join('\n');
 
-<h2>Prerequisites</h2>
-<p><b>Required Tooling</b> — use a browser-based tool like agent-browser or a headless engine (Playwright/Puppeteer) that executes JavaScript.</p>
-
-<h2>Usage</h2>
-<pre class="code-block">agent.html?language=&lt;code&gt;&amp;input=&lt;text&gt;[&amp;format=&lt;format&gt;][&amp;variant=&lt;variant&gt;][&amp;displayFormat=&lt;format&gt;]</pre>
-
-<h2>Parameters</h2>
-<table>
-<tr><th>Param</th><th>Required</th><th>Description</th></tr>
-<tr><td><code>language</code></td><td>Yes</td><td>Language code (see list below)</td></tr>
-<tr><td><code>input</code></td><td>Yes</td><td>Text to translate (URL-encode non-ASCII)</td></tr>
-<tr><td><code>format</code></td><td>No</td><td>Output format key (Jyutping, Pinyin, etc). Defaults to raw IPA when omitted</td></tr>
-<tr><td><code>variant</code></td><td>No</td><td>Language variant. Uses default when omitted</td></tr>
-<tr><td><code>displayFormat</code></td><td>No</td><td>Display mode: <code>normal</code> (text+IPA, default), <code>ipa</code> (IPA only), <code>json</code>, <code>csv</code></td></tr>
-</table>
-
-<h2>Supported Languages</h2>
-<table>
-<tr><th>Code</th><th>Variants</th><th>Formats</th></tr>
-${langRows}
-</table>
-
-<h2>Examples</h2>
-<ul>
-<li><a href="?language=german&amp;input=Hallo%20Welt">German IPA</a> — basic usage (text+IPA)</li>
-<li><a href="?language=cantonese&amp;format=Jyutping&amp;input=你好">Cantonese → Jyutping</a> — with format</li>
-<li><a href="?language=mandarin&amp;variant=hans&amp;format=Pinyin&amp;input=你好">Mandarin → Pinyin</a> — with variant + format</li>
-<li><a href="?language=khmer&amp;input=សួស្តី">Khmer</a> — special processor</li>
-<li><a href="?language=cantonese&amp;input=歡迎&displayFormat=ipa">IPA only</a> — pure IPA output</li>
-<li><a href="?language=cantonese&amp;input=歡迎&displayFormat=json">JSON output</a> — structured JSON</li>
-</ul>
-
-<h2>Output</h2>
-<p>Plain text output. Default is text+IPA format. Use <code>displayFormat=ipa</code> for IPA only, <code>json</code> for structured JSON, <code>csv</code> for CSV. Errors are returned as plain text prefixed with "Error:".</p>
-</div>`;
+  app.innerHTML = `<pre id="output">${doc}</pre>`;
 }
 
 function escapeHtml(text) {
