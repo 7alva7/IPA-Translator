@@ -58,7 +58,7 @@
   "home_feat3_title": "Mã nguồn mở",
   "home_feat3_desc": "Được xây dựng cho cộng đồng. Kiểm tra mã nguồn, đóng góp vào bảng dịch hoặc chạy hoàn toàn ngoại tuyến.",
   "home_agent_title": "Dành cho AI Agent",
-  "home_agent_desc": "Không phải người dùng con người? Sử dụng agent.html — truy vấn qua tham số URL, nhận IPA dạng văn bản thuần. Không có giao diện UI, không cần cài đặt, tiết kiệm token. Hoạt động với agent-browser, Playwright, Puppeteer và mọi công cụ trình duyệt hỗ trợ JS.",
+  "home_agent_desc": "Không phải người dùng con người? Sử dụng <a href=\"agent.html\"><code>agent.html</code></a>— truy vấn qua tham số URL, nhận IPA dạng văn bản thuần. Không có giao diện UI, không cần cài đặt, tiết kiệm token. Hoạt động với agent-browser, Playwright, Puppeteer và mọi công cụ trình duyệt hỗ trợ JS.",
   "home_select_language": "Chọn ngôn ngữ",
   "home_footer_about": "Giới thiệu",
   "home_footer_desc": "Dự án mã nguồn mở này dịch văn bản từ nhiều ngôn ngữ sang ký hiệu Bảng Mẫu Tự Âm Thanh Quốc Tế (IPA). Sử dụng cơ sở dữ liệu IPA và bảng chuyển đổi Latinh hóa để cung cấp phiên âm chính xác.",

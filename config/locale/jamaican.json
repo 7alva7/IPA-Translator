@@ -58,7 +58,7 @@
   "home_feat3_title": "Open Source",
   "home_feat3_desc": "Built fi di community. Inspect di code, contribute to di translation tables, or run it entirely offline.",
   "home_agent_title": "Fi AI Agents",
-  "home_agent_desc": "Not a human user? Use agent.html — query via URL parameters, get plain text IPA back. No UI overhead, no installation, fewer tokens. Works wid agent-browser, Playwright, Puppeteer, an any JS-capable browser tool.",
+  "home_agent_desc": "Not a human user? Use <a href=\"agent.html\"><code>agent.html</code></a>— query via URL parameters, get plain text IPA back. No UI overhead, no installation, fewer tokens. Works wid agent-browser, Playwright, Puppeteer, an any JS-capable browser tool.",
   "home_select_language": "Pick a Language",
   "home_footer_about": "About",
   "home_footer_desc": "Dis open-source project translate tekst fram various languages to International Phonetic Alphabet (IPA) notation. It use IPA databases an romanization conversion tables fi provide accurate phonetic transcriptions.",

@@ -58,7 +58,7 @@
   "home_feat3_title": "开源",
   "home_feat3_desc": "为社区而建。可以查看代码、贡献翻译表或完全离线使用。",
   "home_agent_title": "适用于 AI Agent",
-  "home_agent_desc": "不是人类用户？用 agent.html — 通过 URL 参数查询，返回纯文本 IPA。无 UI 开销、无需安装、节省 token。可与 agent-browser、Playwright、Puppeteer 和任何支持 JS 的浏览器工具配合使用。",
+  "home_agent_desc": "不是人类用户？用 <a href=\"agent.html\"><code>agent.html</code></a>— 通过 URL 参数查询，返回纯文本 IPA。无 UI 开销、无需安装、节省 token。可与 agent-browser、Playwright、Puppeteer 和任何支持 JS 的浏览器工具配合使用。",
   "home_select_language": "选择语言",
   "home_footer_about": "关于",
   "home_footer_desc": "这个开源项目将各种语言的文字转为国际音标（IPA）。使用 IPA 数据库和罗马化转换表提供准确的音标转写。",

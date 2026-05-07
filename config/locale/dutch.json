@@ -58,7 +58,7 @@
   "home_feat3_title": "Open Source",
   "home_feat3_desc": "Gebouwd voor de gemeenschap. Inspiceer de code, draag bij aan de vertalingstabellen of voer het volledig offline uit.",
   "home_agent_title": "Voor AI-agenten",
-  "home_agent_desc": "Geen menselijke gebruiker? Gebruik agent.html — query via URL-parameters, krijg platte tekst IPA terug. Geen UI-overhead, geen installatie, minder tokens. Werkt met agent-browser, Playwright, Puppeteer en elk JS-capabel browser-tool.",
+  "home_agent_desc": "Geen menselijke gebruiker? Gebruik <a href=\"agent.html\"><code>agent.html</code></a>— query via URL-parameters, krijg platte tekst IPA terug. Geen UI-overhead, geen installatie, minder tokens. Werkt met agent-browser, Playwright, Puppeteer en elk JS-capabel browser-tool.",
   "home_select_language": "Selecteer een taal",
   "home_footer_about": "Over",
   "home_footer_desc": "Dit open-source project vertaalt tekst uit verschillende talen naar de notatie van het Internationaal Fonetisch Alfabet (IPA). Het maakt gebruik van IPA-databases en romanisatieconversietabellen om nauwkeurige fonetische transcripties te bieden.",

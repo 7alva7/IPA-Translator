@@ -58,7 +58,7 @@
   "home_feat3_title": "Open Source",
   "home_feat3_desc": "Conçu pour la communauté. Inspectez le code, contribuez aux tableaux de traduction ou exécutez-le entièrement hors ligne.",
   "home_agent_title": "Pour les agents IA",
-  "home_agent_desc": "Pas un utilisateur humain ? Utilisez agent.html — interrogez via les paramètres URL, récupérez l'IPA en texte brut. Pas de surcharge d'interface, pas d'installation, moins de tokens. Fonctionne avec agent-browser, Playwright, Puppeteer et tout outil navigateur compatible JS.",
+  "home_agent_desc": "Pas un utilisateur humain ? Utilisez <a href=\"agent.html\"><code>agent.html</code></a>— interrogez via les paramètres URL, récupérez l'IPA en texte brut. Pas de surcharge d'interface, pas d'installation, moins de tokens. Fonctionne avec agent-browser, Playwright, Puppeteer et tout outil navigateur compatible JS.",
   "home_select_language": "Sélectionnez une langue",
   "home_footer_about": "À propos",
   "home_footer_desc": "Ce projet open-source traduit du texte de diverses langues en notation de l'Alphabet Phonétique International (IPA). Il utilise des bases de données IPA et des tableaux de conversion de romanisation pour fournir des transcriptions phonétiques précises.",

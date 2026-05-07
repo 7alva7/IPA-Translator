@@ -58,7 +58,7 @@
   "home_feat3_title": "مفتوح المصدر",
   "home_feat3_desc": "مبني للمجتمع. افحص الكود، ساهم في جداول الترجمة، أو شغله بدون اتصال بالكامل.",
   "home_agent_title": "لوكلاء الذكاء الاصطناعي",
-  "home_agent_desc": "ليس مستخدماً بشرياً؟ استخدم agent.html — استعلم عبر معلمات URL واحصل على نص IPA عادي. بدون واجهة مستخدم، بدون تثبيت، وبتوكن أقل. يعمل مع agent-browser وPlaywright وPuppeteer وأي أداة متصفح تدعم JavaScript.",
+  "home_agent_desc": "ليس مستخدماً بشرياً؟ استخدم <a href=\"agent.html\"><code>agent.html</code></a>— استعلم عبر معلمات URL واحصل على نص IPA عادي. بدون واجهة مستخدم، بدون تثبيت، وبتوكن أقل. يعمل مع agent-browser وPlaywright وPuppeteer وأي أداة متصفح تدعم JavaScript.",
   "home_select_language": "اختر لغة",
   "home_footer_about": "حول",
   "home_footer_desc": "هذا المشروع مفتوح المصدر يترجم النص من لغات مختلفة إلى رموز الأبجدية الصوتية الدولية (IPA). يستخدم قواعد بيانات IPA وجداول تحويل لتقديم نصوص صوتية دقيقة.",

@@ -58,7 +58,7 @@
   "home_feat3_title": "Opið burst",
   "home_feat3_desc": "Byggt fyrir samfélagið. Skoðaðu kóðann, láttu að þýðingartaflunum eða keyrðu það alveg utan línu.",
   "home_agent_title": "Fyrir AI-agenta",
-  "home_agent_desc": "Ekki mannlegur notandi? Notaðu agent.html — fyrirspurn með URL-breytum, fáðu plain text IPA aftur. Engin UI-byrða, engin uppsetning, færri tokens. Virkar með agent-browser, Playwright, Puppeteer og öllu JS-hæfu vafra-verkfæri.",
+  "home_agent_desc": "Ekki mannlegur notandi? Notaðu <a href=\"agent.html\"><code>agent.html</code></a>— fyrirspurn með URL-breytum, fáðu plain text IPA aftur. Engin UI-byrða, engin uppsetning, færri tokens. Virkar með agent-browser, Playwright, Puppeteer og öllu JS-hæfu vafra-verkfæri.",
   "home_select_language": "Veldu tungumál",
   "home_footer_about": "Um",
   "home_footer_desc": "Þetta opna burst verkefni þýður texta frá ýmsum tungumálum á táknanir alþjóðlega hljóðritunarstafrófsins (IPA). Það notar IPA-gagnagrunna og rómverskunarbreytingartaflor til að veita nákvæmar hljóðritunir.",

@@ -58,7 +58,7 @@
   "home_feat3_title": "オープンソース",
   "home_feat3_desc": "コミュニティのために作られました。コードを検査し、翻訳表に貢献したり、完全にオフラインで実行できます。",
   "home_agent_title": "AIエージェント向け",
-  "home_agent_desc": "人間ユーザーではありませんか？agent.html を使ってください — URLパラメータでクエリし、プレーンテキストのIPAを受け取れます。UIのオーバーヘッドなし、インストール不要、トークンも節約。agent-browser、Playwright、Puppeteer、およびJS対応のすべてのブラウザツールと連携します。",
+  "home_agent_desc": "人間ユーザーではありませんか？ <a href=\"agent.html\"><code>agent.html</code></a>を使ってください — URLパラメータでクエリし、プレーンテキストのIPAを受け取れます。UIのオーバーヘッドなし、インストール不要、トークンも節約。agent-browser、Playwright、Puppeteer、およびJS対応のすべてのブラウザツールと連携します。",
   "home_select_language": "言語を選択",
   "home_footer_about": "概要",
   "home_footer_desc": "このオープンソースプロジェクトは、各種言語のテキストを国際音声記号（IPA）に変換します。IPAデータベースとローマ字化変換表を使用して、正確な音声転写を提供します。",

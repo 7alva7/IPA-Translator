@@ -58,7 +58,7 @@
   "home_feat3_title": "Chanzo Wazi",
   "home_feat3_desc": "Imejengwa kwa jamii. Angalia msimbo, changia jedwali za tafsiri au uendeshe kabisa nje ya mtandao.",
   "home_agent_title": "Kwa wateja wa AI",
-  "home_agent_desc": "Sio mtumiaji binadamu? Tumia agent.html — uliza kupitia vigezo vya URL, pata IPA kama maandishi. Hakuna mzigo wa UI, hakuna usakinishaji, tokeni chache. Inafanya kazi na agent-browser, Playwright, Puppeteer na zana yoyote ya kivinjari inayoweza JS.",
+  "home_agent_desc": "Sio mtumiaji binadamu? Tumia <a href=\"agent.html\"><code>agent.html</code></a>— uliza kupitia vigezo vya URL, pata IPA kama maandishi. Hakuna mzigo wa UI, hakuna usakinishaji, tokeni chache. Inafanya kazi na agent-browser, Playwright, Puppeteer na zana yoyote ya kivinjari inayoweza JS.",
   "home_select_language": "Chagua lugha",
   "home_footer_about": "Kuhusu",
   "home_footer_desc": "Mradi huu wa chanzo wazi unatafsiri maandishi kutoka lugha mbalimbali kuwa notisi ya Herufi za Kiafya Kimataifa (IPA). Inatumia hifadhidata za IPA na jedwali za ubadilishaji wa romanisasi kutoa transkripsi sahihi za kiafya.",

@@ -58,7 +58,7 @@
   "home_feat3_title": "Open Source",
   "home_feat3_desc": "Bygget for samfunnet. Inspiser koden, bidra til oversettelsstabellene eller kjør det helt frakoblet.",
   "home_agent_title": "For AI-agenter",
-  "home_agent_desc": "Ikke en menneskelig bruker? Bruk agent.html — spørr via URL-parametere, få plain text IPA tilbake. Ingen UI-overhead, ingen installasjon, færre tokens. Fungerer med agent-browser, Playwright, Puppeteer og ethvert JS-kapabelt nettleserverktøy.",
+  "home_agent_desc": "Ikke en menneskelig bruker? Bruk <a href=\"agent.html\"><code>agent.html</code></a>— spørr via URL-parametere, få plain text IPA tilbake. Ingen UI-overhead, ingen installasjon, færre tokens. Fungerer med agent-browser, Playwright, Puppeteer og ethvert JS-kapabelt nettleserverktøy.",
   "home_select_language": "Velg et språk",
   "home_footer_about": "Om",
   "home_footer_desc": "Dette open-source-prosjektet oversetter tekst fra ulike språk til notasjonen for det internasjonale fonetiske alfabetet (IPA). Det bruker IPA-databaser og romaniseringskonverteringstabeller for å levere nøyaktige fonetiske transkripsjoner.",

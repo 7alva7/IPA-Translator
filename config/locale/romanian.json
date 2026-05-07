@@ -58,7 +58,7 @@
   "home_feat3_title": "Open Source",
   "home_feat3_desc": "Construit pentru comunitate. Inspecționați codul, contribuiți la tabelele de traducere sau executați-l complet offline.",
   "home_agent_title": "Pentru agenți IA",
-  "home_agent_desc": "Nu sunteți un utilizator uman? Folosiți agent.html — interogați prin parametri URL, primiți IPA în text simplu. Fără suprasarcină de interfață, fără instalare, mai puține token-uri. Funcționează cu agent-browser, Playwright, Puppeteer și orice instrument de browser capabil de JS.",
+  "home_agent_desc": "Nu sunteți un utilizator uman? Folosiți <a href=\"agent.html\"><code>agent.html</code></a>— interogați prin parametri URL, primiți IPA în text simplu. Fără suprasarcină de interfață, fără instalare, mai puține token-uri. Funcționează cu agent-browser, Playwright, Puppeteer și orice instrument de browser capabil de JS.",
   "home_select_language": "Selectați o limbă",
   "home_footer_about": "Despre",
   "home_footer_desc": "Acest proiect open-source traduce textul din diverse limbi în notația Alfabetului Fonetic Internațional (IPA). Utilizează baze de date IPA și tabele de conversie a romanizării pentru a oferi transcrieri fonetice precise.",

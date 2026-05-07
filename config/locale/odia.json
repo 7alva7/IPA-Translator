@@ -58,7 +58,7 @@
   "home_feat3_title": "Open Source",
   "home_feat3_desc": "ସମ୍ପ୍ରଦାୟ ପାଇଁ ନିର୍ମିତ। କୋଡ୍ ଯାଞ୍ଚ କରନ୍ତୁ, ଅନୁବାଦ ଟେବୁଲ୍‌ରେ ଅବଦାନ କରନ୍ତୁ, କିମ୍ବା ସମ୍ପୂର୍ଣ୍ଣ ଅଫ୍‌ଲାଇନ୍ ଚଳାନ୍ତୁ।",
   "home_agent_title": "AI Agent ପାଇଁ",
-  "home_agent_desc": "ମାନବ ବ୍ୟବହାରକାରୀ ନୁହଁନ୍ତି? agent.html ବ୍ୟବହାର କରନ୍ତୁ — URL ପାରାମିଟର ମାଧ୍ୟମରେ ଯାଞ୍ଚ କରନ୍ତୁ, ସାଧାରଣ ପାଠ୍ୟ IPA ପାଇବେ। UI overhead ନାହିଁ, installation ନାହିଁ, କମ୍ token। agent-browser, Playwright, Puppeteer ଏବଂ ଯେକୌଣସି JS-କ୍ଷମ ବ୍ରାଉଜର ଟୁଲ୍ ସହିତ କାମ କରେ।",
+  "home_agent_desc": "ମାନବ ବ୍ୟବହାରକାରୀ ନୁହଁନ୍ତି? <a href=\"agent.html\"><code>agent.html</code></a>ବ୍ୟବହାର କରନ୍ତୁ — URL ପାରାମିଟର ମାଧ୍ୟମରେ ଯାଞ୍ଚ କରନ୍ତୁ, ସାଧାରଣ ପାଠ୍ୟ IPA ପାଇବେ। UI overhead ନାହିଁ, installation ନାହିଁ, କମ୍ token। agent-browser, Playwright, Puppeteer ଏବଂ ଯେକୌଣସି JS-କ୍ଷମ ବ୍ରାଉଜର ଟୁଲ୍ ସହିତ କାମ କରେ।",
   "home_select_language": "ଭାଷା ବାଛନ୍ତୁ",
   "home_footer_about": "ସମ୍ବନ୍ଧରେ",
   "home_footer_desc": "ଏହି open-source ପ୍ରକଳ୍ପ ବିଭିନ୍ନ ଭାଷାରୁ ପାଠ୍ୟକୁ ଆନ୍ତର୍ଜାତିକ ଉଚ୍ଚାରଣ ସଙ୍କେତ (IPA) ରେ ଅନୁବାଦ କରେ। ଏହା IPA ତଥ୍ୟକୋଷ ଏବଂ ରୋମାନୀକରଣ ରୂପାନ୍ତର ଟେବୁଲ୍ ବ୍ୟବହାର କରି ସଠିକ୍ ଉଚ୍ଚାରଣ ଟ୍ରାନସ୍କ୍ରିପସନ୍ ପ୍ରଦାନ କରେ।",

@@ -145,10 +145,8 @@ export function initLocaleSelector(options = {}) {
       // Restore original HTML text
       document.querySelectorAll('[data-i18n]').forEach(el => {
         if (el.dataset.i18nOriginal) {
-          if (el.childNodes.length > 1) {
-            const firstText = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
-            if (firstText) firstText.textContent = el.dataset.i18nOriginal;
-            else el.textContent = el.dataset.i18nOriginal;
+          if (el.dataset.html) {
+            el.innerHTML = el.dataset.i18nOriginal;
           } else {
             el.textContent = el.dataset.i18nOriginal;
           }
@@ -164,12 +162,10 @@ export function initLocaleSelector(options = {}) {
       const key = el.dataset.i18n;
       if (locale[key] !== undefined) {
         if (!el.dataset.i18nOriginal) {
-          el.dataset.i18nOriginal = el.textContent;
+          el.dataset.i18nOriginal = el.innerHTML;
         }
-        if (el.childNodes.length > 1) {
-          const firstText = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
-          if (firstText) firstText.textContent = locale[key];
-          else el.textContent = locale[key];
+        if (el.dataset.html) {
+          el.innerHTML = locale[key];
         } else {
           el.textContent = locale[key];
         }

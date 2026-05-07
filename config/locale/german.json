@@ -58,7 +58,7 @@
   "home_feat3_title": "Open Source",
   "home_feat3_desc": "Für die Gemeinschaft entwickelt. Untersuchen Sie den Code, tragen Sie zu den Übersetzungstabellen bei oder führen Sie es vollständig offline aus.",
   "home_agent_title": "Für KI-Agenten",
-  "home_agent_desc": "Kein menschlicher Nutzer? Verwenden Sie agent.html — abfragen über URL-Parameter, erhalten Sie IPA als Klartext. Kein UI-Overhead, keine Installation, weniger Tokens. Funktioniert mit agent-browser, Playwright, Puppeteer und jedem JS-fähigen Browser-Tool.",
+  "home_agent_desc": "Kein menschlicher Nutzer? Verwenden Sie <a href=\"agent.html\"><code>agent.html</code></a>— abfragen über URL-Parameter, erhalten Sie IPA als Klartext. Kein UI-Overhead, keine Installation, weniger Tokens. Funktioniert mit agent-browser, Playwright, Puppeteer und jedem JS-fähigen Browser-Tool.",
   "home_select_language": "Wählen Sie eine Sprache",
   "home_footer_about": "Über",
   "home_footer_desc": "Dieses Open-Source-Projekt übersetzt Text aus verschiedenen Sprachen in die Notation des Internationalen Phonetischen Alphabets (IPA). Es verwendet IPA-Datenbanken und Romanisierungskonvertierungstabellen für präzise phonetische Transkriptionen.",

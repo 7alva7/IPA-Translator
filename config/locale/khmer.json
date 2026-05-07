@@ -58,7 +58,7 @@
   "home_feat3_title": "បើកទូរង (Open Source)",
   "home_feat3_desc": "សាងសង់ឡើងសម្រាប់សហគមន៍។ ត្រួតពិនិត្យកូដ ចូលរួមក្នុងតារាងបកប្រែ ឬដំណើរការដាច់អិនធឺណិត។",
   "home_agent_title": "សម្រាប់ AI Agent",
-  "home_agent_desc": "មិនមែនជាអ្នកប្រើប្រាស់មនុស្សទេ? ប្រើ agent.html — សួរតាម URL parameters ទទួលបាន IPAជាអត្ថបទធម្មតា។ គ្មាន UI overhead គ្មានការដំឡើង និងតូកែនតិច។ ធ្វើការជាមួយ agent-browser, Playwright, Puppeteer និងឧបករណ៍ browser ដែលអាច JS។",
+  "home_agent_desc": "មិនមែនជាអ្នកប្រើប្រាស់មនុស្សទេ? ប្រើ <a href=\"agent.html\"><code>agent.html</code></a>— សួរតាម URL parameters ទទួលបាន IPAជាអត្ថបទធម្មតា។ គ្មាន UI overhead គ្មានការដំឡើង និងតូកែនតិច។ ធ្វើការជាមួយ agent-browser, Playwright, Puppeteer និងឧបករណ៍ browser ដែលអាច JS។",
   "home_select_language": "ជ្រើសរើសភាសា",
   "home_footer_about": "អំពី",
   "home_footer_desc": "គម្រោង open-source នេះបកប្រែអត្ថបទពីភាសាផ្សេងៗទៅជា IPA។ វាប្រើមូលដ្ឋានទិន្នន័យ IPA និងតារាងបំលែងដើម្បីផ្តល់ការតំណាងសំឡេងដែលមានភាពច្បាស់។",
