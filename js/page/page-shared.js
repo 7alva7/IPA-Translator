@@ -145,7 +145,7 @@ export function initLocaleSelector(options = {}) {
       // Restore original HTML text
       document.querySelectorAll('[data-i18n]').forEach(el => {
         if (el.dataset.i18nOriginal) {
-          if (el.dataset.html) {
+          if ('html' in el.dataset) {
             el.innerHTML = el.dataset.i18nOriginal;
           } else {
             el.textContent = el.dataset.i18nOriginal;
@@ -164,7 +164,7 @@ export function initLocaleSelector(options = {}) {
         if (!el.dataset.i18nOriginal) {
           el.dataset.i18nOriginal = el.innerHTML;
         }
-        if (el.dataset.html) {
+        if ('html' in el.dataset) {
           el.innerHTML = locale[key];
         } else {
           el.textContent = locale[key];
