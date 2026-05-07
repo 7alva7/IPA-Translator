@@ -46,5 +46,21 @@
   "list_word_column": "Ord",
   "list_ipa_column": "IPA",
   "list_description": "Beskrivelse",
-  "list_links": "Lenker"
+  "list_links": "Lenker",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Internasjonalt fonetisk alfabet-oversetter",
+  "home_headline": "Oversett tekst til IPA øyeblikkelig",
+  "home_intro": "Et open-source-verktøy for fonetisk transkripsjon som støtter oversettelse tegn for tegn og frasebasert oversettelse for lingvister, studenter og forskere.",
+  "home_feat1_title": "100 % lokal bearbeiding",
+  "home_feat1_desc": "Ingen data forlater enheten din. Alle oversettelser beregnes direkte i nettleseren din for maksimal personvern og øyeblikkelig hastighet.",
+  "home_feat2_title": "24+ språk",
+  "home_feat2_desc": "Utomfattende støtte for et bredt utvalg av språk, med bruk av svært nøyaktige romaniserings- og IPA-konverteringstabeller.",
+  "home_feat3_title": "Open Source",
+  "home_feat3_desc": "Bygget for samfunnet. Inspiser koden, bidra til oversettelsstabellene eller kjør det helt frakoblet.",
+  "home_agent_title": "For AI-agenter",
+  "home_agent_desc": "Ikke en menneskelig bruker? Bruk agent.html — spørr via URL-parametere, få plain text IPA tilbake. Ingen UI-overhead, ingen installasjon, færre tokens. Fungerer med agent-browser, Playwright, Puppeteer og ethvert JS-kapabelt nettleserverktøy.",
+  "home_select_language": "Velg et språk",
+  "home_footer_about": "Om",
+  "home_footer_desc": "Dette open-source-prosjektet oversetter tekst fra ulike språk til notasjonen for det internasjonale fonetiske alfabetet (IPA). Det bruker IPA-databaser og romaniseringskonverteringstabeller for å levere nøyaktige fonetiske transkripsjoner.",
+  "home_footer_links": "Nyttige lenker"
 }

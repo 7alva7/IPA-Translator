@@ -46,5 +46,21 @@
   "list_word_column": "Word",
   "list_ipa_column": "IPA",
   "list_description": "Mek Yu Know",
-  "list_links": "Links"
+  "list_links": "Links",
+  "home_title": "IPA Translator",
+  "home_subtitle": "International Phonetic Alphabet Translator",
+  "home_headline": "Translate Tekst to IPA Right Now",
+  "home_intro": "An open-source phonetic transcription tool weh support character-by-character an phrase-based translation fi linguists, learners, an researchers.",
+  "home_feat1_title": "100% Local Processing",
+  "home_feat1_desc": "Zero data leave yuh device. All translation dem get calculate direct inna yuh browser fi maximum privacy an instant speed.",
+  "home_feat2_title": "24+ Languages",
+  "home_feat2_desc": "Extensive support fi a wide range a languages, use highly accurate romanization an IPA conversion tables.",
+  "home_feat3_title": "Open Source",
+  "home_feat3_desc": "Built fi di community. Inspect di code, contribute to di translation tables, or run it entirely offline.",
+  "home_agent_title": "Fi AI Agents",
+  "home_agent_desc": "Not a human user? Use agent.html — query via URL parameters, get plain text IPA back. No UI overhead, no installation, fewer tokens. Works wid agent-browser, Playwright, Puppeteer, an any JS-capable browser tool.",
+  "home_select_language": "Pick a Language",
+  "home_footer_about": "About",
+  "home_footer_desc": "Dis open-source project translate tekst fram various languages to International Phonetic Alphabet (IPA) notation. It use IPA databases an romanization conversion tables fi provide accurate phonetic transcriptions.",
+  "home_footer_links": "Yooful Links"
 }

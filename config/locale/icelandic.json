@@ -46,5 +46,21 @@
   "list_word_column": "Orð",
   "list_ipa_column": "IPA",
   "list_description": "Lýsing",
-  "list_links": "Tenglar"
+  "list_links": "Tenglar",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Alþjóðlegt hljóðritunarstafrófs þýðir",
+  "home_headline": "Þýddu texta á IPA strax",
+  "home_intro": "Opið burstaverkfæri fyrir hljóðritun sem styður þýðingu staf fyrir staf og setningarkennda þýðingu fyrir málfræðinga, nemendur og rannsakendur.",
+  "home_feat1_title": "100 % staðbundin vinnsla",
+  "home_feat1_desc": "Engin gögn yfirgefa tækið þitt. Allar þýðingar eru reiknaðar beint í vafrann þinn fyrir hámarks persónuvernd og straxhraða.",
+  "home_feat2_title": "24+ tungumál",
+  "home_feat2_desc": "Útvíkkuð stuðningur fyrir vítt úrval af tungumálum, með mjög nákvæmum rómverskunar- og IPA-breytingartaflum.",
+  "home_feat3_title": "Opið burst",
+  "home_feat3_desc": "Byggt fyrir samfélagið. Skoðaðu kóðann, láttu að þýðingartaflunum eða keyrðu það alveg utan línu.",
+  "home_agent_title": "Fyrir AI-agenta",
+  "home_agent_desc": "Ekki mannlegur notandi? Notaðu agent.html — fyrirspurn með URL-breytum, fáðu plain text IPA aftur. Engin UI-byrða, engin uppsetning, færri tokens. Virkar með agent-browser, Playwright, Puppeteer og öllu JS-hæfu vafra-verkfæri.",
+  "home_select_language": "Veldu tungumál",
+  "home_footer_about": "Um",
+  "home_footer_desc": "Þetta opna burst verkefni þýður texta frá ýmsum tungumálum á táknanir alþjóðlega hljóðritunarstafrófsins (IPA). Það notar IPA-gagnagrunna og rómverskunarbreytingartaflor til að veita nákvæmar hljóðritunir.",
+  "home_footer_links": "Nýtlegir tenglar"
 }

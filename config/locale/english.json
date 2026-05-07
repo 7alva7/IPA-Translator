@@ -46,5 +46,21 @@
   "list_word_column": "Word",
   "list_ipa_column": "IPA",
   "list_description": "Description",
-  "list_links": "Links"
+  "list_links": "Links",
+  "home_title": "IPA Translator",
+  "home_subtitle": "International Phonetic Alphabet Translator",
+  "home_headline": "Translate Text to IPA Instantly",
+  "home_intro": "An open-source phonetic transcription tool supporting character-by-character and phrase-based translation for linguists, learners, and researchers.",
+  "home_feat1_title": "100% Local Processing",
+  "home_feat1_desc": "Zero data leaves your device. All translations are calculated directly in your browser for maximum privacy and instant speed.",
+  "home_feat2_title": "24+ Languages",
+  "home_feat2_desc": "Extensive support for a wide range of languages, utilizing highly accurate romanization and IPA conversion tables.",
+  "home_feat3_title": "Open Source",
+  "home_feat3_desc": "Built for the community. Inspect the code, contribute to the translation tables, or run it entirely offline.",
+  "home_agent_title": "For AI Agents",
+  "home_agent_desc": "Not a human user? Use agent.html — query via URL parameters, get plain text IPA back. No UI overhead, no installation, fewer tokens. Works with agent-browser, Playwright, Puppeteer, and any JS-capable browser tool.",
+  "home_select_language": "Select a Language",
+  "home_footer_about": "About",
+  "home_footer_desc": "This open-source project translates text from various languages to International Phonetic Alphabet (IPA) notation. It uses IPA databases and romanization conversion tables to provide accurate phonetic transcriptions.",
+  "home_footer_links": "Useful Links"
 }

@@ -46,5 +46,21 @@
   "list_word_column": "Kata",
   "list_ipa_column": "IPA",
   "list_description": "Penerangan",
-  "list_links": "Pautan"
+  "list_links": "Pautan",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Penterjemah Abjad Fonetik Antarabangsa",
+  "home_headline": "Terjemahkan teks ke IPA dengan serta-merta",
+  "home_intro": "Alat transkripsi fonetik sumber terbuka yang menyokong terjemahan aksara demi aksara dan berasaskan frasa untuk linguis, pelajar dan penyelidik.",
+  "home_feat1_title": "Pemprosesan 100 % tempatan",
+  "home_feat1_desc": "Tiada data meninggalkan peranti anda. Semua terjemahan dikira terus dalam pelayar anda untuk privasi maksimum dan kelajuan serta-merta.",
+  "home_feat2_title": "24+ bahasa",
+  "home_feat2_desc": "Sokongan meluas untuk pelbagai bahasa, menggunakan jadual romanisasi dan penukaran IPA yang sangat tepat.",
+  "home_feat3_title": "Sumber Terbuka",
+  "home_feat3_desc": "Dibina untuk komuniti. Periksa kod, sumbangkan kepada jadual terjemahan atau jalankannya sepenuhnya tanpa sambungan.",
+  "home_agent_title": "Untuk ejen AI",
+  "home_agent_desc": "Bukan pengguna manusia? Gunakan agent.html — pertanyaan melalui parameter URL, dapatkan IPA teks biasa. Tiada beban UI, tiada pemasangan, lebih sedikit token. Berfungsi dengan agent-browser, Playwright, Puppeteer dan mana-mana alat pelayar yang menyokong JS.",
+  "home_select_language": "Pilih bahasa",
+  "home_footer_about": "Tentang",
+  "home_footer_desc": "Projek sumber terbuka ini menerjemahkan teks daripada pelbagai bahasa kepada notasi Abjad Fonetik Antarabangsa (IPA). Ia menggunakan pangkalan data IPA dan jadual penukaran romanisasi untuk menyediakan transkripsi fonetik yang tepat.",
+  "home_footer_links": "Pautan berguna"
 }

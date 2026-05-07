@@ -46,5 +46,21 @@
   "list_word_column": "文字",
   "list_ipa_column": "IPA",
   "list_description": "说明",
-  "list_links": "链接"
+  "list_links": "链接",
+  "home_title": "IPA 翻译器",
+  "home_subtitle": "国际音标翻译器",
+  "home_headline": "即时将文字转为 IPA",
+  "home_intro": "一个开源的音标转写工具，支持逐字和短语翻译，为语言学家、学习者和研究者设计。",
+  "home_feat1_title": "100% 本地处理",
+  "home_feat1_desc": "数据不会离开您的设备。所有翻译在浏览器中直接计算，保障隐私和速度。",
+  "home_feat2_title": "24+ 种语言",
+  "home_feat2_desc": "广泛支持多种语言，使用高精度的罗马化和 IPA 转换表。",
+  "home_feat3_title": "开源",
+  "home_feat3_desc": "为社区而建。可以查看代码、贡献翻译表或完全离线使用。",
+  "home_agent_title": "适用于 AI Agent",
+  "home_agent_desc": "不是人类用户？用 agent.html — 通过 URL 参数查询，返回纯文本 IPA。无 UI 开销、无需安装、节省 token。可与 agent-browser、Playwright、Puppeteer 和任何支持 JS 的浏览器工具配合使用。",
+  "home_select_language": "选择语言",
+  "home_footer_about": "关于",
+  "home_footer_desc": "这个开源项目将各种语言的文字转为国际音标（IPA）。使用 IPA 数据库和罗马化转换表提供准确的音标转写。",
+  "home_footer_links": "实用链接"
 }

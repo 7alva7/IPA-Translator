@@ -46,5 +46,21 @@
   "list_word_column": "Woord",
   "list_ipa_column": "IPA",
   "list_description": "Beschrijving",
-  "list_links": "Links"
+  "list_links": "Links",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Internationaal Fonetisch Alfabet Vertaler",
+  "home_headline": "Vertaal tekst naar IPA direct",
+  "home_intro": "Een open-source fonetisch transcriptietool die ondersteuning biedt voor vertaling karakter per karakter en op basis van zinnen voor taalkundigen, studenten en onderzoekers.",
+  "home_feat1_title": "100 % lokale verwerking",
+  "home_feat1_desc": "Geen gegevens verlaten uw apparaat. Alle vertalingen worden direct in uw browser berekend voor maximale privacy en directe snelheid.",
+  "home_feat2_title": "24+ talen",
+  "home_feat2_desc": "Uitgebreide ondersteuning voor een breed scala aan talen, met gebruik van zeer nauwkeurige romanisatie- en IPA-conversietabellen.",
+  "home_feat3_title": "Open Source",
+  "home_feat3_desc": "Gebouwd voor de gemeenschap. Inspiceer de code, draag bij aan de vertalingstabellen of voer het volledig offline uit.",
+  "home_agent_title": "Voor AI-agenten",
+  "home_agent_desc": "Geen menselijke gebruiker? Gebruik agent.html — query via URL-parameters, krijg platte tekst IPA terug. Geen UI-overhead, geen installatie, minder tokens. Werkt met agent-browser, Playwright, Puppeteer en elk JS-capabel browser-tool.",
+  "home_select_language": "Selecteer een taal",
+  "home_footer_about": "Over",
+  "home_footer_desc": "Dit open-source project vertaalt tekst uit verschillende talen naar de notatie van het Internationaal Fonetisch Alfabet (IPA). Het maakt gebruik van IPA-databases en romanisatieconversietabellen om nauwkeurige fonetische transcripties te bieden.",
+  "home_footer_links": "Nuttige links"
 }

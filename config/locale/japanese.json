@@ -46,5 +46,21 @@
   "list_word_column": "単語",
   "list_ipa_column": "IPA",
   "list_description": "説明",
-  "list_links": "リンク"
+  "list_links": "リンク",
+  "home_title": "IPA トランスレーター",
+  "home_subtitle": "国際音声記号翻訳ツール",
+  "home_headline": "テキストを即座にIPAに変換",
+  "home_intro": "言語学者、学習者、研究者のためのオープンソース音声記号ツール。文字単位とフレーズベースの翻訳をサポートします。",
+  "home_feat1_title": "100% ローカル処理",
+  "home_feat1_desc": "データはデバイスから離れません。すべての翻訳がブラウザ内で直接計算され、プライバシーと高速性を確保します。",
+  "home_feat2_title": "24以上の言語",
+  "home_feat2_desc": "高精度なローマ字化およびIPA変換表を活用し、幅広い言語を包括的にサポートします。",
+  "home_feat3_title": "オープンソース",
+  "home_feat3_desc": "コミュニティのために作られました。コードを検査し、翻訳表に貢献したり、完全にオフラインで実行できます。",
+  "home_agent_title": "AIエージェント向け",
+  "home_agent_desc": "人間ユーザーではありませんか？agent.html を使ってください — URLパラメータでクエリし、プレーンテキストのIPAを受け取れます。UIのオーバーヘッドなし、インストール不要、トークンも節約。agent-browser、Playwright、Puppeteer、およびJS対応のすべてのブラウザツールと連携します。",
+  "home_select_language": "言語を選択",
+  "home_footer_about": "概要",
+  "home_footer_desc": "このオープンソースプロジェクトは、各種言語のテキストを国際音声記号（IPA）に変換します。IPAデータベースとローマ字化変換表を使用して、正確な音声転写を提供します。",
+  "home_footer_links": "有用なリンク"
 }

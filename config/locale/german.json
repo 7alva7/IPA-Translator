@@ -46,5 +46,21 @@
   "list_word_column": "Wort",
   "list_ipa_column": "IPA",
   "list_description": "Beschreibung",
-  "list_links": "Links"
+  "list_links": "Links",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Internationales Phonetisches Alphabet Übersetzer",
+  "home_headline": "Text sofort in IPA übersetzen",
+  "home_intro": "Ein Open-Source-Werkzeug für phonetische Transkription mit Unterstützung für zeichenweise und phrasenbasierte Übersetzung für Linguisten, Lernende und Forscher.",
+  "home_feat1_title": "100 % lokale Verarbeitung",
+  "home_feat1_desc": "Keine Daten verlassen Ihr Gerät. Alle Übersetzungen werden direkt in Ihrem Browser berechnet für maximale Privatsphäre und sofortige Geschwindigkeit.",
+  "home_feat2_title": "24+ Sprachen",
+  "home_feat2_desc": "Umfassende Unterstützung für eine breite Palette von Sprachen mit hochpräzisen Romanisierungs- und IPA-Konvertierungstabellen.",
+  "home_feat3_title": "Open Source",
+  "home_feat3_desc": "Für die Gemeinschaft entwickelt. Untersuchen Sie den Code, tragen Sie zu den Übersetzungstabellen bei oder führen Sie es vollständig offline aus.",
+  "home_agent_title": "Für KI-Agenten",
+  "home_agent_desc": "Kein menschlicher Nutzer? Verwenden Sie agent.html — abfragen über URL-Parameter, erhalten Sie IPA als Klartext. Kein UI-Overhead, keine Installation, weniger Tokens. Funktioniert mit agent-browser, Playwright, Puppeteer und jedem JS-fähigen Browser-Tool.",
+  "home_select_language": "Wählen Sie eine Sprache",
+  "home_footer_about": "Über",
+  "home_footer_desc": "Dieses Open-Source-Projekt übersetzt Text aus verschiedenen Sprachen in die Notation des Internationalen Phonetischen Alphabets (IPA). Es verwendet IPA-Datenbanken und Romanisierungskonvertierungstabellen für präzise phonetische Transkriptionen.",
+  "home_footer_links": "Nützliche Links"
 }

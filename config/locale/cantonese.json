@@ -46,5 +46,21 @@
   "list_word_column": "文字",
   "list_ipa_column": "IPA",
   "list_description": "說明",
-  "list_links": "連結"
+  "list_links": "連結",
+  "home_title": "IPA 翻譯器",
+  "home_subtitle": "國際音標翻譯器",
+  "home_headline": "即時將文字轉為 IPA",
+  "home_intro": "一個開源嘅音標轉寫工具，支援逐字同按短語翻譯，為語言學家、學習者同研究者設計。",
+  "home_feat1_title": "100% 本地處理",
+  "home_feat1_desc": "所有數據唔會離開你嘅裝置。所有翻譯喺瀏覽器內直接計算，保障私隱同速度。",
+  "home_feat2_title": "24+ 種語言",
+  "home_feat2_desc": "廣泛支援多種語言，使用高精度嘅羅馬化同 IPA 轉換表。",
+  "home_feat3_title": "開源",
+  "home_feat3_desc": "為社群而建。可以檢查程式碼、貢獻翻譯表或者完全離線使用。",
+  "home_agent_title": "適用於 AI Agent",
+  "home_agent_desc": "唔係人類用戶？用 agent.html — 透過 URL 參數查詢，返平文本 IPA。無 UI 開銷、無需安裝、少啲 token。同 agent-browser、Playwright、Puppeteer 同任何支援 JS 嘅瀏覽器工具一齊用。",
+  "home_select_language": "選擇語言",
+  "home_footer_about": "關於",
+  "home_footer_desc": "呢個開源項目將各種語言嘅文字轉為國際音標（IPA）。使用 IPA 資料庫同羅馬化轉換表提供準確嘅音標轉寫。",
+  "home_footer_links": "實用連結"
 }

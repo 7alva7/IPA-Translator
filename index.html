@@ -11,8 +11,8 @@
   <body>
     <div class="header">
       <div class="titles">
-        <h1>IPA Translator</h1>
-        <h2>International Phonetic Alphabet Translator</h2>
+        <h1 data-i18n="home_title">IPA Translator</h1>
+        <h2 data-i18n="home_subtitle">International Phonetic Alphabet Translator</h2>
       </div>
       <button id="dark-mode-toggle" class="btn-theme" aria-label="Toggle dark mode">
         <span class="icon"></span>
@@ -21,37 +21,37 @@
     <hr />
 
     <section class="hero-section">
-      <h2 class="hero-headline">Translate Text to IPA Instantly</h2>
-      <p class="intro-text">
+      <h2 class="hero-headline" data-i18n="home_headline">Translate Text to IPA Instantly</h2>
+      <p class="intro-text" data-i18n="home_intro">
         An open-source phonetic transcription tool supporting character-by-character and phrase-based translation for linguists, learners, and researchers.
       </p>
     </section>
 
     <section class="features-grid">
       <div class="feature-card">
-        <h3>100% Local Processing</h3>
-        <p>Zero data leaves your device. All translations are calculated directly in your browser for maximum privacy and instant speed.</p>
+        <h3 data-i18n="home_feat1_title">100% Local Processing</h3>
+        <p data-i18n="home_feat1_desc">Zero data leaves your device. All translations are calculated directly in your browser for maximum privacy and instant speed.</p>
       </div>
       <div class="feature-card">
-        <h3>24+ Languages</h3>
-        <p>Extensive support for a wide range of languages, utilizing highly accurate romanization and IPA conversion tables.</p>
+        <h3 data-i18n="home_feat2_title">24+ Languages</h3>
+        <p data-i18n="home_feat2_desc">Extensive support for a wide range of languages, utilizing highly accurate romanization and IPA conversion tables.</p>
       </div>
       <div class="feature-card">
-        <h3>Open Source</h3>
-        <p>Built for the community. Inspect the code, contribute to the translation tables, or run it entirely offline.</p>
+        <h3 data-i18n="home_feat3_title">Open Source</h3>
+        <p data-i18n="home_feat3_desc">Built for the community. Inspect the code, contribute to the translation tables, or run it entirely offline.</p>
       </div>
     </section>
 
     <section class="agent-section">
-      <h3 class="agent-title">For AI Agents</h3>
-      <p class="agent-desc">
+      <h3 class="agent-title" data-i18n="home_agent_title">For AI Agents</h3>
+      <p class="agent-desc" data-i18n="home_agent_desc">
         Not a human user? Use <a href="agent.html"><code>agent.html</code></a> — query via URL parameters, get plain text IPA back. No UI overhead, no installation, fewer tokens. Works with agent-browser, Playwright, Puppeteer, and any JS-capable browser tool. <a class="agent-link" href="agent.html">View full documentation &rarr;</a>
       </p>
       <pre class="agent-example"><a href="agent.html?language=cantonese&amp;format=Jyutping&amp;input=早晨">agent.html?language=cantonese&format=Jyutping&input=早晨</a></pre>
     </section>
 
     <div class="section-title">
-      <h3>Select a Language</h3>
+      <h3 data-i18n="home_select_language">Select a Language</h3>
     </div>
 
     <div class="lang-grid" id="language-grid"></div>
@@ -59,12 +59,12 @@
     <footer class="footer">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4>About</h4>
-          <p>This open-source project translates text from various languages to International Phonetic Alphabet (IPA) notation. It uses IPA databases and romanization conversion tables to provide accurate phonetic transcriptions.</p>
+          <h4 data-i18n="home_footer_about">About</h4>
+          <p data-i18n="home_footer_desc">This open-source project translates text from various languages to International Phonetic Alphabet (IPA) notation. It uses IPA databases and romanization conversion tables to provide accurate phonetic transcriptions.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Useful Links</h4>
+          <h4 data-i18n="home_footer_links">Useful Links</h4>
           <ul>
             <li><a href="https://github.com/lotusfa/IPA-Translator">GitHub</a></li>
             <li><a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">IPA (Wikipedia)</a></li>

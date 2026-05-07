@@ -46,5 +46,21 @@
   "list_word_column": "Neno",
   "list_ipa_column": "IPA",
   "list_description": "Uteuzi",
-  "list_links": "Viungo"
+  "list_links": "Viungo",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Mtafsiri wa Herufi za Kiafya Kimataifa",
+  "home_headline": "Tafsiri maandishi kuwa IPA mara moja",
+  "home_intro": "Zana ya transkripsi ya vifaa vya wazi inayounga mkono tafsiri herufi kwa herufi na kulingana na maneno kwa walinzi, wanafunzi na watafiti.",
+  "home_feat1_title": "Usindikaji 100 % wa ndani",
+  "home_feat1_desc": "Hakuna data inayotokea kifaa chako. Tafsiri zote zinahesabiwa moja kwa moja kwenye kivinjari chako kwa faragha ya juu na kasi ya haraka.",
+  "home_feat2_title": "Lugha 24+",
+  "home_feat2_desc": "Msaada mpana wa lugha nyingi, ukitumia jedwali za romanisasi na ubadilishaji IPA zenye usahihi wa hali ya juu.",
+  "home_feat3_title": "Chanzo Wazi",
+  "home_feat3_desc": "Imejengwa kwa jamii. Angalia msimbo, changia jedwali za tafsiri au uendeshe kabisa nje ya mtandao.",
+  "home_agent_title": "Kwa wateja wa AI",
+  "home_agent_desc": "Sio mtumiaji binadamu? Tumia agent.html — uliza kupitia vigezo vya URL, pata IPA kama maandishi. Hakuna mzigo wa UI, hakuna usakinishaji, tokeni chache. Inafanya kazi na agent-browser, Playwright, Puppeteer na zana yoyote ya kivinjari inayoweza JS.",
+  "home_select_language": "Chagua lugha",
+  "home_footer_about": "Kuhusu",
+  "home_footer_desc": "Mradi huu wa chanzo wazi unatafsiri maandishi kutoka lugha mbalimbali kuwa notisi ya Herufi za Kiafya Kimataifa (IPA). Inatumia hifadhidata za IPA na jedwali za ubadilishaji wa romanisasi kutoa transkripsi sahihi za kiafya.",
+  "home_footer_links": "Viungo muhimu"
 }

@@ -46,5 +46,21 @@
   "list_word_column": "Vorto",
   "list_ipa_column": "IPA",
   "list_description": "Priskribo",
-  "list_links": "Ligoj"
+  "list_links": "Ligoj",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Internacia Fonetika Alfabeto Tradukilo",
+  "home_headline": "Traduku tekston al IPA tuj",
+  "home_intro": "Malfermitkoda fonetika transskripta ilo, kiu subtenas tradukon signo po signo kaj fraze por lingvistoj, lernantoj kaj esploristoj.",
+  "home_feat1_title": "100 % loka procezado",
+  "home_feat1_desc": "Neniuj datumoj forlasas vian aparaton. Ĉiuj tradukoj estas kalkulitaj rekte en via retumilo por maksimuma privateco kaj tujrapideco.",
+  "home_feat2_title": "24+ lingvoj",
+  "home_feat2_desc": "Etenda subteno por larĝa gamo da lingvoj, uzante tre precizajn romanigajn kaj IPA-konvertajn tabelojn.",
+  "home_feat3_title": "Malfermitkoda",
+  "home_feat3_desc": "Konstruita por la komunumo. Inspektu la kodon, kontribuu al la tradukotabeloj aŭ ruligu ĝin tute senrete.",
+  "home_agent_title": "Por AI-agentoj",
+  "home_agent_desc": "Ne homa uzanto? Uzu agent.html — demandu per URL-parametroj, ricevu IPA kiel simplan tekston. Neniu IU-supraŭro, neniu instalo, malpli da tokenoj. Funkcias kun agent-browser, Playwright, Puppeteer kaj ĉiu JS-kapabla retumila ilo.",
+  "home_select_language": "Elektu lingvon",
+  "home_footer_about": "Pri",
+  "home_footer_desc": "Ĉi tiu malfermitkoda projekto tradukas tekston de diversaj lingvoj al la noto de la Internacia Fonetika Alfabeto (IPA). Ĝi uzas IPA-datumbazojn kaj romanigajn konvertajn tabelojn por provizi precizajn fonetikajn transskribojn.",
+  "home_footer_links": "Utilaj ligiloj"
 }

@@ -46,5 +46,21 @@
   "list_word_column": "Từ",
   "list_ipa_column": "IPA",
   "list_description": "Mô tả",
-  "list_links": "Liên kết"
+  "list_links": "Liên kết",
+  "home_title": "Bộ dịch IPA",
+  "home_subtitle": "Bộ dịch Bảng Mẫu Tự Âm Thanh Quốc Tế",
+  "home_headline": "Dịch văn bản sang IPA ngay lập tức",
+  "home_intro": "Công cụ phiên âm nguồn mở hỗ trợ dịch theo ký tự và theo cụm từ, dành cho ngôn ngữ học, người học và nhà nghiên cứu.",
+  "home_feat1_title": "Xử lý 100% tại chỗ",
+  "home_feat1_desc": "Không có dữ liệu nào rời khỏi thiết bị của bạn. Tất cả bản dịch được tính toán trực tiếp trong trình duyệt để bảo vệ quyền riêng tư và tốc độ tức thì.",
+  "home_feat2_title": "Hơn 24 ngôn ngữ",
+  "home_feat2_desc": "Hỗ trợ rộng rãi nhiều ngôn ngữ, sử dụng bảng chuyển đổi Latinh hóa và IPA chính xác cao.",
+  "home_feat3_title": "Mã nguồn mở",
+  "home_feat3_desc": "Được xây dựng cho cộng đồng. Kiểm tra mã nguồn, đóng góp vào bảng dịch hoặc chạy hoàn toàn ngoại tuyến.",
+  "home_agent_title": "Dành cho AI Agent",
+  "home_agent_desc": "Không phải người dùng con người? Sử dụng agent.html — truy vấn qua tham số URL, nhận IPA dạng văn bản thuần. Không có giao diện UI, không cần cài đặt, tiết kiệm token. Hoạt động với agent-browser, Playwright, Puppeteer và mọi công cụ trình duyệt hỗ trợ JS.",
+  "home_select_language": "Chọn ngôn ngữ",
+  "home_footer_about": "Giới thiệu",
+  "home_footer_desc": "Dự án mã nguồn mở này dịch văn bản từ nhiều ngôn ngữ sang ký hiệu Bảng Mẫu Tự Âm Thanh Quốc Tế (IPA). Sử dụng cơ sở dữ liệu IPA và bảng chuyển đổi Latinh hóa để cung cấp phiên âm chính xác.",
+  "home_footer_links": "Liên kết hữu ích"
 }

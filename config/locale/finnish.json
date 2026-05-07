@@ -46,5 +46,21 @@
   "list_word_column": "Sana",
   "list_ipa_column": "IPA",
   "list_description": "Kuvaus",
-  "list_links": "Linkit"
+  "list_links": "Linkit",
+  "home_title": "IPA Translator",
+  "home_subtitle": "Kansainvälisen fonettisen aakkoston kääntäjä",
+  "home_headline": "Käänne teksti IPA-muotoon välittömästi",
+  "home_intro": "Avoin lähdekoodinen fonettinen transkriptio-ohjelma, joka tukee merkki kerrallaan ja lausekepohjaista käännöstä kielitieteilijöille, opiskelijoille ja tutkijoille.",
+  "home_feat1_title": "100 % paikallinen käsittely",
+  "home_feat1_desc": "Ei dataa lähetetä laitteeselta pois. Kaikki käännökset lasketaan suoraan selaimessasi maksimaalisen yksityisyyden ja välittömän nopeuden vuoksi.",
+  "home_feat2_title": "24+ kieltä",
+  "home_feat2_desc": "Laaja tuki monille kielille, käyttäen erittäin tarkkoja latinalaistamis- ja IPA-muunnostaulukoita.",
+  "home_feat3_title": "Avoin lähdekoodi",
+  "home_feat3_desc": "Rakennettu yhteisölle. Tarkastele koodia, contributed käännöstaulukoihin tai aja se täysin offline-tilassa.",
+  "home_agent_title": "Tekoälyagentteille",
+  "home_agent_desc": "Etkö ole inhimillinen käyttäjä? Käytä agent.html — kysely URL-parametreilla, saa plain text IPA takaisin. Ei käyttöliittymä-kuormitusta, ei asennusta, vähemmän token. Toimii agent-browserin, Playwrightin, Puppeteerin ja minkä tahansa JS-kykyisen selaintyökalun kanssa.",
+  "home_select_language": "Valitse kieli",
+  "home_footer_about": "Tietoja",
+  "home_footer_desc": "Tämä avoimen lähdekoodin projekti kääntää tekstiä eri kielistä kansainvälisen fonettisen aakkoston (IPA) notaatioon. Se käyttää IPA-tietokantoja ja latinalaistamismuunnostaulukoita tarjotakseen tarkan fonettisen transkription.",
+  "home_footer_links": "Hyödyllisiä linkkejä"
 }
