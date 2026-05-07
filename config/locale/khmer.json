@@ -27,5 +27,19 @@
   "game_tone": "សំឡេង",
   "i18n_home": "ទំព័រដើម",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "ភាសាបង្ហាញ"
+  "i18n_locale_label": "ភាសាបង្ហាញ",
+  "tools_share": "ចែករំលែក",
+  "tools_game": "ហ្គេមក្វីស",
+  "tools_lang": "ភាសាផ្សេងៗ",
+  "share_modal_share": "ចែករំលែក",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "អត្ថបទ",
+  "label_ipa": "IPA",
+  "footer_description": "ការពិពណ៌នា",
+  "footer_links": "តំណភ្ជាប់ដែលមានប្រយោជន៍",
+  "label_pronounced": "ការបញ្ចេញសំឡេង:",
+  "label_format": "ទម្រង់:",
+  "label_variant": "ប្រភេទ:",
+  "label_word_match": "ការត្អូញត្អែរពាក្យ"
 }

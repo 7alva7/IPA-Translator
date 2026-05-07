@@ -120,6 +120,23 @@ export function getShareModal() {
   return shareModalInstance;
 }
 
+async function getShareLabels() {
+  const savedLocale = localStorage.getItem('ipa_locale');
+  if (!savedLocale) return { share: 'Share', json: 'JSON', csv: 'CSV' };
+  try {
+    const resp = await fetch(`../config/locale/${savedLocale}.json`);
+    if (!resp.ok) return { share: 'Share', json: 'JSON', csv: 'CSV' };
+    const data = await resp.json();
+    return {
+      share: data.share_modal_share || 'Share',
+      json: data.share_modal_json || 'JSON',
+      csv: data.share_modal_csv || 'CSV',
+    };
+  } catch {
+    return { share: 'Share', json: 'JSON', csv: 'CSV' };
+  }
+}
+
 function buildShareModal() {
   const overlay = document.createElement('div');
   overlay.className = 'share-modal-overlay';
@@ -160,19 +177,8 @@ function buildShareModal() {
     setTimeout(() => { copyBtn.innerHTML = svgCopy; }, 2000);
   });
 
-  // Create native share circle button if supported (or on localhost for dev testing)
+  // Native share button — created fresh on each show() to pick up current locale labels
   const isLocalhost = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-  let nativeShareBtn = null;
-  if (typeof navigator.share === 'function' || isLocalhost) {
-    nativeShareBtn = document.createElement('button');
-    nativeShareBtn.className = 'share-circle-btn';
-    nativeShareBtn.innerHTML = `${svgShare}<span>Share</span>`;
-    nativeShareBtn.addEventListener('click', async () => {
-      try {
-        await navigator.share({ url: currentUrl });
-      } catch { /* user cancelled */ }
-    });
-  }
 
   const show = async (getShareDataOrOpts) => {
     // Accept either a function (backward compat for game) or { getShareData, showExport }
@@ -192,8 +198,18 @@ function buildShareModal() {
     // Clear previous action buttons
     actionRow.innerHTML = '';
 
+    const labels = await getShareLabels();
+
     // Add native share button if available
-    if (nativeShareBtn) {
+    if (typeof navigator.share === 'function' || isLocalhost) {
+      const nativeShareBtn = document.createElement('button');
+      nativeShareBtn.className = 'share-circle-btn';
+      nativeShareBtn.innerHTML = `${svgShare}<span>${labels.share}</span>`;
+      nativeShareBtn.addEventListener('click', async () => {
+        try {
+          await navigator.share({ url: currentUrl });
+        } catch { /* user cancelled */ }
+      });
       actionRow.appendChild(nativeShareBtn);
     }
 
@@ -201,7 +217,7 @@ function buildShareModal() {
     if (showExport) {
       const jsonBtn = document.createElement('button');
       jsonBtn.className = 'share-circle-btn';
-      jsonBtn.innerHTML = `${svgDownload}<span>JSON</span>`;
+      jsonBtn.innerHTML = `${svgDownload}<span>${labels.json}</span>`;
       jsonBtn.addEventListener('click', () => {
         downloadFile(JSON.stringify(data, null, 2), 'ipa-data.json', 'application/json');
       });
@@ -209,7 +225,7 @@ function buildShareModal() {
 
       const csvBtn = document.createElement('button');
       csvBtn.className = 'share-circle-btn';
-      csvBtn.innerHTML = `${svgDownload}<span>CSV</span>`;
+      csvBtn.innerHTML = `${svgDownload}<span>${labels.csv}</span>`;
       csvBtn.addEventListener('click', () => {
         const pairs = data.pairs || [];
         const formatted = data.formattedPairs || [];

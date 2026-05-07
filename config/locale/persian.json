@@ -27,5 +27,19 @@
   "game_tone": "لحن",
   "i18n_home": "خانه",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "زبان نمایش"
+  "i18n_locale_label": "زبان نمایش",
+  "tools_share": "اشتراک‌گذاری",
+  "tools_game": "بازی کوییز",
+  "tools_lang": "زبان‌های دیگر",
+  "share_modal_share": "اشتراک‌گذاری",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "متن",
+  "label_ipa": "IPA",
+  "footer_description": "توضیحات",
+  "footer_links": "لینک‌های مفید",
+  "label_pronounced": "تلفظ:",
+  "label_format": "فرمت:",
+  "label_variant": "نوع:",
+  "label_word_match": "تطابق کلمه"
 }

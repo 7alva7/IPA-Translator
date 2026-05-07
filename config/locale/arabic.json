@@ -27,5 +27,19 @@
   "game_tone": "النبرة",
   "i18n_home": "الرئيسية",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "لغة العرض"
+  "i18n_locale_label": "لغة العرض",
+  "tools_share": "مشاركة",
+  "tools_game": "لعبة اختبار",
+  "tools_lang": "لغات أخرى",
+  "share_modal_share": "مشاركة",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "النص",
+  "label_ipa": "IPA",
+  "footer_description": "الوصف",
+  "footer_links": "روابط مفيدة",
+  "label_pronounced": "النطق:",
+  "label_format": "التنسيق:",
+  "label_variant": "المتغير:",
+  "label_word_match": "تطابق الكلمات"
 }

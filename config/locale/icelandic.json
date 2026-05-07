@@ -27,5 +27,19 @@
   "game_tone": "Tónn",
   "i18n_home": "Heimasíða",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Vísunarmál"
+  "i18n_locale_label": "Vísunarmál",
+  "tools_share": "Deila",
+  "tools_game": "Spil",
+  "tools_lang": "Aðrir tungumál",
+  "share_modal_share": "Deila",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Texti",
+  "label_ipa": "IPA",
+  "footer_description": "Lýsing",
+  "footer_links": "Nýtlegir tenglar",
+  "label_pronounced": "Úttala:",
+  "label_format": "Snið:",
+  "label_variant": "Breyting:",
+  "label_word_match": "Orðasamsvörun"
 }

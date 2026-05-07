@@ -27,5 +27,19 @@
   "game_tone": "Sävy",
   "i18n_home": "Koti",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Näyttökieli"
+  "i18n_locale_label": "Näyttökieli",
+  "tools_share": "Jaa",
+  "tools_game": "Peli",
+  "tools_lang": "Muut kielet",
+  "share_modal_share": "Jaa",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Teksti",
+  "label_ipa": "IPA",
+  "footer_description": "Kuvaus",
+  "footer_links": "Hyödyllisiä linkkejä",
+  "label_pronounced": "Ääntäminen:",
+  "label_format": "Muoto:",
+  "label_variant": "Vaihtoehto:",
+  "label_word_match": "Sanavastine"
 }

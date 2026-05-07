@@ -27,5 +27,19 @@
   "game_tone": "Toon",
   "i18n_home": "Home",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Weergavetaal"
+  "i18n_locale_label": "Weergavetaal",
+  "tools_share": "Delen",
+  "tools_game": "Quizspel",
+  "tools_lang": "Andere talen",
+  "share_modal_share": "Delen",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Tekst",
+  "label_ipa": "IPA",
+  "footer_description": "Beschrijving",
+  "footer_links": "Nuttige links",
+  "label_pronounced": "Uitspraak:",
+  "label_format": "Formaat:",
+  "label_variant": "Variant:",
+  "label_word_match": "Woordovereenkomst"
 }

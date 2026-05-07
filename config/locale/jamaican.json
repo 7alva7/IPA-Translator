@@ -27,5 +27,19 @@
   "game_tone": "Tone",
   "i18n_home": "Home",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Display Language"
+  "i18n_locale_label": "Display Language",
+  "tools_share": "Share",
+  "tools_game": "Quiz Gie",
+  "tools_lang": "Aada Langwij",
+  "share_modal_share": "Share",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Tekst",
+  "label_ipa": "IPA",
+  "footer_description": "Deskripshan",
+  "footer_links": "Yooful Links",
+  "label_pronounced": "Pronunciation:",
+  "label_format": "Format:",
+  "label_variant": "Variant:",
+  "label_word_match": "Word match"
 }

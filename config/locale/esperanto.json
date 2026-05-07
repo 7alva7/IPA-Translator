@@ -27,5 +27,19 @@
   "game_tone": "Tono",
   "i18n_home": "Hejmpaĝo",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Montra Lingvo"
+  "i18n_locale_label": "Montra Lingvo",
+  "tools_share": "Dividi",
+  "tools_game": "Kvizo",
+  "tools_lang": "Aliaj lingvoj",
+  "share_modal_share": "Dividi",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Teksto",
+  "label_ipa": "IPA",
+  "footer_description": "Priskribo",
+  "footer_links": "Utilaj ligiloj",
+  "label_pronounced": "Prononco:",
+  "label_format": "Formato:",
+  "label_variant": "Variantoj:",
+  "label_word_match": "Vortokorespondado"
 }

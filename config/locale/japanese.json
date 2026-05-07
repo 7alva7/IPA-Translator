@@ -27,5 +27,19 @@
   "game_tone": "調子",
   "i18n_home": "ホーム",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "表示言語"
+  "i18n_locale_label": "表示言語",
+  "tools_share": "共有",
+  "tools_game": "クイズゲーム",
+  "tools_lang": "他の言語",
+  "share_modal_share": "共有",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "テキスト",
+  "label_ipa": "IPA",
+  "footer_description": "説明",
+  "footer_links": "便利なリンク",
+  "label_pronounced": "発音：",
+  "label_format": "フォーマット：",
+  "label_variant": "バリアント：",
+  "label_word_match": "単語マッチ"
 }

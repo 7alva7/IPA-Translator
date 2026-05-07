@@ -27,5 +27,19 @@
   "game_tone": "Tone",
   "i18n_home": "Hjem",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Visningsspråk"
+  "i18n_locale_label": "Visningsspråk",
+  "tools_share": "Del",
+  "tools_game": "Quizzspill",
+  "tools_lang": "Andre språk",
+  "share_modal_share": "Del",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Tekst",
+  "label_ipa": "IPA",
+  "footer_description": "Beskrivelse",
+  "footer_links": "Nyttige lenker",
+  "label_pronounced": "Uttale:",
+  "label_format": "Format:",
+  "label_variant": "Variant:",
+  "label_word_match": "Ordmatching"
 }

@@ -27,5 +27,19 @@
   "game_tone": "Ton",
   "i18n_home": "Hem",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Visningsspråk"
+  "i18n_locale_label": "Visningsspråk",
+  "tools_share": "Dela",
+  "tools_game": "Quizspel",
+  "tools_lang": "Andra språk",
+  "share_modal_share": "Dela",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Text",
+  "label_ipa": "IPA",
+  "footer_description": "Beskrivning",
+  "footer_links": "Användbara länkar",
+  "label_pronounced": "Uttale:",
+  "label_format": "Format:",
+  "label_variant": "Variant:",
+  "label_word_match": "Ordmatchning"
 }

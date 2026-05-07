@@ -27,5 +27,19 @@
   "game_tone": "Sauti",
   "i18n_home": "Nyumbani",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Lugha ya Onyesho"
+  "i18n_locale_label": "Lugha ya Onyesho",
+  "tools_share": "Shiriki",
+  "tools_game": "Mchezo wa maswali",
+  "tools_lang": "Lugha nyingine",
+  "share_modal_share": "Shiriki",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Mandhari",
+  "label_ipa": "IPA",
+  "footer_description": "Maelezo",
+  "footer_links": "Viungo muhimu",
+  "label_pronounced": "Sauti:",
+  "label_format": "Umbizo:",
+  "label_variant": "Tofauti:",
+  "label_word_match": "Ulinganifu wa maneno"
 }

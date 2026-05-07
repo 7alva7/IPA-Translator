@@ -27,5 +27,19 @@
   "game_tone": "声调",
   "i18n_home": "首页",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "显示语言"
+  "i18n_locale_label": "显示语言",
+  "tools_share": "分享",
+  "tools_game": "测验小游戏",
+  "tools_lang": "其他语言",
+  "share_modal_share": "分享",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "文字",
+  "label_ipa": "音标（IPA）",
+  "footer_description": "说明",
+  "footer_links": "链接",
+  "label_pronounced": "发音：",
+  "label_format": "输出格式：",
+  "label_variant": "繁/简：",
+  "label_word_match": "以詞組匹配"
 }

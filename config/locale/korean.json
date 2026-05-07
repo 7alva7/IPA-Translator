@@ -27,5 +27,19 @@
   "game_tone": "음조",
   "i18n_home": "홈",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "표시 언어"
+  "i18n_locale_label": "표시 언어",
+  "tools_share": "공유",
+  "tools_game": "퀴즈 게임",
+  "tools_lang": "다른 언어",
+  "share_modal_share": "공유",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "텍스트",
+  "label_ipa": "IPA",
+  "footer_description": "설명",
+  "footer_links": "유용한 링크",
+  "label_pronounced": "발음:",
+  "label_format": "형식:",
+  "label_variant": "변형:",
+  "label_word_match": "단어 매칭"
 }

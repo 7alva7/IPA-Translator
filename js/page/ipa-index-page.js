@@ -248,10 +248,33 @@ export function initIPAIndexPage(options) {
     initLanguageButtons({ containerId: langButtonsContainerId, configPath: '../config/languages.json' });
   }
 
-  // Initialize locale selector (footer dropdown)
-  if (defaultLocale) {
-    initLocaleSelector({ defaultLocale });
+  // Render footer tool labels from locale data
+  function renderFooterTools(localeCode, localeData) {
+    if (!footerToolsContainerId || !toolsConfig) return;
+    const container = document.getElementById(footerToolsContainerId);
+    if (!container) return;
+
+    toolsConfig.forEach((tool, i) => {
+      const btn = container.children[i];
+      if (!btn) return;
+      const span = btn.querySelector('span');
+      if (!span) return;
+
+      if (tool.type === 'link') {
+        // Keep hardcoded label (language-specific, e.g. "IPA France")
+        return;
+      }
+      const key = `tools_${tool.type}`;
+      span.textContent = (localeData && localeData[key]) || tool.label;
+    });
   }
+
+  // Format button and dropdown locale-aware update (scope vars for renderFormatControls)
+  let formatBtnEl = null;
+  let formatDropdown = null;
+  var formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV' };
+
+  // Initialize locale selector (footer dropdown) — callbacks wired after format button setup
 
   // Language selector modal (shared by header button and footer tools)
   let langModal = null;
@@ -328,12 +351,12 @@ export function initIPAIndexPage(options) {
       });
     }
 
-    const formatBtn = document.getElementById('display-format-btn');
-    if (formatBtn) {
-      const formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV' };
-      formatBtn.innerHTML = `${L.textAndIpa} ${svgDownArrow}`;
+    formatBtnEl = document.getElementById('display-format-btn');
+    if (formatBtnEl) {
+      formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV' };
+      formatBtnEl.innerHTML = `${L.textAndIpa} ${svgDownArrow}`;
 
-      const dropdown = {
+      formatDropdown = {
         el: null,
         open: false,
         show() {
@@ -347,36 +370,73 @@ export function initIPAIndexPage(options) {
             this.el.querySelectorAll('.format-dropdown-menu-item').forEach(item => {
               item.addEventListener('click', () => {
                 displayFormat = item.value;
-                formatBtn.innerHTML = `${formatLabels[item.value]} ${svgDownArrow}`;
-                dropdown.hide();
+                formatBtnEl.innerHTML = `${formatLabels[item.value]} ${svgDownArrow}`;
+                formatDropdown.hide();
                 translate();
               });
             });
             outputControls.appendChild(this.el);
           }
           this.open = true;
-          formatBtn.setAttribute('aria-expanded', 'true');
+          formatBtnEl.setAttribute('aria-expanded', 'true');
           this.el.style.display = 'block';
         },
         hide() {
           this.open = false;
-          formatBtn.removeAttribute('aria-expanded');
+          formatBtnEl.removeAttribute('aria-expanded');
           if (this.el) this.el.style.display = 'none';
         }
       };
 
-      formatBtn.addEventListener('click', (e) => {
+      formatBtnEl.addEventListener('click', (e) => {
         e.stopPropagation();
-        dropdown.open ? dropdown.hide() : dropdown.show();
+        formatDropdown.open ? formatDropdown.hide() : formatDropdown.show();
       });
 
       document.addEventListener('click', (e) => {
-        if (dropdown.open && !formatBtn.contains(e.target) && !dropdown.el?.contains(e.target)) {
-          dropdown.hide();
+        if (formatDropdown.open && !formatBtnEl.contains(e.target) && !formatDropdown.el?.contains(e.target)) {
+          formatDropdown.hide();
         }
       });
     }
 
+  }
+
+  // Format controls locale-aware update
+  function renderFormatControls(localeCode, localeData) {
+    if (!formatBtnEl) return;
+    const labels = localeData || {};
+    formatLabels = { '': labels.textAndIpa || L.textAndIpa, ipa: labels.onlyIpa || L.onlyIpa, json: 'JSON', csv: 'CSV' };
+
+    // Update button text (preserve SVG arrow)
+    const btnText = Array.from(formatBtnEl.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
+    if (btnText) {
+      btnText.textContent = formatLabels[displayFormat || ''] + ' ';
+    }
+
+    // Update dropdown items if dropdown has been created
+    if (formatDropdown && formatDropdown.el) {
+      formatDropdown.el.querySelectorAll('.format-dropdown-menu-item').forEach(item => {
+        const label = formatLabels[item.value];
+        if (item.value === '') {
+          const t = Array.from(item.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
+          if (t) t.textContent = label + ' ';
+        } else {
+          item.textContent = label;
+        }
+      });
+    }
+  }
+
+  // Wire locale selector with combined callback
+  if (defaultLocale) {
+    initLocaleSelector({
+      defaultLocale,
+      onLocaleChange: (code, data) => {
+        renderFooterTools(code, data);
+        renderFormatControls(code, data);
+      }
+    });
   }
 
   // Language selector button — inject SVG arrow

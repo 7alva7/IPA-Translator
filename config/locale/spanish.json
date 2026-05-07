@@ -27,5 +27,19 @@
   "game_tone": "Tono",
   "i18n_home": "Inicio",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Idioma de Visualización"
+  "i18n_locale_label": "Idioma de Visualización",
+  "tools_share": "Compartir",
+  "tools_game": "Juego quiz",
+  "tools_lang": "Otros idiomas",
+  "share_modal_share": "Compartir",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Texto",
+  "label_ipa": "AFI",
+  "footer_description": "Descripción",
+  "footer_links": "Enlaces útiles",
+  "label_pronounced": "Pronunciada:",
+  "label_format": "Formato:",
+  "label_variant": "Variante:",
+  "label_word_match": "Coincidencia de palabra"
 }

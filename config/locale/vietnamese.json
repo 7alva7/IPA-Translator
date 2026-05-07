@@ -27,5 +27,19 @@
   "game_tone": "Thanh",
   "i18n_home": "Trang Chủ",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Ngôn Ngữ Hiển Thị"
+  "i18n_locale_label": "Ngôn Ngữ Hiển Thị",
+  "tools_share": "Chia sẻ",
+  "tools_game": "Trò chơi câu đố",
+  "tools_lang": "Ngôn ngữ khác",
+  "share_modal_share": "Chia sẻ",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Văn bản",
+  "label_ipa": "Phiên âm IPA",
+  "footer_description": "Mô tả",
+  "footer_links": "Liên kết hữu ích",
+  "label_pronounced": "Phiên âm:",
+  "label_format": "Định dạng:",
+  "label_variant": "Phương ngữ:",
+  "label_word_match": "Ghép theo từ"
 }

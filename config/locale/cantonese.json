@@ -27,5 +27,19 @@
   "game_tone": "聲調",
   "i18n_home": "主頁",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "顯示語言"
+  "i18n_locale_label": "顯示語言",
+  "tools_share": "分享",
+  "tools_game": "測驗小遊戲",
+  "tools_lang": "其他語言",
+  "share_modal_share": "分享",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "文字",
+  "label_ipa": "標音（IPA）",
+  "footer_description": "說明",
+  "footer_links": "連結",
+  "label_pronounced": "發音：",
+  "label_format": "輸出格式：",
+  "label_variant": "變體：",
+  "label_word_match": "以詞組匹配"
 }

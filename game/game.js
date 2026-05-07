@@ -402,7 +402,10 @@ function launchGame(length) {
 (async () => {
   await importFromUrl();
   const gd = loadGameData();
-  await initGameI18n(gd?.language || 'english');
+  const userLocale = localStorage.getItem('ipa_locale');
+  const quizLanguage = gd?.language || 'english';
+  const gameLocale = (userLocale && userLocale !== quizLanguage) ? userLocale : quizLanguage;
+  await initGameI18n(gameLocale);
   document.title = t('game_title');
   startScreen();
 })();

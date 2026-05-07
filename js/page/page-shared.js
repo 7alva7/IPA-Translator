@@ -116,7 +116,8 @@ export function initLocaleSelector(options = {}) {
     languagesPath = "../config/languages.json",
     localeBasePath = "../config/locale",
     storageKey = "ipa_locale",
-    defaultLocale = "english"
+    defaultLocale = "english",
+    onLocaleChange = null
   } = options;
 
   const selectEl = document.getElementById(selectId);
@@ -140,6 +141,22 @@ export function initLocaleSelector(options = {}) {
   }
 
   async function applyTranslations(localeCode) {
+    if (localeCode === '') {
+      // Restore original HTML text
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        if (el.dataset.i18nOriginal) {
+          if (el.childNodes.length > 1) {
+            const firstText = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
+            if (firstText) firstText.textContent = el.dataset.i18nOriginal;
+            else el.textContent = el.dataset.i18nOriginal;
+          } else {
+            el.textContent = el.dataset.i18nOriginal;
+          }
+        }
+      });
+      if (onLocaleChange) onLocaleChange(localeCode, null);
+      return;
+    }
     const locale = await loadLocale(localeCode);
     const keys = Object.keys(locale);
 
@@ -149,14 +166,21 @@ export function initLocaleSelector(options = {}) {
         if (!el.dataset.i18nOriginal) {
           el.dataset.i18nOriginal = el.textContent;
         }
-        el.textContent = locale[key];
+        if (el.childNodes.length > 1) {
+          const firstText = Array.from(el.childNodes).find(n => n.nodeType === Node.TEXT_NODE);
+          if (firstText) firstText.textContent = locale[key];
+          else el.textContent = locale[key];
+        } else {
+          el.textContent = locale[key];
+        }
       } else if (key && !keys.length) {
-        // Restore original text if locale failed to load
         if (el.dataset.i18nOriginal) {
           el.textContent = el.dataset.i18nOriginal;
         }
       }
     });
+
+    if (onLocaleChange) onLocaleChange(localeCode, locale);
   }
 
   async function init() {
@@ -173,6 +197,12 @@ export function initLocaleSelector(options = {}) {
         selectEl.appendChild(opt);
       });
 
+      // Add "(Default)" option at the top
+      const defaultOpt = document.createElement('option');
+      defaultOpt.value = '';
+      defaultOpt.textContent = '(Default)';
+      selectEl.prepend(defaultOpt);
+
       const savedLocale = localStorage.getItem(storageKey);
       const initialLocale = (savedLocale && languages.find(l => l.code === savedLocale))
         ? savedLocale
@@ -183,7 +213,11 @@ export function initLocaleSelector(options = {}) {
 
       selectEl.addEventListener('change', async () => {
         const newLocale = selectEl.value;
-        localStorage.setItem(storageKey, newLocale);
+        if (newLocale === '') {
+          localStorage.removeItem(storageKey);
+        } else {
+          localStorage.setItem(storageKey, newLocale);
+        }
         await applyTranslations(newLocale);
       });
     } catch (e) {

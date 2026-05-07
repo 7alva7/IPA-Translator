@@ -27,5 +27,19 @@
   "game_tone": "Nada",
   "i18n_home": "Laman Utama",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Bahasa Paparan"
+  "i18n_locale_label": "Bahasa Paparan",
+  "tools_share": "Kongsi",
+  "tools_game": "Kuiz",
+  "tools_lang": "Bahasa Lain",
+  "share_modal_share": "Kongsi",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Teks",
+  "label_ipa": "IPA",
+  "footer_description": "Penerangan",
+  "footer_links": "Pautan berguna",
+  "label_pronounced": "Ejaan:",
+  "label_format": "Format:",
+  "label_variant": "Varian:",
+  "label_word_match": "Padanan perkataan"
 }

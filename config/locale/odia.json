@@ -1,4 +1,3 @@
-
 {
   "textAndIpa": "(ଅକ୍ଷର /ipa/)",
   "onlyIpa": "କେବଳ /ipa/",
@@ -28,5 +27,19 @@
   "game_tone": "ସ୍ୱର",
   "i18n_home": "ହୋମ୍",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "ପ୍ରଦର୍ଶନ ଭାଷା"
+  "i18n_locale_label": "ପ୍ରଦର୍ଶନ ଭାଷା",
+  "tools_share": "ସେୟାର୍",
+  "tools_game": "କୁଇଜ୍ ଖେଳ",
+  "tools_lang": "ଅନ୍ୟ ଭାଷା",
+  "share_modal_share": "ସେୟାର୍",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "ପାଠ୍ୟ",
+  "label_ipa": "IPA",
+  "footer_description": "ବିବରଣୀ",
+  "footer_links": "ଉପଯୋଗୀ ଲିଙ୍କ୍",
+  "label_pronounced": "ଉଚ୍ଚାରଣ:",
+  "label_format": "ଫର୍ମାଟ:",
+  "label_variant": "ଭେଦ:",
+  "label_word_match": "ଶବ୍ଦ ମେଳ"
 }

@@ -27,5 +27,19 @@
   "game_tone": "Ton",
   "i18n_home": "Acasă",
   "i18n_github": "GitHub",
-  "i18n_locale_label": "Limba de Afișare"
+  "i18n_locale_label": "Limba de Afișare",
+  "tools_share": "Distribuiți",
+  "tools_game": "Joc quiz",
+  "tools_lang": "Alte limbi",
+  "share_modal_share": "Distribuiți",
+  "share_modal_json": "JSON",
+  "share_modal_csv": "CSV",
+  "label_text": "Text",
+  "label_ipa": "AIP",
+  "footer_description": "Descriere",
+  "footer_links": "Legături utile",
+  "label_pronounced": "Pronunție:",
+  "label_format": "Format:",
+  "label_variant": "Variantă:",
+  "label_word_match": "Potrivire cuvinte"
 }
