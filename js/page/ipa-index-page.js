@@ -124,72 +124,71 @@ export function initIPAIndexPage(options) {
     if (!inputEl || !outputEl) return;
 
     const input = inputEl.value;
+    if (!input) {
+      setElementValue(outputId, '');
+      return;
+    }
     if (input.length > 10000) {
       setElementValue(outputId, 'Input too long (max 10,000 characters)');
       return;
     }
     setElementValue(outputId, 'loading....');
-    const gen = dbGeneration;
 
-    setTimeout(() => {
-      if (gen !== dbGeneration) return;
-      const withWords = getWithWords();
-      const allowWordSearch = getAllowWordSearch();
+    const withWords = getWithWords();
+    const allowWordSearch = getAllowWordSearch();
+    const formatter = getFormatter();
 
-      const formatter = getFormatter();
+    if (displayFormat === 'ipa') {
+      let ipaResult = process({
+        input,
+        lookupTable: IPA_DB,
+        withWords: false,
+        allowWordSearch,
+        maxWordLength,
+        maxPhraseLength
+      });
+      if (formatter) ipaResult = formatter(ipaResult);
+      setElementValueAnimated(outputId, ipaResult);
+    } else if (displayFormat === 'json') {
+      const { pairs } = buildPairsData();
+      setElementValueAnimated(outputId, formatAsJSON(pairs, formatter));
+    } else if (displayFormat === 'csv') {
+      const { pairs } = buildPairsData();
+      setElementValueAnimated(outputId, formatAsCSV(pairs, formatter));
+    } else {
+      let result = process({
+        input,
+        lookupTable: IPA_DB,
+        withWords,
+        allowWordSearch,
+        maxWordLength,
+        maxPhraseLength
+      });
+      if (formatter) result = formatter(result);
+      setElementValueAnimated(outputId, result);
+    }
 
-      // Handle display format overrides
-      if (displayFormat === 'ipa') {
-        // Pure IPA output only (no Chinese characters), regardless of withWords checkbox
-        let ipaResult = process({
-          input,
-          lookupTable: IPA_DB,
-          withWords: false,
-          allowWordSearch,
-          maxWordLength,
-          maxPhraseLength
+    if (enableShareButton) {
+      const shareBtn = document.getElementById('share-btn');
+      if (shareBtn) shareBtn.style.display = 'inline-flex';
+    }
+
+    if (footerToolsContainerId) {
+      const container = document.getElementById(footerToolsContainerId);
+      if (container) {
+        container.querySelectorAll('[data-visible="after-translate"]').forEach(el => {
+          el.style.display = 'flex';
         });
-        if (formatter) ipaResult = formatter(ipaResult);
-        setElementValueAnimated(outputId, ipaResult);
-      } else if (displayFormat === 'json') {
-        const { pairs } = buildPairsData();
-        setElementValueAnimated(outputId, formatAsJSON(pairs, formatter));
-      } else if (displayFormat === 'csv') {
-        const { pairs } = buildPairsData();
-        setElementValueAnimated(outputId, formatAsCSV(pairs, formatter));
-      } else {
-        // Normal display (current format/withWords settings)
-        let result = process({
-          input,
-          lookupTable: IPA_DB,
-          withWords,
-          allowWordSearch,
-          maxWordLength,
-          maxPhraseLength
-        });
-        if (formatter) result = formatter(result);
-        setElementValueAnimated(outputId, result);
       }
-
-      if (enableShareButton) {
-        const shareBtn = document.getElementById('share-btn');
-        if (shareBtn) shareBtn.style.display = 'inline-flex';
-      }
-
-      if (footerToolsContainerId) {
-        const container = document.getElementById(footerToolsContainerId);
-        if (container) {
-          container.querySelectorAll('[data-visible="after-translate"]').forEach(el => {
-            el.style.display = 'flex';
-          });
-        }
-      }
-    }, 10);
+    }
   };
 
   const loadDatabase = () => {
     dbGeneration++;
-    setElementValue(outputId, 'loading....');
+    const inputEl = document.getElementById(inputId);
+    if (inputEl && inputEl.value) {
+      setElementValue(outputId, 'loading....');
+    }
     loadIPADatabase({
       basePath: getDatabasePath(),
       onSuccess: (lookup) => {
