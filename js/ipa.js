@@ -102,6 +102,8 @@ export function processTextCharBased(options) {
  *   @param {string} options.input - Input Vietnamese text
  *   @param {object} options.lookupTable - IPA lookup table with word->IPA mappings
  *   @param {boolean} [options.withWords] - Show word:IPA format (default: false)
+ *   @param {boolean} [options.allowWordSearch] - Enable multi-word phrase matching (default: true)
+ *   @param {number} [options.maxPhraseLength] - Max phrase length for matching (default: 5)
  *   @param {function} [options.onProgress] - Callback for progress updates
  *   @param {boolean} [options.pairsOnly] - Return [[word, ipa], ...] array instead of string (default: false)
  * @returns {string|string[][]} Processed result or pairs array
@@ -111,6 +113,8 @@ export function processTextLongestMatch(options) {
     input,
     lookupTable,
     withWords = false,
+    allowWordSearch = true,
+    maxPhraseLength = 5,
     onProgress = null,
     pairsOnly = false
   } = options;
@@ -132,8 +136,10 @@ export function processTextLongestMatch(options) {
     let matchLength = 0;
 
     // Try longest possible word combination first (greedy approach)
-    // Vietnamese phrases can be multi-word, so we try from max length down to 1
-    const maxComboLength = Math.min(5, words.length - i); // Limit to 5 words max
+    // When allowWordSearch is false, only match single words
+    const maxComboLength = allowWordSearch
+      ? Math.min(maxPhraseLength, words.length - i)
+      : 1;
 
     for (let len = maxComboLength; len >= 1; len--) {
       const candidate = words.slice(i, i + len).join(" ");
