@@ -74,30 +74,30 @@
 
 /* Dark Mode Variables (Dark Paper) */
 body.dark-mode {
-  --color-primary: #b0b0b0;
-  --color-primary-dark: #a0a0a0;
-  --color-primary-light: #c0c0c0;
+  --color-primary: #909090;
+  --color-primary-dark: #808080;
+  --color-primary-light: #a0a0a0;
 
   --color-text: #e8e6e1;
   --color-text-muted: #a0a0a0;
   --color-text-light: #707070;
   --color-bg: #1a1917;
   --color-bg-secondary: #252422;
-  --color-border: #c0bdb6;
+  --color-border: #3a3835;
 
   --color-input-bg: #252422;
-  --color-input-border: #c0bdb6;
+  --color-input-border: #4a4844;
   --color-input-placeholder: #707070;
 
   --color-link: #d0cdc6;
   --color-link-hover: #e8e6e1;
   --color-btn-bg: #252422;
   --color-btn-hover: #302f2c;
-  --color-btn-border: #c0bdb6;
+  --color-btn-border: #4a4844;
 
   --color-table-header: #252422;
   --color-table-hover: #302f2c;
-  --color-table-border: #c0bdb6;
+  --color-table-border: #3a3835;
 }
 
 /* Theme Transition Class */
@@ -177,52 +177,6 @@ body.dark-mode .btn-icon:hover {
 }
 
 /* Global paper aesthetic element styles (both modes, variable-driven) */
-.footer {
-  border-top-color: var(--color-border);
-}
-
-hr {
-  border-top-color: var(--color-border);
-}
-
-.footer-col h4 {
-  color: var(--color-text);
-}
-
-.footer-col p {
-  color: var(--color-text-muted);
-}
-
-.footer-col ul li a {
-  color: var(--color-text);
-  background-color: var(--color-btn-bg);
-  border-radius: 0;
-}
-
-.footer-col ul li a:hover {
-  background-color: var(--color-btn-hover);
-}
-
-.footer-bottom {
-  border-top-color: var(--color-border);
-}
-
-.footer-bottom a {
-  color: var(--color-text);
-}
-
-.locale-select-btn {
-  color: var(--color-text-muted);
-}
-
-.locale-select-btn:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-a {
-  color: var(--color-text);
-}
-
 /* Header with titles and dark mode toggle */
 .header {
   display: flex;
@@ -413,19 +367,19 @@ select.form-control {
   font-size: 14px;
   font-weight: 600;
   margin: 0 0 12px 0;
-  color: #333;
+  color: var(--color-text);
 }
 
 .footer-col p {
   font-size: 15px;
-  color: #666;
+  color: var(--color-text-muted);
   margin: 0;
   line-height: 1.6;
 }
 
 .footer-col ul li a {
   font-size: 15px;
-  color: #666;
+  color: var(--color-text);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -445,23 +399,23 @@ select.form-control {
 
 .footer-col ul li a {
   font-size: 14px;
-  color: #666;
+  color: var(--color-text);
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: var(--color-btn-bg);
   padding: 4px 10px;
-  border-radius: 16px;
+  border-radius: 0;
   transition: background-color 0.2s;
 }
 
 .footer-col ul li a:hover {
-  color: #666;
+  color: var(--color-text);
   text-decoration: none;
-  background-color: #e5e5e5;
+  background-color: var(--color-btn-hover);
 }
 
 .footer-bottom {
   padding-top: 20px;
-  border-top: 1px solid #e1e1e8;
+  border-top: 1px solid var(--color-border);
   text-align: center;
 }
 
@@ -474,28 +428,27 @@ select.form-control {
 .footer-bottom p {
   margin: 0;
   font-size: 13px;
-  color: #999;
+  color: var(--color-text-muted);
 }
 
 .footer-bottom a {
-  color: #666;
+  color: var(--color-text);
   font-weight: 500;
 }
 
 .footer-bottom a:hover {
-  color: #666;
+  color: var(--color-text);
 }
 
-/* Locale selector button — matches lang-selector-btn style */
+/* Locale selector button */
 .locale-select-btn {
   background: none;
   border: none;
   cursor: pointer;
   padding: 2px 4px;
-  color: inherit;
+  color: var(--color-text-muted);
   font-size: 13px;
-  color: #999;
-  border-radius: 4px;
+  border-radius: 0;
   transition: background-color 0.2s;
   line-height: 1;
 }
@@ -620,7 +573,7 @@ textarea.form-control, input.form-control {
 }
 
 a {
-  color: #666;
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -786,7 +739,7 @@ tbody tr:hover {
     grid-template-columns: 1fr 1.2fr;  /* Word | IPA (index hidden) */
     background: var(--color-table-header, #f5f5f5);
     font-weight: 600;
-    border-bottom: 2px solid #e1e1e8 !important;
+    border-bottom: 2px solid var(--color-text) !important;
   }
 
   table.display thead tr {
@@ -815,7 +768,7 @@ tbody tr:hover {
     justify-content: center;
     padding: 10px 6px !important;
     text-align: center !important;
-    border: 1px solid #e1e1e8 !important;
+    border: 1px solid var(--color-border) !important;
     background: transparent !important;
   }
 
@@ -965,9 +918,9 @@ div.table-responsive > div.dataTables_wrapper > div.row > .col-sm-12 {
   font-size: var(--font-md);
   font-weight: 500;
   border: 1px solid var(--color-btn-border);
-  border-radius: var(--radius-sm);
+  border-radius: 0;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-bg);
   cursor: pointer;
   transition: background-color var(--transition-normal);
 }
