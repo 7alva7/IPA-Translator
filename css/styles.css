@@ -100,6 +100,36 @@ body.dark-mode {
   --color-table-border: #333;
 }
 
+/* Paper Mode Variables (Newspaper / Ink-on-paper aesthetic) */
+body.paper-mode {
+  --color-primary: #3a3a3a;
+  --color-primary-dark: #2a2a2a;
+  --color-primary-light: #4a4a4a;
+
+  --color-text: #1a1a1b;
+  --color-text-muted: #4a4a4a;
+  --color-text-light: #8a8a8a;
+  --color-bg: #f9f7f2;
+  --color-bg-secondary: #efece4;
+  --color-border: #2a2a2a;
+
+  --color-input-bg: #fffef9;
+  --color-input-border: #2a2a2a;
+  --color-input-placeholder: #8a8a8a;
+
+  --color-link: #1a1a1b;
+  --color-link-hover: #000;
+  --color-btn-bg: #efece4;
+  --color-btn-hover: #e2ded3;
+  --color-btn-border: #2a2a2a;
+
+  --color-table-header: #efece4;
+  --color-table-hover: #e8e4d9;
+  --color-table-border: #2a2a2a;
+
+  --accent-color: #1a1a1b;
+}
+
 /* Theme Transition Class */
 .theme-transition {
   transition: 
@@ -149,10 +179,46 @@ body.dark-mode {
   color: #e0e0e0;
 }
 
-body.dark-mode textarea {
-  background: #2d2d2d;
-  border-color: #444;
-  color: #e0e0e0;
+/* Paper mode base styles */
+body.paper-mode {
+  background: #f9f7f2;
+  color: #1a1a1b;
+  font-family: Georgia, "Noto Serif SC", "Noto Serif TC", "Songti SC", "MingLiU", serif;
+  border-top: 3px double #1a1a1b;
+  padding-top: 30px;
+}
+
+body.paper-mode h1,
+body.paper-mode h2,
+body.paper-mode h3,
+body.paper-mode h4 {
+  font-family: Georgia, "Noto Serif SC", "Noto Serif TC", "Songti SC", "MingLiU", serif;
+  font-weight: 700;
+}
+
+body.paper-mode .titles h1 {
+  font-variant-small-caps: normal;
+  letter-spacing: 0.02em;
+}
+
+body.paper-mode .titles h2 {
+  color: #4a4a4a;
+  font-style: italic;
+  font-family: Georgia, "Noto Serif SC", "Noto Serif TC", serif;
+}
+
+body.paper-mode textarea {
+  background: #fffef9;
+  border-color: #2a2a2a;
+  border-width: 1px;
+  border-radius: 0;
+  color: #1a1a1b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.8;
+}
+
+body.paper-mode textarea[disabled] {
+  background: #f4f1e9;
 }
 
 body.dark-mode textarea[disabled] {
@@ -220,6 +286,70 @@ body.dark-mode .btn-theme:hover {
 
 body.dark-mode .btn-theme .icon {
   color: #fff;
+}
+
+/* Paper mode element overrides */
+body.paper-mode .footer {
+  border-top-color: #2a2a2a;
+}
+
+body.paper-mode hr {
+  border-top-color: #2a2a2a;
+}
+
+body.paper-mode .footer-col h4 {
+  color: #1a1a1b;
+}
+
+body.paper-mode .footer-col p {
+  color: #4a4a4a;
+}
+
+body.paper-mode .footer-col ul li a {
+  color: #1a1a1b;
+  background-color: #efece4;
+  border-radius: 0;
+}
+
+body.paper-mode .footer-col ul li a:hover {
+  background-color: #e2ded3;
+}
+
+body.paper-mode .footer-bottom {
+  border-top-color: #2a2a2a;
+}
+
+body.paper-mode .footer-bottom a {
+  color: #1a1a1b;
+}
+
+body.paper-mode .locale-select-btn {
+  color: #4a4a4a;
+}
+
+body.paper-mode .locale-select-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.paper-mode a {
+  color: #1a1a1b;
+}
+
+body.paper-mode .btn-theme {
+  background: #efece4;
+  border-color: #2a2a2a;
+}
+
+body.paper-mode .btn-theme:hover {
+  background: #e2ded3;
+}
+
+body.paper-mode .btn-theme .icon {
+  color: #1a1a1b;
+}
+
+body.paper-mode .btn-icon:hover {
+  background: rgba(0, 0, 0, 0.06);
 }
 
 /* Header with titles and dark mode toggle */
@@ -733,6 +863,55 @@ body.dark-mode .dataTables_paginate .pagination .disabled a {
 body.dark-mode .dataTables_filter input {
   background-color: #ccc;
 }
+
+/* Paper mode table styles */
+body.paper-mode th,
+body.paper-mode td {
+  border-bottom-color: #2a2a2a;
+}
+
+body.paper-mode thead th {
+  border-bottom: 2px solid #1a1a1b;
+}
+
+body.paper-mode tbody tr:hover {
+  background-color: #e8e4d9;
+}
+
+body.paper-mode .dataTables_paginate .pagination a {
+  background: #fffef9;
+  border-color: #2a2a2a;
+  color: #1a1a1b;
+  border-radius: 0;
+}
+
+body.paper-mode .dataTables_paginate .pagination a:hover {
+  background-color: #efece4;
+}
+
+body.paper-mode .dataTables_paginate .pagination .active a {
+  background-color: #1a1a1b;
+  color: #f9f7f2;
+  border-color: #1a1a1b;
+}
+
+body.paper-mode .dataTables_paginate .pagination .disabled a {
+  background: #f4f1e9;
+  border-color: #8a8a8a;
+  color: #8a8a8a;
+}
+
+body.paper-mode .dataTables_filter input {
+  border-color: #2a2a2a;
+  border-radius: 0;
+}
+
+body.paper-mode .dataTables_filter,
+body.paper-mode .dataTables_info,
+body.paper-mode .dataTables_length {
+  color: #4a4a4a;
+}
+
 /* ============================================
  * Responsive table for mobile - 3-column grid
  * Display index, word, and IPA inline on mobile
@@ -839,6 +1018,16 @@ body.dark-mode .dataTables_filter input {
   .dataTables_paginate .pagination a {
     padding: 6px 10px;
     font-size: 13px;
+  }
+
+  /* Paper mode mobile table — dark borders */
+  body.paper-mode table.display thead {
+    border-bottom-color: #1a1a1b !important;
+  }
+
+  body.paper-mode table.display td,
+  body.paper-mode table.display th {
+    border-color: #2a2a2a !important;
   }
 }
 
@@ -1255,6 +1444,16 @@ body.dark-mode .format-dropdown {
   border-color: #444;
 }
 
+body.paper-mode .format-dropdown {
+  border-color: #2a2a2a;
+  border-radius: 0;
+}
+
+body.paper-mode .format-dropdown-menu-item:first-child,
+body.paper-mode .format-dropdown-menu-item:last-child {
+  border-radius: 0;
+}
+
 /* ============================================
  * Home Page - Hero & Features Enhancements
  * ============================================ */
@@ -1426,4 +1625,91 @@ body.dark-mode .format-dropdown {
   .agent-example {
     font-size: var(--font-xs);
   }
+}
+
+/* ============================================
+ * Paper Mode - Additional element overrides
+ * Sharp edges, serif headings, newspaper feel
+ * ============================================ */
+
+/* Modals — sharp corners */
+body.paper-mode .share-modal,
+body.paper-mode .lang-modal {
+  border-radius: 0;
+  border: 1px solid var(--color-border);
+}
+
+/* Share modal buttons — sharp */
+body.paper-mode .share-native-btn,
+body.paper-mode .copy-link-btn {
+  border-radius: 0;
+}
+
+body.paper-mode .share-url-field {
+  border-radius: 0;
+}
+
+body.paper-mode .share-modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.paper-mode .lang-modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Feature cards — sharp with double-line top border */
+body.paper-mode .feature-card {
+  border-radius: 0;
+  border-top: 2px solid var(--color-border);
+}
+
+/* Agent section — sharp */
+body.paper-mode .agent-section {
+  border-radius: 0;
+}
+
+body.paper-mode .agent-example {
+  border-radius: 0;
+}
+
+/* Language grid pills — sharp */
+body.paper-mode .lang-grid a {
+  border-radius: 0;
+}
+
+/* Form controls — sharp */
+body.paper-mode input.form-control,
+body.paper-mode select.form-control {
+  border-radius: 0;
+}
+
+/* Section title — double underline */
+body.paper-mode .section-title {
+  border-bottom: 3px double var(--color-border);
+}
+
+/* Hero headline — serif, larger tracking */
+body.paper-mode .hero-headline {
+  font-family: Georgia, "Noto Serif SC", "Noto Serif TC", serif;
+  letter-spacing: 0.03em;
+}
+
+/* Intro text — serif */
+body.paper-mode .intro-text {
+  font-family: Georgia, "Noto Serif SC", "Noto Serif TC", serif;
+}
+
+/* Label text — serif */
+body.paper-mode label {
+  font-family: Georgia, "Noto Serif SC", "Noto Serif TC", serif;
+}
+
+/* Footer pill links — sharp */
+body.paper-mode .footer-col ul li a {
+  border-radius: 0;
+}
+
+/* Tools row buttons inherit sharp style */
+body.paper-mode .tools-row .btn-icon {
+  border-radius: 0;
 }

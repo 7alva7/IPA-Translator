@@ -1,7 +1,7 @@
-import { svgDarkMode, svgLightMode } from '../svg.js';
+import { svgDarkMode, svgLightMode, svgPaperMode } from '../svg.js';
 
 /**
- * Set up dark mode toggle
+ * Theme toggle button — cycles: light → dark → paper → light ...
  * @param {string} toggleId - ID of the theme toggle button element
  */
 export function initDarkMode(toggleId) {
@@ -9,27 +9,29 @@ export function initDarkMode(toggleId) {
   if (!toggle) return;
 
   const iconSpan = toggle.querySelector(".icon");
-  const savedTheme = localStorage.getItem("theme");
+  const themes = ["light", "dark", "paper"];
+  const icons = { light: svgLightMode, dark: svgDarkMode, paper: svgPaperMode };
 
-  // Set initial state
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark-mode");
-    if (iconSpan) iconSpan.innerHTML = svgDarkMode;
-  } else {
-    if (iconSpan) iconSpan.innerHTML = svgLightMode;
+  function applyTheme(name) {
+    document.body.classList.remove("dark-mode", "paper-mode");
+    if (name !== "light") document.body.classList.add(name + "-mode");
+    if (iconSpan) iconSpan.innerHTML = icons[name];
   }
 
-  // Add click handler
+  // Set initial state
+  const savedTheme = localStorage.getItem("theme");
+  const initial = themes.includes(savedTheme) ? savedTheme : "light";
+  applyTheme(initial);
+
+  // Add click handler — cycle through themes
   toggle.addEventListener("click", function () {
     toggle.classList.add("btn-theme-transition");
-    document.body.classList.toggle("dark-mode");
-    const isDark = document.body.classList.contains("dark-mode");
+    const current = themes.find(t => document.body.classList.contains(t + "-mode")) || "light";
+    const nextIndex = (themes.indexOf(current) + 1) % themes.length;
+    const next = themes[nextIndex];
 
-    if (iconSpan) {
-      iconSpan.innerHTML = isDark ? svgDarkMode : svgLightMode;
-    }
-
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    applyTheme(next);
+    localStorage.setItem("theme", next);
   });
 }
 
