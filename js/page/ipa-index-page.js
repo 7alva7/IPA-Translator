@@ -7,7 +7,7 @@ import { loadIPADatabase, normalizeIPAData, isElementChecked, setElementValue, s
 import { formatPairIPAs, formatAsJSON, formatAsCSV } from '../format-display.js';
 import { initSpeakButton } from '../tts.js';
 import { getShareModal, parseShareFromUrl, clearShareParams } from '../share.js';
-import { svgShare, svgGlobe, svgGamepad, svgCopy, svgTick, svgDownArrow, svgLang } from '../svg.js';
+import { svgShare, svgGlobe, svgGamepad, svgCopy, svgTick, svgDownArrow, svgLang, svgFullscreen, svgExitFullscreen } from '../svg.js';
 import { initDarkMode, initLanguageButtons, generateLanguageButtons, initResponsiveTextareaRows, initLocaleSelector } from './page-shared.js';
 
 export function initIPAIndexPage(options) {
@@ -316,6 +316,37 @@ export function initIPAIndexPage(options) {
     modal.overlay.style.display = 'flex';
   };
 
+  // Fullscreen output modal
+  let fullscreenModal = null;
+
+  const getFullscreenModal = () => {
+    if (!fullscreenModal) {
+      const overlay = document.createElement('div');
+      overlay.className = 'fullscreen-overlay';
+      overlay.innerHTML = `
+        <div class="fullscreen-content" role="dialog" aria-modal="true">
+          <button class="fullscreen-close" aria-label="Close">&times;</button>
+          <pre class="fullscreen-text"></pre>
+        </div>`;
+      document.body.appendChild(overlay);
+
+      const closeBtn = overlay.querySelector('.fullscreen-close');
+      const contentEl = overlay.querySelector('.fullscreen-text');
+      const close = () => { overlay.style.display = 'none'; };
+
+      closeBtn.addEventListener('click', close);
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.style.display !== 'none') close();
+      });
+
+      fullscreenModal = { overlay, contentEl, close };
+    }
+    return fullscreenModal;
+  };
+
   if (languageSelectorId) {
     const selectorBtn = document.getElementById(languageSelectorId);
     if (selectorBtn) {
@@ -398,6 +429,27 @@ export function initIPAIndexPage(options) {
         }
       });
     }
+
+    // Fullscreen button
+    const sep = document.createElement('span');
+    sep.className = 'output-sep';
+    sep.textContent = '•';
+    outputControls.appendChild(sep);
+
+    const fullscreenBtn = document.createElement('button');
+    fullscreenBtn.id = 'fullscreen-btn';
+    fullscreenBtn.className = 'btn-icon';
+    fullscreenBtn.setAttribute('aria-label', 'Fullscreen');
+    fullscreenBtn.innerHTML = svgFullscreen;
+    outputControls.appendChild(fullscreenBtn);
+
+    fullscreenBtn.addEventListener('click', () => {
+      const output = document.getElementById(outputId)?.value || '';
+      if (!output) return;
+      const modal = getFullscreenModal();
+      modal.contentEl.textContent = output;
+      modal.overlay.style.display = 'flex';
+    });
 
   }
 

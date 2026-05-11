@@ -353,7 +353,7 @@ select.form-control {
 .footer {
   margin-top: 0;
   padding: 30px 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 3px double var(--color-border);
 }
 
 .footer-grid {
@@ -516,7 +516,46 @@ select.form-control {
 
 .form-check-inline input[type="radio"],
 .form-check-inline input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
   margin: 0 5px 0 0;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-input-bg);
+  cursor: pointer;
+  position: relative;
+}
+
+.form-check-inline input[type="radio"] {
+  border-radius: 50%;
+}
+
+.form-check-inline input[type="checkbox"] {
+  border-radius: 0;
+}
+
+.form-check-inline input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-text);
+}
+
+.form-check-inline input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 12px;
+  color: var(--color-text);
+  line-height: 1;
 }
 
 .form-check-inline label {
@@ -1246,6 +1285,69 @@ body.dark-mode .lang-modal-close:hover {
 
 .format-dropdown-menu-item:hover {
   background: var(--color-btn-hover);
+}
+
+/* ============================================
+ * Fullscreen Output Modal
+ * ============================================ */
+
+.fullscreen-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-content {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  width: calc(100% - 40px);
+  max-width: 900px;
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.fullscreen-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 20px;
+  color: var(--color-text-muted);
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  line-height: 1;
+}
+
+.fullscreen-close:hover {
+  color: var(--color-text);
+}
+
+.fullscreen-text {
+  padding: 20px;
+  font-size: var(--font-md);
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  flex: 1;
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: inherit;
+}
+
+body.dark-mode .fullscreen-close:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
