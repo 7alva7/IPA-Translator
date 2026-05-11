@@ -1,7 +1,7 @@
-import { svgDarkMode, svgLightMode, svgPaperMode } from '../svg.js';
+import { svgDarkMode, svgLightMode } from '../svg.js';
 
 /**
- * Theme toggle button — cycles: light → dark → paper → light ...
+ * Set up dark mode toggle
  * @param {string} toggleId - ID of the theme toggle button element
  */
 export function initDarkMode(toggleId) {
@@ -9,29 +9,28 @@ export function initDarkMode(toggleId) {
   if (!toggle) return;
 
   const iconSpan = toggle.querySelector(".icon");
-  const themes = ["light", "dark", "paper"];
-  const icons = { light: svgLightMode, dark: svgDarkMode, paper: svgPaperMode };
-
-  function applyTheme(name) {
-    document.body.classList.remove("dark-mode", "paper-mode");
-    if (name !== "light") document.body.classList.add(name + "-mode");
-    if (iconSpan) iconSpan.innerHTML = icons[name];
-  }
+  const savedTheme = localStorage.getItem("theme");
 
   // Set initial state
-  const savedTheme = localStorage.getItem("theme");
-  const initial = themes.includes(savedTheme) ? savedTheme : "light";
-  applyTheme(initial);
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    if (iconSpan) iconSpan.innerHTML = svgDarkMode;
+  } else {
+    document.body.classList.remove("dark-mode");
+    if (iconSpan) iconSpan.innerHTML = svgLightMode;
+  }
 
-  // Add click handler — cycle through themes
+  // Add click handler
   toggle.addEventListener("click", function () {
     toggle.classList.add("btn-theme-transition");
-    const current = themes.find(t => document.body.classList.contains(t + "-mode")) || "light";
-    const nextIndex = (themes.indexOf(current) + 1) % themes.length;
-    const next = themes[nextIndex];
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
 
-    applyTheme(next);
-    localStorage.setItem("theme", next);
+    if (iconSpan) {
+      iconSpan.innerHTML = isDark ? svgDarkMode : svgLightMode;
+    }
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 }
 
