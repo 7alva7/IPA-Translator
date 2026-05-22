@@ -1346,6 +1346,27 @@ body.dark-mode .lang-modal-close:hover {
   font-family: inherit;
 }
 
+.fullscreen-text.fullscreen-ruby {
+  white-space: normal;
+  line-height: 2.4;
+}
+
+.fullscreen-text.fullscreen-ruby ruby {
+  margin: 0 2px;
+  font-size: 0.65em;
+  color: var(--color-text-muted);
+}
+
+.fullscreen-text.fullscreen-ruby rt {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.fullscreen-text.fullscreen-ruby .ruby-unmatched {
+  margin: 0 2px;
+}
+
 body.dark-mode .fullscreen-close:hover {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -1626,16 +1647,19 @@ body.dark-mode .lang-modal-close:hover {
   background: var(--color-bg-secondary);
   color: var(--color-text);
   border-radius: 0.25rem;
+  font-size: var(--font-md);
 }
 
 .ruby-output ruby {
   margin: 0 2px;
+  font-size: 0.65em;
+  color: var(--color-text-muted);
 }
 
 .ruby-output rt {
-  font-size: 0.6em;
-  color: var(--color-text-muted);
-  font-weight: normal;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 .ruby-output .ruby-unmatched {
@@ -1645,6 +1669,5 @@ body.dark-mode .lang-modal-close:hover {
 @media (max-width: 768px) {
   .ruby-output {
     min-height: 180px;
-    font-size: 16px;
   }
 }

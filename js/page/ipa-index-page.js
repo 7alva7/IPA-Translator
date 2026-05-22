@@ -507,15 +507,23 @@ export function initIPAIndexPage(options) {
 
     fullscreenBtn.addEventListener('click', () => {
       let output = '';
+      let isRuby = false;
       if (displayFormat === 'ruby') {
         const rubyEl = document.getElementById(getRubyOutputId());
-        output = rubyEl ? rubyEl.innerText : '';
+        output = rubyEl ? rubyEl.innerHTML : '';
+        isRuby = true;
       } else {
         output = document.getElementById(outputId)?.value || '';
       }
       if (!output) return;
       const modal = getFullscreenModal();
-      modal.contentEl.textContent = output;
+      if (isRuby) {
+        modal.contentEl.classList.add('fullscreen-ruby');
+        modal.contentEl.innerHTML = output;
+      } else {
+        modal.contentEl.classList.remove('fullscreen-ruby');
+        modal.contentEl.textContent = output;
+      }
       modal.overlay.style.display = 'flex';
     });
 
