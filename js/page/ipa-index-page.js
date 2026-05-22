@@ -99,6 +99,42 @@ export function initIPAIndexPage(options) {
     return allowWordSearchId ? isElementChecked(allowWordSearchId) : false;
   };
 
+  const getRubyOutputId = () => outputId.replace('tBox', 'ruby');
+
+  const setOutputMode = (mode) => {
+    const textareaEl = document.getElementById(outputId);
+    const rubyEl = document.getElementById(getRubyOutputId());
+    if (mode === 'ruby') {
+      if (textareaEl) textareaEl.style.display = 'none';
+      if (rubyEl) rubyEl.style.display = 'block';
+    } else {
+      if (textareaEl) textareaEl.style.display = '';
+      if (rubyEl) rubyEl.style.display = 'none';
+    }
+  };
+
+  function escapeHTML(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function generateRubyHTML(pairs, formatter) {
+    let html = '';
+    for (const [word, ipa] of pairs) {
+      if (ipa == null) {
+        html += `<span class="ruby-unmatched">${escapeHTML(word)}</span>`;
+      } else {
+        let displayIPA = ipa;
+        if (formatter) {
+          const formatted = formatter('/' + ipa + '/');
+          const match = formatted.match(/\/(.+?)\//);
+          displayIPA = match ? match[1] : ipa;
+        }
+        html += `<ruby>${escapeHTML(word)}<rt>${escapeHTML(displayIPA)}</rt></ruby>`;
+      }
+    }
+    return html;
+  }
+
   function buildPairsData() {
     const input = document.getElementById(inputId)?.value || '';
     const withWords = getWithWords();
@@ -126,6 +162,9 @@ export function initIPAIndexPage(options) {
     const input = inputEl.value;
     if (!input) {
       setElementValue(outputId, '');
+      setOutputMode('textarea');
+      const rubyEl = document.getElementById(getRubyOutputId());
+      if (rubyEl) rubyEl.innerHTML = '';
       return;
     }
     if (input.length > 10000) {
@@ -137,6 +176,8 @@ export function initIPAIndexPage(options) {
     const withWords = getWithWords();
     const allowWordSearch = getAllowWordSearch();
     const formatter = getFormatter();
+
+    setOutputMode('textarea');
 
     if (displayFormat === 'ipa') {
       let ipaResult = process({
@@ -155,6 +196,22 @@ export function initIPAIndexPage(options) {
     } else if (displayFormat === 'csv') {
       const { pairs } = buildPairsData();
       setElementValueAnimated(outputId, formatAsCSV(pairs, formatter));
+    } else if (displayFormat === 'ruby') {
+      const { pairs } = process({
+        input,
+        lookupTable: IPA_DB,
+        withWords,
+        allowWordSearch,
+        maxWordLength,
+        maxPhraseLength,
+        pairsOnly: true,
+        includeUnmatched: true
+      });
+      setOutputMode('ruby');
+      const rubyEl = document.getElementById(getRubyOutputId());
+      if (rubyEl) {
+        rubyEl.innerHTML = generateRubyHTML(pairs, formatter);
+      }
     } else {
       let result = process({
         input,
@@ -271,7 +328,7 @@ export function initIPAIndexPage(options) {
   // Format button and dropdown locale-aware update (scope vars for renderFormatControls)
   let formatBtnEl = null;
   let formatDropdown = null;
-  var formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV' };
+  var formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV', ruby: '疊羅漢' };
 
   // Initialize locale selector (footer dropdown) — callbacks wired after format button setup
 
@@ -373,8 +430,13 @@ export function initIPAIndexPage(options) {
     if (copyBtn) {
       copyBtn.innerHTML = svgCopy;
       copyBtn.addEventListener('click', () => {
-        const output = document.getElementById(outputId)?.value || '';
-        navigator.clipboard.writeText(output).then(() => {
+        let textToCopy = '';
+        if (displayFormat === 'ruby') {
+          textToCopy = document.getElementById(inputId)?.value || '';
+        } else {
+          textToCopy = document.getElementById(outputId)?.value || '';
+        }
+        navigator.clipboard.writeText(textToCopy).then(() => {
           copyBtn.innerHTML = svgTick;
           setTimeout(() => { copyBtn.innerHTML = svgCopy; }, 1500);
         });
@@ -383,7 +445,7 @@ export function initIPAIndexPage(options) {
 
     formatBtnEl = document.getElementById('display-format-btn');
     if (formatBtnEl) {
-      formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV' };
+      formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV', ruby: '疊羅漢' };
       formatBtnEl.innerHTML = `${L.textAndIpa} ${svgDownArrow}`;
 
       formatDropdown = {
@@ -444,7 +506,13 @@ export function initIPAIndexPage(options) {
     outputControls.appendChild(fullscreenBtn);
 
     fullscreenBtn.addEventListener('click', () => {
-      const output = document.getElementById(outputId)?.value || '';
+      let output = '';
+      if (displayFormat === 'ruby') {
+        const rubyEl = document.getElementById(getRubyOutputId());
+        output = rubyEl ? rubyEl.innerText : '';
+      } else {
+        output = document.getElementById(outputId)?.value || '';
+      }
       if (!output) return;
       const modal = getFullscreenModal();
       modal.contentEl.textContent = output;
@@ -457,7 +525,7 @@ export function initIPAIndexPage(options) {
   function renderFormatControls(localeCode, localeData) {
     if (!formatBtnEl) return;
     const labels = localeData || {};
-    formatLabels = { '': labels.textAndIpa || L.textAndIpa, ipa: labels.onlyIpa || L.onlyIpa, json: 'JSON', csv: 'CSV' };
+    formatLabels = { '': labels.textAndIpa || L.textAndIpa, ipa: labels.onlyIpa || L.onlyIpa, json: 'JSON', csv: 'CSV', ruby: '疊羅漢' };
 
     // Update button text (preserve SVG arrow)
     const btnText = Array.from(formatBtnEl.childNodes).find(n => n.nodeType === Node.TEXT_NODE);

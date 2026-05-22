@@ -41,7 +41,8 @@ export function processTextCharBased(options) {
     withWords = false,
     allowWordSearch = false,
     maxWordLength = 6,
-    pairsOnly = false
+    pairsOnly = false,
+    includeUnmatched = false
   } = options;
 
   let result = "";
@@ -85,6 +86,7 @@ export function processTextCharBased(options) {
       i += wordLength;
     } else {
       result += input[i] + " ";
+      if (pairsOnly && includeUnmatched) pairs.push([input[i], null]);
       i++;
     }
   }
@@ -116,7 +118,8 @@ export function processTextLongestMatch(options) {
     allowWordSearch = true,
     maxPhraseLength = 5,
     onProgress = null,
-    pairsOnly = false
+    pairsOnly = false,
+    includeUnmatched = false
   } = options;
 
   // Split text into words (Vietnamese uses spaces as word separators)
@@ -169,6 +172,7 @@ export function processTextLongestMatch(options) {
     } else {
       // No match found, keep original word
       result += words[i] + " ";
+      if (pairsOnly && includeUnmatched) pairs.push([words[i], null]);
       i++;
     }
 
