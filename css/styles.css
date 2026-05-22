@@ -1610,3 +1610,41 @@ body.dark-mode .share-modal-close:hover,
 body.dark-mode .lang-modal-close:hover {
   background: rgba(255, 255, 255, 0.05);
 }
+
+/* ============================================
+ * Ruby Stack (疊羅漢) Display Format
+ * ============================================ */
+
+.ruby-output {
+  width: 100%;
+  min-height: 300px;
+  padding: 10px;
+  line-height: 2.4;
+  overflow-y: auto;
+  word-wrap: break-word;
+  border: 1px solid var(--color-input-border);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  border-radius: 0.25rem;
+}
+
+.ruby-output ruby {
+  margin: 0 2px;
+}
+
+.ruby-output rt {
+  font-size: 0.6em;
+  color: var(--color-text-muted);
+  font-weight: normal;
+}
+
+.ruby-output .ruby-unmatched {
+  margin: 0 2px;
+}
+
+@media (max-width: 768px) {
+  .ruby-output {
+    min-height: 180px;
+    font-size: 16px;
+  }
+}
