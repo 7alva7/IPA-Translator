@@ -7,7 +7,7 @@ initIPAIndexPage({
   databasePath: '../json/fi.json',
   process: processTextLongestMatch,
   ttsLanguage: 'fi-FI',
-  locale: { textAndIpa: '(Teksti /ipa/)', onlyIpa: 'Vain /ipa/' },
+  locale: { textAndIpa: '(Teksti /ipa/)', ruby: 'Rubi', onlyIpa: 'Vain /ipa/' },
   gameLabel: 'finnish',
   languageSelectorId: 'lang-selector-btn',
   footerToolsContainerId: 'footer-tools',

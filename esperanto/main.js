@@ -12,7 +12,7 @@ initIPAIndexPage({
   process: processTextLongestMatch,
   maxWordLength: 5,
   ttsLanguage: 'eo',
-  locale: { textAndIpa: '(Teksto /ipa/)', onlyIpa: 'Nur /ipa/' },
+  locale: { textAndIpa: '(Teksto /ipa/)', ruby: 'Rubi', onlyIpa: 'Nur /ipa/' },
   gameLabel: 'esperanto',
   languageSelectorId: 'lang-selector-btn',
   footerToolsContainerId: 'footer-tools',

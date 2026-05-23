@@ -12,7 +12,7 @@ initIPAIndexPage({
   variantRadioSelector: 'input[name="inlineRadioOptions"]',
   variantMapping: { IPA_fr_FR: 'fr_FR', IPA_fr_QC: 'fr_QC' },
   process: processTextLongestMatch,
-  locale: { textAndIpa: '(Texte /ipa/)', onlyIpa: 'Seulement /ipa/' },
+  locale: { textAndIpa: '(Texte /ipa/)', ruby: 'Ruby', onlyIpa: 'Seulement /ipa/' },
   getLanguage: () => {
     const variant = document.querySelector('input[name="inlineRadioOptions"]:checked')?.id;
     return variant === 'IPA_fr_FR' ? 'fr-FR' : 'fr-CA';

@@ -7,7 +7,7 @@ initIPAIndexPage({
   databasePath: '../json/de.json',
   process: processTextLongestMatch,
   ttsLanguage: 'de-DE',
-  locale: { textAndIpa: '(Text /ipa/)', onlyIpa: 'Nur /ipa/' },
+  locale: { textAndIpa: '(Text /ipa/)', ruby: 'Klammerzeichen', onlyIpa: 'Nur /ipa/' },
   gameLabel: 'german',
   languageSelectorId: 'lang-selector-btn',
   footerToolsContainerId: 'footer-tools',

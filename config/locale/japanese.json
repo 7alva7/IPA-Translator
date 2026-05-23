@@ -1,5 +1,6 @@
 {
   "textAndIpa": "(文字 /ipa/)",
+  "ruby": "ルビ",
   "onlyIpa": "/ipa/ のみ",
   "speakWord": "単語を音読する",
   "game_title": "IPA ゲーム",

@@ -27,7 +27,7 @@ initIPAIndexPage({
     Pinyin: convertIPATextToPinyinWithMarks,
     Zhuyin: convertIPATextToZhuyin
   },
-  locale: { textAndIpa: '(文字 /ipa/)', onlyIpa: '只有 /ipa/' },
+  locale: { textAndIpa: '(文字 /ipa/)', ruby: '注音格式', onlyIpa: '只有 /ipa/' },
   maxWordLength: 9,
   ttsLanguage: 'zh-CN',
   gameLabel: 'mandarin',

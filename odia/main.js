@@ -7,7 +7,7 @@ initIPAIndexPage({
   databasePath: '../json/or.json',
   process: processTextLongestMatch,
   enableSpeakButton: false,
-  locale: { textAndIpa: '(ଅକ୍ଷର /ipa/)', onlyIpa: 'କେବଳ /ipa/' },
+  locale: { textAndIpa: '(ଅକ୍ଷର /ipa/)', ruby: 'ରୁବି', onlyIpa: 'କେବଳ /ipa/' },
   gameLabel: 'odia',
   languageSelectorId: 'lang-selector-btn',
   footerToolsContainerId: 'footer-tools',

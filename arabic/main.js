@@ -10,7 +10,7 @@ initIPAIndexPage({
   defaultLocale: 'arabic',
   databasePath: '../json/ar.json',
   process: processTextLongestMatch,
-  locale: { textAndIpa: '(نص /ipa/)', onlyIpa: '/ipa/ فقط' },
+  locale: { textAndIpa: '(نص /ipa/)', ruby: 'التعليق', onlyIpa: '/ipa/ فقط' },
   maxWordLength: 5,
   ttsLanguage: 'ar',
   gameLabel: 'arabic',

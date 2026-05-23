@@ -5,7 +5,7 @@ initIPAIndexPage({
   defaultLocale: 'korean',
   databasePath: '../json/ko.json',
   process: processKorean,
-  locale: { textAndIpa: '(문자 /ipa/)', onlyIpa: '/ipa/ 만' },
+  locale: { textAndIpa: '(문자 /ipa/)', ruby: '루비', onlyIpa: '/ipa/ 만' },
   maxWordLength: 6,
   ttsLanguage: 'ko-KR',
   gameLabel: 'korean',
