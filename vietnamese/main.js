@@ -19,7 +19,7 @@ initIPAIndexPage({
     IPA_num: formatIPANumbers,
     tone_simple: formatVietnameseOutput
   },
-  locale: { textAndIpa: '(Chữ /ipa/)', onlyIpa: 'Chỉ /ipa/' },
+  locale: { textAndIpa: '(Chữ /ipa/)', ruby: 'Chép vần', onlyIpa: 'Chỉ /ipa/' },
   maxWordLength: 6,
   ttsLanguage: 'vi-VN',
   gameLabel: 'vietnamese',

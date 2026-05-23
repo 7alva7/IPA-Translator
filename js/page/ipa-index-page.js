@@ -328,7 +328,7 @@ export function initIPAIndexPage(options) {
   // Format button and dropdown locale-aware update (scope vars for renderFormatControls)
   let formatBtnEl = null;
   let formatDropdown = null;
-  var formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV', ruby: '疊羅漢' };
+  var formatLabels = { '': L.textAndIpa, ruby: L.ruby || 'Ruby', ipa: L.onlyIpa, json: 'JSON', csv: 'CSV' };
 
   // Initialize locale selector (footer dropdown) — callbacks wired after format button setup
 
@@ -445,7 +445,7 @@ export function initIPAIndexPage(options) {
 
     formatBtnEl = document.getElementById('display-format-btn');
     if (formatBtnEl) {
-      formatLabels = { '': L.textAndIpa, ipa: L.onlyIpa, json: 'JSON', csv: 'CSV', ruby: '疊羅漢' };
+      formatLabels = { '': L.textAndIpa, ruby: L.ruby || 'Ruby', ipa: L.onlyIpa, json: 'JSON', csv: 'CSV' };
       formatBtnEl.innerHTML = `${L.textAndIpa} ${svgDownArrow}`;
 
       formatDropdown = {
@@ -533,7 +533,7 @@ export function initIPAIndexPage(options) {
   function renderFormatControls(localeCode, localeData) {
     if (!formatBtnEl) return;
     const labels = localeData || {};
-    formatLabels = { '': labels.textAndIpa || L.textAndIpa, ipa: labels.onlyIpa || L.onlyIpa, json: 'JSON', csv: 'CSV', ruby: '疊羅漢' };
+    formatLabels = { '': labels.textAndIpa || L.textAndIpa, ruby: labels.ruby || L.ruby || 'Ruby', ipa: labels.onlyIpa || L.onlyIpa, json: 'JSON', csv: 'CSV' };
 
     // Update button text (preserve SVG arrow)
     const btnText = Array.from(formatBtnEl.childNodes).find(n => n.nodeType === Node.TEXT_NODE);

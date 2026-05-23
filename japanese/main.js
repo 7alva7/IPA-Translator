@@ -10,7 +10,7 @@ initIPAIndexPage({
   defaultLocale: 'japanese',
   databasePath: '../json/ja.json',
   process: processTextCharBased,
-  locale: { textAndIpa: '(文字 /ipa/)', onlyIpa: '/ipa/ のみ' },
+  locale: { textAndIpa: '(文字 /ipa/)', ruby: 'ルビ', onlyIpa: '/ipa/ のみ' },
   maxWordLength: 6,
   ttsLanguage: 'ja-JP',
   gameLabel: 'japanese',

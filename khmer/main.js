@@ -8,7 +8,7 @@ initIPAIndexPage({
   // Use the new Khmer processor here
   process: processKhmerText, 
   ttsLanguage: 'km-KH',
-  locale: { textAndIpa: '(អក្សរ /ipa/)', onlyIpa: '/ipa/ ប៉ុណ្ណោះ' },
+  locale: { textAndIpa: '(អក្សរ /ipa/)', ruby: 'រូបី', onlyIpa: '/ipa/ ប៉ុណ្ណោះ' },
   gameLabel: 'khmer',
   languageSelectorId: 'lang-selector-btn',
   footerToolsContainerId: 'footer-tools',

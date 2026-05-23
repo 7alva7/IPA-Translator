@@ -29,7 +29,7 @@ initIPAIndexPage({
     Yale: formatYueYale,
     Liu: formatYueLiu
   },
-  locale: { textAndIpa: '(文字 /ipa/)', onlyIpa: '只有 /ipa/' },
+  locale: { textAndIpa: '(文字 /ipa/)', ruby: '疊羅漢', onlyIpa: '只有 /ipa/' },
   maxWordLength: 6,
   ttsLanguage: 'zh-HK',
   gameLabel: 'cantonese',

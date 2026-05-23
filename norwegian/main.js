@@ -7,7 +7,7 @@ initIPAIndexPage({
   databasePath: '../json/nb.json',
   process: processTextLongestMatch,
   ttsLanguage: 'nb-NO',
-  locale: { textAndIpa: '(Tekst /ipa/)', onlyIpa: 'Kun /ipa/' },
+  locale: { textAndIpa: '(Tekst /ipa/)', ruby: 'Ruby', onlyIpa: 'Kun /ipa/' },
   gameLabel: 'norwegian',
   languageSelectorId: 'lang-selector-btn',
   footerToolsContainerId: 'footer-tools',

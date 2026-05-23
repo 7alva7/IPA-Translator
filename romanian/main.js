@@ -6,7 +6,7 @@ initIPAIndexPage({
   databasePath: '../json/ro.json',
   process: processTextLongestMatch,
   ttsLanguage: 'ro-RO',
-  locale: { textAndIpa: '(Text /ipa/)', onlyIpa: 'Doar /ipa/' },
+  locale: { textAndIpa: '(Text /ipa/)', ruby: 'Rubin', onlyIpa: 'Doar /ipa/' },
   gameLabel: 'romanian',
   languageSelectorId: 'lang-selector-btn',
   footerToolsContainerId: 'footer-tools',
