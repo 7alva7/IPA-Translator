@@ -342,7 +342,7 @@ export function initIPAIndexPage(options) {
       overlay.innerHTML = `
         <div class="lang-modal" role="dialog" aria-modal="true">
           <button class="lang-modal-close" aria-label="Close">&times;</button>
-          <h3>選擇語言 / Select Language</h3>
+          <h3 data-i18n="home_select_language">Select a Language</h3>
           <ul class="lang-modal-list" id="lang-modal-list"></ul>
         </div>`;
       document.body.appendChild(overlay);
@@ -370,6 +370,7 @@ export function initIPAIndexPage(options) {
       configPath: '../config/languages.json',
       wrapperTag: 'div'
     });
+    if (applyTranslations) applyTranslations(currentLocale);
     modal.overlay.style.display = 'flex';
   };
 
@@ -556,10 +557,13 @@ export function initIPAIndexPage(options) {
   }
 
   // Wire locale selector with combined callback
+  let currentLocale = localStorage.getItem('ipa_locale') || defaultLocale || 'english';
+  let applyTranslations = null;
   if (defaultLocale) {
-    initLocaleSelector({
+    applyTranslations = initLocaleSelector({
       defaultLocale,
       onLocaleChange: (code, data) => {
+        currentLocale = code || defaultLocale;
         renderFooterTools(code, data);
         renderFormatControls(code, data);
       }

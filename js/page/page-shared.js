@@ -223,6 +223,8 @@ export function initLocaleSelector(options = {}) {
   }
 
   init();
+
+  return applyTranslations;
 }
 
 
