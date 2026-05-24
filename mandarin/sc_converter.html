@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>簡繁轉換器 (Simplified-Traditional Converter)</title>
+    <meta name="description" content="漢語簡體繁體互相轉換。自動偵測輸入文字類型，即時轉換為對應的繁體或簡體字">
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="titles">
+        <h1>簡繁轉換器</h1>
+        <h2>Simplified-Traditional Converter</h2>
+      </div>
+      <button id="dark-mode-toggle" class="btn-theme" aria-label="Toggle dark mode">
+        <span class="icon"></span>
+      </button>
+    </div>
+    <hr />
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label>
+            <span data-i18n="label_input">輸入</span>
+          </label>
+          <textarea id="inputText" rows="10" placeholder="在此輸入簡體或繁體文字..."></textarea>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <div class="label-with-controls">
+            <label id="outputLabel" data-i18n="label_output">輸出</label>
+            <div class="output-controls" id="output-controls">
+              <button id="copy-output-btn" class="btn-icon" aria-label="Copy"></button>
+            </div>
+          </div>
+          <textarea id="outputText" rows="10" disabled></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <span style="font-weight: 500; margin-right: 5px;" data-i18n="label_conversion_mode">轉換模式：</span>
+        <div class="form-check-inline">
+          <input type="radio" name="convMode" id="mode_standard" checked />
+          <label for="mode_standard" data-i18n="label_mode_standard">標準</label>
+        </div>
+        <div class="form-check-inline">
+          <input type="radio" name="convMode" id="mode_taiwan" />
+          <label for="mode_taiwan" data-i18n="label_mode_taiwan">台灣</label>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <select id="locale-select" class="locale-select-btn"></select>
+          <p>
+            <a href="../index.html" data-i18n="i18n_home">Home</a>
+            &nbsp;|&nbsp;
+            <a href="index.html" data-i18n="i18n_ipa">IPA 翻譯器</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/lotusfa/IPA-Translator" data-i18n="i18n_github">GitHub</a>
+            &nbsp;|&nbsp;
+            Copyright © <a href="https://lotusfa.com/">LotusFa</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./sc_converter.js"></script>
+  </body>
+</html>
