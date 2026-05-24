@@ -1,7 +1,7 @@
 // Simplified ↔ Traditional Chinese converter
-// Uses opencc-js via CDN (ES module imports)
+// Uses opencc-js from local lib/
 
-const CDN = 'https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/esm';
+const LIB = '../lib/opencc';
 
 let _cn2tw = null;
 let _tw2cn = null;
@@ -10,15 +10,15 @@ let _hk2cn = null;
 let _ready = false;
 
 /**
- * Load opencc-js converters from CDN (cached after first call)
+ * Load opencc-js converters from local lib (cached after first call)
  * @returns {Promise<void>}
  */
 export async function loadConverters() {
   if (_ready) return;
 
   const [{ Converter: Cn2T }, { Converter: T2Cn }] = await Promise.all([
-    import(`${CDN}/cn2t.js`),
-    import(`${CDN}/t2cn.js`),
+    import(`${LIB}/cn2t.js`),
+    import(`${LIB}/t2cn.js`),
   ]);
 
   _cn2tw = Cn2T({ from: 'cn', to: 'tw' });
