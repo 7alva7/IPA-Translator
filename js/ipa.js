@@ -184,8 +184,8 @@ export function processTextLongestMatch(options) {
 }
 
 /**
- * Process Khmer text using Intl.Segmenter for smart word breaking
- * This handles the "no-space" nature of Khmer and keeps clusters together.
+ * Process Khmer text using greedy longest-match first, with Intl.Segmenter
+ * as a fallback for breaking unknown text into word-like segments.
  * * @param {object} options - Options:
  * @param {string} options.input - Input Khmer text
  * @param {object} options.lookupTable - IPA lookup table (km.json)
@@ -197,51 +197,98 @@ export function processKhmerText(options) {
   const { input, lookupTable, withWords = false, pairsOnly = false } = options;
 
   // 1. Clean hidden characters
-  const sanitizedInput = input.replace(/[\u200B-\u200D\uFEFF]/g, '');
-  
-  // 2. Use Segmenter for word-level boundaries
-  const segmenter = new Intl.Segmenter('km', { granularity: 'word' });
-  const segments = segmenter.segment(sanitizedInput);
+  const sanitizedInput = input.replace(/[​-‍﻿]/g, '');
 
+  const maxWordLength = 20;
   let result = "";
   let pairs = [];
+  let i = 0;
 
-  for (const { segment } of segments) {
-    const cleanSegment = segment.trim();
-    if (!cleanSegment) {
-      if (!pairsOnly) result += " ";
-      continue;
-    }
+  while (i < sanitizedInput.length) {
+    let matchedWord = null;
+    let matchedIPA = null;
 
-    // Try whole word first (e.g., "ភាសា" or "សួស្តី")
-    let matchedIPA = lookupTable[cleanSegment];
-
-    if (matchedIPA) {
-      result += withWords ? `( ${cleanSegment} ${matchedIPA} ) ` : `${matchedIPA} `;
-      if (pairsOnly) pairs.push([cleanSegment, matchedIPA]);
-    } else {
-      /* 3. Fallback: Break word into phonetic clusters
-         This regex captures: Base Consonant + Subscripts + Vowels + Diacritics
-      */
-      const clusters = cleanSegment.match(/[\u1780-\u17AF]([\u17D2][\u1780-\u17AF])*[\u17B6-\u17D3\u17D7]*/g) || [cleanSegment];
-      
-      for (const cluster of clusters) {
-        const clusterIPA = lookupTable[cluster];
-        if (clusterIPA) {
-          result += withWords ? `( ${cluster} ${clusterIPA} ) ` : `${clusterIPA} `;
-          if (pairsOnly) pairs.push([cluster, clusterIPA]);
-        } else {
-          // If cluster not in DB, keep original text
-          result += cluster; 
-          if (pairsOnly) pairs.push([cluster, null]);
+    // Phase 1: Greedy longest-match from database
+    // Try multi-character matches at any position (compounds, symbols, abbreviations).
+    // Single-char matches are skipped so the segmenter can process full syllables.
+    for (let len = maxWordLength; len >= 2; len--) {
+      if (i + len <= sanitizedInput.length) {
+        const candidate = sanitizedInput.substring(i, i + len);
+        if (lookupTable[candidate]) {
+          matchedWord = candidate;
+          matchedIPA = lookupTable[candidate];
+          break;
         }
       }
-      result += " ";
+    }
+
+    if (matchedWord) {
+      result += withWords ? `( ${matchedWord} ${matchedIPA} ) ` : `${matchedIPA} `;
+      if (pairsOnly) pairs.push([matchedWord, matchedIPA]);
+      i += matchedWord.length;
+    } else {
+      // Phase 2: Use Intl.Segmenter to find word boundaries in remaining text
+      const remaining = sanitizedInput.substring(i);
+      const segmenter = new Intl.Segmenter('km', { granularity: 'word' });
+      let consumed = 0;
+      let processedThisChunk = false;
+
+      for (const { segment, isWordLike } of segmenter.segment(remaining)) {
+        consumed += segment.length;
+
+        if (!isWordLike) {
+          // Non-word-like (punctuation, symbols): try DB lookup, else pass through
+          if (lookupTable[segment]) {
+            result += withWords ? `( ${segment} ${lookupTable[segment]} ) ` : `${lookupTable[segment]} `;
+            if (pairsOnly) pairs.push([segment, lookupTable[segment]]);
+          } else {
+            result += segment;
+          }
+          continue;
+        }
+
+        const cleanSegment = segment.trim();
+        if (!cleanSegment) continue;
+
+        // Try looking up the whole segment
+        const segmentIPA = lookupTable[cleanSegment];
+        if (segmentIPA) {
+          result += withWords ? `( ${cleanSegment} ${segmentIPA} ) ` : `${segmentIPA} `;
+          if (pairsOnly) pairs.push([cleanSegment, segmentIPA]);
+        } else {
+          /* Phase 3: Break into phonetic clusters
+             This regex captures: Base Consonant + Subscripts + Vowels + Diacritics
+          */
+          const clusters = cleanSegment.match(/[ក-ឯ]([្][ក-ឯ])*[ា-៓ៗ]*/g) || [cleanSegment];
+
+          for (const cluster of clusters) {
+            const clusterIPA = lookupTable[cluster];
+            if (clusterIPA) {
+              result += withWords ? `( ${cluster} ${clusterIPA} ) ` : `${clusterIPA} `;
+              if (pairsOnly) pairs.push([cluster, clusterIPA]);
+            } else {
+              result += cluster;
+              if (pairsOnly) pairs.push([cluster, null]);
+            }
+          }
+        }
+
+        processedThisChunk = true;
+        break; // Process one word at a time, then restart outer loop for Phase 1
+      }
+
+      i += consumed;
+      if (!processedThisChunk && consumed === 0) {
+        // Safety: advance one character to prevent infinite loop
+        result += sanitizedInput[i];
+        if (pairsOnly) pairs.push([sanitizedInput[i], null]);
+        i++;
+      }
     }
   }
 
   if (pairsOnly) return { result: result.trim(), pairs };
-  return result.trim().replace(/\s+/g, ' '); // Clean up spacing
+  return result.trim().replace(/\s+/g, ' ');
 }
 
 /**
