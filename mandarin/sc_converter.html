@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>簡繁轉換器 (Simplified-Traditional Converter)</title>
-    <meta name="description" content="漢語簡體繁體互相轉換。自動偵測輸入文字類型，即時轉換為對應的繁體或簡體字">
+    <title>繁簡轉換器 (Traditional-Simplified Converter)</title>
+    <meta name="description" content="漢語繁體簡體互相轉換。自動偵測輸入文字類型，即時轉換為對應的繁體或簡體字">
     <link rel="icon" href="../favicon.svg" />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <div class="header">
       <div class="titles">
-        <h1>簡繁轉換器</h1>
-        <h2>Simplified-Traditional Converter</h2>
+        <h1>繁簡轉換器</h1>
+        <h2>Traditional-Simplified Converter</h2>
       </div>
       <button id="dark-mode-toggle" class="btn-theme" aria-label="Toggle dark mode">
         <span class="icon"></span>
@@ -26,7 +26,7 @@
           <label>
             <span data-i18n="label_input">輸入</span>
           </label>
-          <textarea id="inputText" rows="10" placeholder="在此輸入簡體或繁體文字..."></textarea>
+          <textarea id="inputText" rows="10" placeholder="在此輸入繁體或簡體文字...">在此輸入繁體或簡體文字...</textarea>
         </div>
       </div>
 
@@ -58,13 +58,28 @@
     </div>
 
     <footer class="footer">
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer_description">Description</h4>
+          <p>此開源項目爲中文字提供自動繁簡雙向轉換。系統自動偵測輸入之字體語系並即時轉換。</p>
+          <p>This open-source project provides automatic bidirectional conversion for Chinese characters. It instantly detects the input script and converts it in real time.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_links">Useful Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="i18n_ipa" >漢語國際音標翻譯器（普通話/國語）</a></li>
+            <li><a href="../cantonese/index.html" data-i18n="i18n_ipa" >粵語國際音標翻譯器</a></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <div class="footer-bottom-inner">
           <select id="locale-select" class="locale-select-btn"></select>
           <p>
             <a href="../index.html" data-i18n="i18n_home">Home</a>
-            &nbsp;|&nbsp;
-            <a href="index.html" data-i18n="i18n_ipa">IPA 翻譯器</a>
             &nbsp;|&nbsp;
             <a href="https://github.com/lotusfa/IPA-Translator" data-i18n="i18n_github">GitHub</a>
             &nbsp;|&nbsp;
