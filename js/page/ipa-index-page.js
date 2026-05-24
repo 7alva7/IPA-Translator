@@ -44,6 +44,7 @@ export function initIPAIndexPage(options) {
     toolsConfig = null,
     locale = null,
     defaultLocale = null,
+    onVariantAutoDetect = null,
   } = options;
 
   const defaultFormatLabels = { textAndIpa: '(Text /ipa/)', onlyIpa: 'Only /ipa/' };
@@ -267,7 +268,10 @@ export function initIPAIndexPage(options) {
   const setupEventListeners = () => {
     const inputEl = document.getElementById(inputId);
     if (inputEl) {
-      inputEl.addEventListener('input', debouncedTranslate);
+      inputEl.addEventListener('input', () => {
+        if (onVariantAutoDetect) onVariantAutoDetect();
+        debouncedTranslate();
+      });
       inputEl.addEventListener('focus', function () { this.select(); });
     }
 
