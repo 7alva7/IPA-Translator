@@ -13,7 +13,7 @@
       "code": "mandarin",
       "name": "漢語 (zh)",
       "nativeName": "漢語",
-      "localeName": "汉语 (CN)",
+      "localeName": "汉语 (cn)",
       "indexPath": "../mandarin/index.html",
       "ipaListPath": "../mandarin/ipa_list_zh_hans.html",
       "isActive": false
