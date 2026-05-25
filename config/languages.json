@@ -2,7 +2,7 @@
   "languages": [
     {
       "code": "cantonese",
-      "name": "粵語 (yue)",
+      "name": "漢語 (zh)",
       "nativeName": "廣東話",
       "indexPath": "../cantonese/index.html",
       "ipaListPath": "../cantonese/ipa_list.html",
@@ -10,7 +10,7 @@
     },
     {
       "code": "mandarin",
-      "name": "漢語 (zh)",
+      "name": "汉语 (CN)",
       "nativeName": "漢語",
       "indexPath": "../mandarin/index.html",
       "ipaListPath": "../mandarin/ipa_list_zh_hans.html",
