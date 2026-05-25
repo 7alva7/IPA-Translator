@@ -190,7 +190,7 @@ export function initLocaleSelector(options = {}) {
       languages.forEach(lang => {
         const opt = document.createElement('option');
         opt.value = lang.code;
-        opt.textContent = lang.name;
+        opt.textContent = lang.localeName || lang.name;
         selectEl.appendChild(opt);
       });
 

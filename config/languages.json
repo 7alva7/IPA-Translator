@@ -2,16 +2,18 @@
   "languages": [
     {
       "code": "cantonese",
-      "name": "漢語 (zh)",
+      "name": "粵語 (yue)",
       "nativeName": "廣東話",
+      "localeName": "漢語 (zh)",
       "indexPath": "../cantonese/index.html",
       "ipaListPath": "../cantonese/ipa_list.html",
       "isActive": false
     },
     {
       "code": "mandarin",
-      "name": "汉语 (CN)",
+      "name": "漢語 (zh)",
       "nativeName": "漢語",
+      "localeName": "汉语 (CN)",
       "indexPath": "../mandarin/index.html",
       "ipaListPath": "../mandarin/ipa_list_zh_hans.html",
       "isActive": false
