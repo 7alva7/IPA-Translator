@@ -122,7 +122,7 @@ export function initIPAIndexPage(options) {
     let html = '';
     for (const [word, ipa] of pairs) {
       if (ipa == null) {
-        html += `<span class="ruby-unmatched">${escapeHTML(word)}</span>`;
+        html += `<span class="ruby-item"><span class="ruby-unmatched">${escapeHTML(word)}</span></span>`;
       } else {
         let displayIPA = ipa;
         if (formatter) {
@@ -130,7 +130,7 @@ export function initIPAIndexPage(options) {
           const match = formatted.match(/\/(.+?)\//);
           displayIPA = match ? match[1] : ipa;
         }
-        html += `<ruby>${escapeHTML(word)}<rt>${escapeHTML(displayIPA)}</rt></ruby>`;
+        html += `<span class="ruby-item"><ruby>${escapeHTML(word)}<rt>${escapeHTML(displayIPA)}</rt></ruby></span>`;
       }
     }
     return html;
