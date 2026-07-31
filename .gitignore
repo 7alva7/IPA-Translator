@@ -1,2 +1,8 @@
 ref/
 ref/*
+
+.claude/
+graphify-out
+.graphify*
+
+_kg_chun*
