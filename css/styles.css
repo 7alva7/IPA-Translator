@@ -591,10 +591,19 @@ textarea.form-control, input.form-control {
 
   .row {
     flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .col {
-    min-width: 100%;
+  /* Release the 300px column floor so tables fit narrow phones */
+  .col,
+  .col-sm,
+  .col-md-6,
+  .col-sm-12 {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 20px;
   }
 
@@ -775,7 +784,7 @@ tbody tr:hover {
   /* Table header grid matches row grid for proper alignment */
   table.display thead {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;  /* Word | IPA (index hidden) */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);  /* Word | IPA (index hidden) */
     background: var(--color-table-header, #f5f5f5);
     font-weight: 600;
     border-bottom: 2px solid var(--color-text) !important;
@@ -793,7 +802,7 @@ tbody tr:hover {
   /* Each row grid matches header grid for proper alignment */
   table.display tr {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;  /* Word | IPA (index hidden) */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);  /* Word | IPA (index hidden) */
     gap: 0px;
     padding: 0 !important;
     margin: 0 !important;
@@ -805,6 +814,7 @@ tbody tr:hover {
     display: flex !important;
     align-items: center;
     justify-content: center;
+    min-width: 0;
     padding: 10px 6px !important;
     text-align: center !important;
     border: 1px solid var(--color-border) !important;
@@ -849,9 +859,22 @@ tbody tr:hover {
     margin: 10px 0 !important;
   }
 
+  /* Bundle sets white-space: nowrap on these; it forces page-level overflow */
+  div.dataTables_wrapper div.dataTables_length label,
+  div.dataTables_wrapper div.dataTables_filter label,
+  div.dataTables_wrapper div.dataTables_info,
+  div.dataTables_wrapper div.dataTables_paginate,
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    white-space: normal !important;
+  }
+
+  .dataTables_length select {
+    max-width: 100%;
+  }
+
   .dataTables_filter input {
     width: 100% !important;
-    max-width: 250px !important;
+    max-width: 100% !important;
     margin: 8px 0 0 0 !important;
   }
 
@@ -898,6 +921,12 @@ tbody tr:hover {
   #IPA_tBox {
     min-height: 80px !important;
   }
+}
+
+/* Bootstrap is not loaded, so .table-responsive needs its own containment */
+div.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 div.table-responsive > div.dataTables_wrapper > div.row > .col-sm-12 {
