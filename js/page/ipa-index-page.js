@@ -18,6 +18,7 @@ export function initIPAIndexPage(options) {
     outputId = 'IPA_tBox',
     withWordsId = 'wf_c_words',
     allowWordSearchId = 'allow_words_search',
+    applyPhonologyId = 'apply_phonology',
     variantRadioSelector = 'input[name="inlineRadioOptions"]',
     formatRadioSelector = null,
     darkModeToggleId = 'dark-mode-toggle',
@@ -100,6 +101,10 @@ export function initIPAIndexPage(options) {
     return allowWordSearchId ? isElementChecked(allowWordSearchId) : false;
   };
 
+  const getApplyPhonology = () => {
+    return applyPhonologyId ? isElementChecked(applyPhonologyId) : false;
+  };
+
   const getRubyOutputId = () => outputId.replace('tBox', 'ruby');
 
   const setOutputMode = (mode) => {
@@ -140,12 +145,14 @@ export function initIPAIndexPage(options) {
     const input = document.getElementById(inputId)?.value || '';
     const withWords = getWithWords();
     const allowWordSearch = getAllowWordSearch();
+    const applyPhonology = getApplyPhonology();
 
     const { pairs } = process({
       input,
       lookupTable: IPA_DB,
       withWords,
       allowWordSearch,
+      applyPhonology,
       maxWordLength,
       maxPhraseLength,
       pairsOnly: true
@@ -176,6 +183,7 @@ export function initIPAIndexPage(options) {
 
     const withWords = getWithWords();
     const allowWordSearch = getAllowWordSearch();
+    const applyPhonology = getApplyPhonology();
     const formatter = getFormatter();
 
     setOutputMode('textarea');
@@ -186,6 +194,7 @@ export function initIPAIndexPage(options) {
         lookupTable: IPA_DB,
         withWords: false,
         allowWordSearch,
+        applyPhonology,
         maxWordLength,
         maxPhraseLength
       });
@@ -203,6 +212,7 @@ export function initIPAIndexPage(options) {
         lookupTable: IPA_DB,
         withWords,
         allowWordSearch,
+        applyPhonology,
         maxWordLength,
         maxPhraseLength,
         pairsOnly: true,
@@ -219,6 +229,7 @@ export function initIPAIndexPage(options) {
         lookupTable: IPA_DB,
         withWords,
         allowWordSearch,
+        applyPhonology,
         maxWordLength,
         maxPhraseLength
       });
@@ -298,6 +309,11 @@ export function initIPAIndexPage(options) {
     if (allowWordSearchId) {
       const allowWordSearchEl = document.getElementById(allowWordSearchId);
       if (allowWordSearchEl) allowWordSearchEl.addEventListener('change', translate);
+    }
+
+    if (applyPhonologyId) {
+      const applyPhonologyEl = document.getElementById(applyPhonologyId);
+      if (applyPhonologyEl) applyPhonologyEl.addEventListener('change', translate);
     }
   };
 

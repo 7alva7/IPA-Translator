@@ -335,12 +335,14 @@ function applyKoreanPhonology(ipaArray) {
 }
 
 /**
- * Process Korean text: character-based lookup with post-processing phonology rules.
+ * Process Korean text: character-based lookup with optional post-processing phonology rules.
  * @param {object} options - Same as processTextCharBased plus pairsOnly
+ *   @param {boolean} [options.applyPhonology] - Apply Korean phonological rules to the
+ *     database IPA (default: false — raw database values are shown unless opted in)
  * @returns {string|object} Processed result or pairs
  */
 export function processKorean(options) {
-  const { input, withWords = false, pairsOnly = false } = options;
+  const { input, withWords = false, pairsOnly = false, applyPhonology = false } = options;
 
   const { pairs: rawPairs } = processTextCharBased({ ...options, pairsOnly: true });
   const matchedPairs = rawPairs.filter(p => p[1] != null);
@@ -352,11 +354,13 @@ export function processKorean(options) {
     return { start, end: start + word.length, word, ipa };
   });
 
-  const phonologyInput = matchedPairs.map(([word, ipa]) => [word, ipa]);
-  applyKoreanPhonology(phonologyInput);
-  const updatedIPA = phonologyInput.map(([word, ipa]) => ipa);
-
-  const matchesWithUpdated = matches.map((m, i) => ({ ...m, ipa: updatedIPA[i] }));
+  let matchesWithUpdated = matches;
+  if (applyPhonology) {
+    const phonologyInput = matchedPairs.map(([word, ipa]) => [word, ipa]);
+    applyKoreanPhonology(phonologyInput);
+    const updatedIPA = phonologyInput.map(([word, ipa]) => ipa);
+    matchesWithUpdated = matches.map((m, i) => ({ ...m, ipa: updatedIPA[i] }));
+  }
 
   let result = "";
   let mi = 0;
