@@ -43,6 +43,7 @@
   "label_format": "Format:",
   "label_variant": "Variantă:",
   "label_word_match": "Potrivire cuvinte",
+  "label_apply_phonology": "Aplică regulile fonologice",
   "list_back": "Înapoi la Traducător",
   "list_word_column": "Cuvânt",
   "list_ipa_column": "IPA",

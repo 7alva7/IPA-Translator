@@ -43,6 +43,7 @@
   "label_format": "输出格式：",
   "label_variant": "繁/简：",
   "label_word_match": "以詞組匹配",
+  "label_apply_phonology": "应用音韵规则",
   "list_back": "返回翻译器",
   "list_word_column": "文字",
   "list_ipa_column": "IPA",

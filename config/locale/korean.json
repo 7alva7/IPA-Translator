@@ -43,6 +43,7 @@
   "label_format": "형식:",
   "label_variant": "변형:",
   "label_word_match": "단어 매칭",
+  "label_apply_phonology": "음운 규칙 적용",
   "list_back": "번역기로 돌아가기",
   "list_word_column": "단어",
   "list_ipa_column": "IPA",

@@ -43,6 +43,7 @@
   "label_format": "Snið:",
   "label_variant": "Breyting:",
   "label_word_match": "Orðasamsvörun",
+  "label_apply_phonology": "Beita hljóðfræðireglur",
   "list_back": "Til baka í þýðara",
   "list_word_column": "Orð",
   "list_ipa_column": "IPA",

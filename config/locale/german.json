@@ -43,6 +43,7 @@
   "label_format": "Format:",
   "label_variant": "Variante:",
   "label_word_match": "Wortübereinstimmung",
+  "label_apply_phonology": "Phonologische Regeln anwenden",
   "list_back": "Zurück zum Übersetzer",
   "list_word_column": "Wort",
   "list_ipa_column": "IPA",

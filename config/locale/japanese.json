@@ -43,6 +43,7 @@
   "label_format": "フォーマット：",
   "label_variant": "バリアント：",
   "label_word_match": "単語マッチ",
+  "label_apply_phonology": "音韻規則を適用",
   "list_back": "翻訳ツールに戻る",
   "list_word_column": "単語",
   "list_ipa_column": "IPA",

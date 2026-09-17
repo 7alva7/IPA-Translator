@@ -43,6 +43,7 @@
   "label_format": "Formaat:",
   "label_variant": "Variant:",
   "label_word_match": "Woordovereenkomst",
+  "label_apply_phonology": "Fonologische regels toepassen",
   "list_back": "Terug naar Vertaler",
   "list_word_column": "Woord",
   "list_ipa_column": "IPA",

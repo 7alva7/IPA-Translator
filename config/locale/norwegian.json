@@ -43,6 +43,7 @@
   "label_format": "Format:",
   "label_variant": "Variant:",
   "label_word_match": "Ordmatching",
+  "label_apply_phonology": "Bruk fonologiske regler",
   "list_back": "Tilbake til oversetter",
   "list_word_column": "Ord",
   "list_ipa_column": "IPA",

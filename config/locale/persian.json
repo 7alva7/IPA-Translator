@@ -43,6 +43,7 @@
   "label_format": "فرمت:",
   "label_variant": "نوع:",
   "label_word_match": "تطابق کلمه",
+  "label_apply_phonology": "اعمال قواعد آواشناختی",
   "list_back": "بازگشت به مترجم",
   "list_word_column": "کلمه",
   "list_ipa_column": "IPA",

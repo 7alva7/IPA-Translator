@@ -43,6 +43,7 @@
   "label_format": "Định dạng:",
   "label_variant": "Phương ngữ:",
   "label_word_match": "Ghép theo từ",
+  "label_apply_phonology": "Áp dụng quy tắc âm vị học",
   "list_back": "Quay lại Bộ chuyển đổi",
   "list_word_column": "Từ",
   "list_ipa_column": "IPA",

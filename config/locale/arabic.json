@@ -43,6 +43,7 @@
   "label_format": "التنسيق:",
   "label_variant": "المتغير:",
   "label_word_match": "تطابق الكلمات",
+  "label_apply_phonology": "تطبيق القواعد الصوتية",
   "list_back": "العودة إلى المترجم",
   "list_word_column": "كلمة",
   "list_ipa_column": "IPA",

@@ -43,6 +43,7 @@
   "label_format": "Format:",
   "label_variant": "Variante:",
   "label_word_match": "Correspondance mot",
+  "label_apply_phonology": "Appliquer les règles phonologiques",
   "list_back": "Retour au Traducteur",
   "list_word_column": "Mot",
   "list_ipa_column": "IPA",

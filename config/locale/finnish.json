@@ -43,6 +43,7 @@
   "label_format": "Muoto:",
   "label_variant": "Vaihtoehto:",
   "label_word_match": "Sanavastine",
+  "label_apply_phonology": "Käytä fonologisia sääntöjä",
   "list_back": "Takaisin kääntäjään",
   "list_word_column": "Sana",
   "list_ipa_column": "IPA",
