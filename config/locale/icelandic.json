@@ -64,5 +64,6 @@
   "home_select_language": "Veldu tungumál",
   "home_footer_about": "Um",
   "home_footer_desc": "Þetta opna burst verkefni þýður texta frá ýmsum tungumálum á táknanir alþjóðlega hljóðritunarstafrófsins (IPA). Það notar IPA-gagnagrunna og rómverskunarbreytingartaflor til að veita nákvæmar hljóðritunir.",
-  "home_footer_links": "Nýtlegir tenglar"
+  "home_footer_links": "Nýtlegir tenglar",
+  "i18n_support": "☕ Styðjið mig"
 }

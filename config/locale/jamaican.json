@@ -64,5 +64,6 @@
   "home_select_language": "Pick a Language",
   "home_footer_about": "About",
   "home_footer_desc": "Dis open-source project translate tekst fram various languages to International Phonetic Alphabet (IPA) notation. It use IPA databases an romanization conversion tables fi provide accurate phonetic transcriptions.",
-  "home_footer_links": "Yooful Links"
+  "home_footer_links": "Yooful Links",
+  "i18n_support": "☕ Support mi"
 }

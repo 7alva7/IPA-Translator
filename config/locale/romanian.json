@@ -64,5 +64,6 @@
   "home_select_language": "Selectați o limbă",
   "home_footer_about": "Despre",
   "home_footer_desc": "Acest proiect open-source traduce textul din diverse limbi în notația Alfabetului Fonetic Internațional (IPA). Utilizează baze de date IPA și tabele de conversie a romanizării pentru a oferi transcrieri fonetice precise.",
-  "home_footer_links": "Legături utile"
+  "home_footer_links": "Legături utile",
+  "i18n_support": "☕ Susține-mă"
 }

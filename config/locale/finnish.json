@@ -64,5 +64,6 @@
   "home_select_language": "Valitse kieli",
   "home_footer_about": "Tietoja",
   "home_footer_desc": "Tämä avoimen lähdekoodin projekti kääntää tekstiä eri kielistä kansainvälisen fonettisen aakkoston (IPA) notaatioon. Se käyttää IPA-tietokantoja ja latinalaistamismuunnostaulukoita tarjotakseen tarkan fonettisen transkription.",
-  "home_footer_links": "Hyödyllisiä linkkejä"
+  "home_footer_links": "Hyödyllisiä linkkejä",
+  "i18n_support": "☕ Tue minua"
 }

@@ -64,5 +64,6 @@
   "home_select_language": "選擇語言",
   "home_footer_about": "關於",
   "home_footer_desc": "呢個開源項目將各種語言嘅文字轉為國際音標（IPA）。使用 IPA 資料庫同羅馬化轉換表提供準確嘅音標轉寫。",
-  "home_footer_links": "實用連結"
+  "home_footer_links": "實用連結",
+  "i18n_support": "☕ 支持我"
 }

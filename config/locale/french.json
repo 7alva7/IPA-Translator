@@ -64,5 +64,6 @@
   "home_select_language": "Sélectionnez une langue",
   "home_footer_about": "À propos",
   "home_footer_desc": "Ce projet open-source traduit du texte de diverses langues en notation de l'Alphabet Phonétique International (IPA). Il utilise des bases de données IPA et des tableaux de conversion de romanisation pour fournir des transcriptions phonétiques précises.",
-  "home_footer_links": "Liens utiles"
+  "home_footer_links": "Liens utiles",
+  "i18n_support": "☕ Soutenez-moi"
 }

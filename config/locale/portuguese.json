@@ -64,5 +64,6 @@
   "home_select_language": "Selecione um idioma",
   "home_footer_about": "Sobre",
   "home_footer_desc": "Este projeto de código aberto traduz texto de vários idiomas para a notação do Alfabeto Fonético Internacional (IPA). Utiliza bancos de dados IPA e tabelas de conversão de romanização para fornecer transcrições fonéticas precisas.",
-  "home_footer_links": "Links úteis"
+  "home_footer_links": "Links úteis",
+  "i18n_support": "☕ Apoie-me"
 }

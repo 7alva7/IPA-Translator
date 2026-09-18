@@ -64,5 +64,6 @@
   "home_select_language": "언어 선택",
   "home_footer_about": "소개",
   "home_footer_desc": "이 오픈소스 프로젝트는 다양한 언어의 텍스트를 국제음성기호(IPA)로 변환합니다. IPA 데이터베이스와 로마자 표기 변환표를 사용하여 정확한 음성 전사를 제공합니다.",
-  "home_footer_links": "유용한 링크"
+  "home_footer_links": "유용한 링크",
+  "i18n_support": "☕ 후원하기"
 }

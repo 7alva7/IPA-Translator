@@ -64,5 +64,6 @@
   "home_select_language": "Chọn ngôn ngữ",
   "home_footer_about": "Giới thiệu",
   "home_footer_desc": "Dự án mã nguồn mở này dịch văn bản từ nhiều ngôn ngữ sang ký hiệu Bảng Mẫu Tự Âm Thanh Quốc Tế (IPA). Sử dụng cơ sở dữ liệu IPA và bảng chuyển đổi Latinh hóa để cung cấp phiên âm chính xác.",
-  "home_footer_links": "Liên kết hữu ích"
+  "home_footer_links": "Liên kết hữu ích",
+  "i18n_support": "☕ Ủng hộ tôi"
 }

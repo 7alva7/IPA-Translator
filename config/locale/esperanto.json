@@ -64,5 +64,6 @@
   "home_select_language": "Elektu lingvon",
   "home_footer_about": "Pri",
   "home_footer_desc": "Ĉi tiu malfermitkoda projekto tradukas tekston de diversaj lingvoj al la noto de la Internacia Fonetika Alfabeto (IPA). Ĝi uzas IPA-datumbazojn kaj romanigajn konvertajn tabelojn por provizi precizajn fonetikajn transskribojn.",
-  "home_footer_links": "Utilaj ligiloj"
+  "home_footer_links": "Utilaj ligiloj",
+  "i18n_support": "☕ Subtenu min"
 }

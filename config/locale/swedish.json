@@ -64,5 +64,6 @@
   "home_select_language": "Välj ett språk",
   "home_footer_about": "Om",
   "home_footer_desc": "Detta open-source-projekt översätter text från olika språk till notationen för det internationella fonetiska alfabetet (IPA). Det använder IPA-databaser och romaniseringskonverteringstabeller för att tillhandahålla precisa fonetiska transkriptioner.",
-  "home_footer_links": "Användbara länkar"
+  "home_footer_links": "Användbara länkar",
+  "i18n_support": "☕ Stöd mig"
 }

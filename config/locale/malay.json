@@ -64,5 +64,6 @@
   "home_select_language": "Pilih bahasa",
   "home_footer_about": "Tentang",
   "home_footer_desc": "Projek sumber terbuka ini menerjemahkan teks daripada pelbagai bahasa kepada notasi Abjad Fonetik Antarabangsa (IPA). Ia menggunakan pangkalan data IPA dan jadual penukaran romanisasi untuk menyediakan transkripsi fonetik yang tepat.",
-  "home_footer_links": "Pautan berguna"
+  "home_footer_links": "Pautan berguna",
+  "i18n_support": "☕ Sokong saya"
 }

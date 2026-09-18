@@ -64,5 +64,6 @@
   "home_select_language": "言語を選択",
   "home_footer_about": "概要",
   "home_footer_desc": "このオープンソースプロジェクトは、各種言語のテキストを国際音声記号（IPA）に変換します。IPAデータベースとローマ字化変換表を使用して、正確な音声転写を提供します。",
-  "home_footer_links": "有用なリンク"
+  "home_footer_links": "有用なリンク",
+  "i18n_support": "☕ サポートする"
 }

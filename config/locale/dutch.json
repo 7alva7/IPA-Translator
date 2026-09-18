@@ -64,5 +64,6 @@
   "home_select_language": "Selecteer een taal",
   "home_footer_about": "Over",
   "home_footer_desc": "Dit open-source project vertaalt tekst uit verschillende talen naar de notatie van het Internationaal Fonetisch Alfabet (IPA). Het maakt gebruik van IPA-databases en romanisatieconversietabellen om nauwkeurige fonetische transcripties te bieden.",
-  "home_footer_links": "Nuttige links"
+  "home_footer_links": "Nuttige links",
+  "i18n_support": "☕ Steun mij"
 }
